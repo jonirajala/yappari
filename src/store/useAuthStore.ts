@@ -7,7 +7,8 @@ interface AuthState {
   loading: boolean;
   initialized: boolean;
   initialize: () => Promise<void>;
-  signInWithMagicLink: (email: string) => Promise<{ error: string | null }>;
+  signUp: (email: string, password: string) => Promise<{ error: string | null }>;
+  signIn: (email: string, password: string) => Promise<{ error: string | null }>;
   signOut: () => Promise<void>;
 }
 
@@ -19,48 +20,36 @@ export const useAuthStore = create<AuthState>()((set, get) => ({
   initialize: async () => {
     if (!supabase || get().initialized) return;
 
-    // Listen for auth changes FIRST (catches magic link callback)
-    supabase.auth.onAuthStateChange((event, session) => {
-      console.log('[auth] state change:', event, session?.user?.email);
+    supabase.auth.onAuthStateChange((_event, session) => {
       set({ user: session?.user ?? null, initialized: true });
     });
 
-    // Handle magic link / PKCE code in URL
-    const params = new URLSearchParams(window.location.search);
-    const hashParams = new URLSearchParams(window.location.hash.substring(1));
-
-    if (params.get('code') || hashParams.get('access_token')) {
-      // Supabase will handle this via onAuthStateChange
-      // But for PKCE flow, we need to explicitly exchange the code
-      if (params.get('code')) {
-        const { data, error } = await supabase.auth.exchangeCodeForSession(params.get('code')!);
-        if (error) {
-          console.error('[auth] code exchange error:', error);
-        } else {
-          set({ user: data.session?.user ?? null, initialized: true });
-          // Clean up URL
-          window.history.replaceState({}, '', window.location.pathname);
-        }
-        return;
-      }
-    }
-
-    // Check for existing session
     const { data: { session } } = await supabase.auth.getSession();
-    console.log('[auth] existing session:', session?.user?.email ?? 'none');
     set({ user: session?.user ?? null, initialized: true });
   },
 
-  signInWithMagicLink: async (email: string) => {
+  signUp: async (email: string, password: string) => {
     if (!supabase) return { error: 'Supabase not configured' };
     set({ loading: true });
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: window.location.origin,
-      },
-    });
+    const { data, error } = await supabase.auth.signUp({ email, password });
     set({ loading: false });
+    if (!error && data.session) {
+      set({ user: data.session.user });
+    }
+    if (!error && !data.session) {
+      return { error: 'Check your email to confirm your account' };
+    }
+    return { error: error?.message ?? null };
+  },
+
+  signIn: async (email: string, password: string) => {
+    if (!supabase) return { error: 'Supabase not configured' };
+    set({ loading: true });
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    set({ loading: false });
+    if (!error && data.session) {
+      set({ user: data.session.user });
+    }
     return { error: error?.message ?? null };
   },
 

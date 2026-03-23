@@ -11,6 +11,7 @@ export function OnboardingPage() {
   const [step, setStep] = useState(0);
   const [name, setName] = useState('');
   const [showAuth, setShowAuth] = useState(false);
+  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signup');
   const { setName: storeName, completeOnboarding } = useUserStore();
   const user = useAuthStore((s) => s.user);
   const navigate = useNavigate();
@@ -65,12 +66,20 @@ export function OnboardingPage() {
 
             <div className="flex flex-col gap-3">
               {isSupabaseConfigured() && (
-                <button
-                  onClick={() => setShowAuth(true)}
-                  className="w-full btn-primary"
-                >
-                  Continue with Email
-                </button>
+                <>
+                  <button
+                    onClick={() => { setShowAuth(true); setAuthMode('signup'); }}
+                    className="w-full btn-primary"
+                  >
+                    Create Account
+                  </button>
+                  <button
+                    onClick={() => { setShowAuth(true); setAuthMode('signin'); }}
+                    className="w-full py-4 bg-white border-2 border-primary text-primary text-lg font-bold rounded-2xl active:bg-primary/5 transition-all"
+                  >
+                    Sign In
+                  </button>
+                </>
               )}
               <button
                 onClick={handleGuest}
@@ -123,7 +132,7 @@ export function OnboardingPage() {
         )}
       </AnimatePresence>
 
-      {showAuth && <AuthModal onClose={() => setShowAuth(false)} />}
+      {showAuth && <AuthModal onClose={() => setShowAuth(false)} defaultMode={authMode} />}
     </div>
   );
 }
