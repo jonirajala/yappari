@@ -1,0 +1,805 @@
+import type { Lesson } from '../types';
+
+export const unit3Lessons: Lesson[] = [
+  // === Lesson 3.1: I, Student, Teacher ===
+  {
+    id: 'lesson-3-1',
+    unitId: 'unit-3',
+    title: 'I, Student, Teacher',
+    titleJp: 'わたし、がくせい、せんせい',
+    vocabulary: [
+      { japanese: 'わたし', reading: 'watashi', english: 'I, me' },
+      { japanese: 'がくせい', reading: 'gakusei', english: 'student' },
+      { japanese: 'せんせい', reading: 'sensei', english: 'teacher' },
+    ],
+    exercises: [
+      {
+        id: 'ex-3-1-00',
+        type: 'vocab_intro',
+        words: [
+          { japanese: 'わたし', reading: 'watashi', english: 'I, me', emoji: '🙋' },
+          { japanese: 'がくせい', reading: 'gakusei', english: 'student', emoji: '🎒' },
+          { japanese: 'せんせい', reading: 'sensei', english: 'teacher', emoji: '👩‍🏫' },
+        ],
+      },
+      {
+        id: 'ex-3-1-01',
+        type: 'multiple_choice',
+        prompt: 'Which means "I" or "me"?',
+        options: ['わたし', 'がくせい', 'せんせい', 'なまえ'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-1-02',
+        type: 'multiple_choice',
+        prompt: 'Which means "student"?',
+        options: ['がくせい', 'せんせい', 'わたし', 'ともだち'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-1-03',
+        type: 'multiple_choice',
+        prompt: 'Which means "teacher"?',
+        options: ['せんせい', 'わたし', 'がくせい', 'いしゃ'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-1-04',
+        type: 'matching',
+        pairs: [
+          { left: 'わたし', right: 'I, me' },
+          { left: 'がくせい', right: 'student' },
+          { left: 'せんせい', right: 'teacher' },
+        ],
+      },
+      {
+        id: 'ex-3-1-05',
+        type: 'kana_build',
+        prompt: 'I, me',
+        emoji: '🙋',
+        correctChars: ['わ', 'た', 'し'],
+        distractors: ['が', 'く', 'せ'],
+      },
+      {
+        id: 'ex-3-1-06',
+        type: 'kana_build',
+        prompt: 'student',
+        emoji: '🎒',
+        correctChars: ['が', 'く', 'せ', 'い'],
+        distractors: ['わ', 'た', 'し'],
+      },
+      {
+        id: 'ex-3-1-07',
+        type: 'kana_build',
+        prompt: 'teacher',
+        emoji: '👩‍🏫',
+        correctChars: ['せ', 'ん', 'せ', 'い'],
+        distractors: ['が', 'く', 'わ'],
+      },
+      {
+        id: 'ex-3-1-08',
+        type: 'multiple_choice',
+        prompt: 'A person who teaches is a:',
+        options: ['せんせい', 'がくせい', 'わたし', 'ともだち'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-1-09',
+        type: 'multiple_choice',
+        prompt: 'A person who studies is a:',
+        options: ['がくせい', 'せんせい', 'わたし', 'いしゃ'],
+        correctIndex: 0,
+      },
+      // Review U2
+      {
+        id: 'ex-3-1-10',
+        type: 'multiple_choice',
+        prompt: 'Which means "thank you"?',
+        options: ['ありがとうございます', 'すみません', 'おねがいします', 'どうも'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-1-11',
+        type: 'multiple_choice',
+        prompt: 'Which means "please"?',
+        options: ['おねがいします', 'ありがとうございます', 'すみません', 'どうも'],
+        correctIndex: 0,
+      },
+      // Review U1
+      {
+        id: 'ex-3-1-12',
+        type: 'multiple_choice',
+        prompt: 'It\'s morning. Formal greeting:',
+        options: ['おはようございます', 'こんにちは', 'こんばんは', 'おやすみなさい'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-1-13',
+        type: 'matching',
+        pairs: [
+          { left: 'こんにちは', right: 'hello' },
+          { left: 'こんばんは', right: 'good evening' },
+          { left: 'さようなら', right: 'goodbye' },
+        ],
+      },
+    ],
+  },
+
+  // === Lesson 3.2: X は Y です (I Am a Student) ===
+  {
+    id: 'lesson-3-2',
+    unitId: 'unit-3',
+    title: 'I Am a Student',
+    titleJp: 'わたしはがくせいです',
+    vocabulary: [
+      { japanese: 'わたし', reading: 'watashi', english: 'I, me' },
+      { japanese: 'がくせい', reading: 'gakusei', english: 'student' },
+      { japanese: 'せんせい', reading: 'sensei', english: 'teacher' },
+      { japanese: 'です', reading: 'desu', english: 'am / is / are' },
+    ],
+    exercises: [
+      {
+        id: 'ex-3-2-00',
+        type: 'vocab_intro',
+        words: [
+          { japanese: 'です', reading: 'desu', english: 'am / is / are (polite)', emoji: '🟰' },
+        ],
+      },
+      {
+        id: 'ex-3-2-01',
+        type: 'grammar_intro',
+        title: 'Building Your First Sentence: X は Y です',
+        explanation:
+          'Time for your first real Japanese sentence pattern! It works like this: pick your topic, mark it with は, then say what it is with です.\n\nは is pronounced "wa" when it\'s used as a particle (topic marker) — this trips everyone up at first, but you\'ll get used to it fast.\n\nです (desu) is the polite way to say "is/am/are." It goes at the very end, like putting a period on your sentence.\n\nSo わたしはがくせいです literally reads: "As for me — student — am" → "I am a student."',
+        examples: [
+          { japanese: 'わたしはがくせいです', english: 'I am a student' },
+          { japanese: 'わたしはせんせいです', english: 'I am a teacher' },
+        ],
+      },
+      {
+        id: 'ex-3-2-02',
+        type: 'multiple_choice',
+        prompt: 'What does です mean?',
+        options: ['am / is / are', 'not', 'what', 'who'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-2-03',
+        type: 'multiple_choice',
+        prompt: 'わたしはがくせいです means:',
+        options: ['I am a student', 'I am a teacher', 'You are a student', 'Are you a student?'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-2-04',
+        type: 'fill_blank',
+        sentence: 'わたし ＿ がくせいです',
+        answer: 'は',
+        options: ['は', 'が', 'を', 'に'],
+        translation: 'I am a student',
+      },
+      {
+        id: 'ex-3-2-05',
+        type: 'fill_blank',
+        sentence: 'わたしは がくせい ＿',
+        answer: 'です',
+        options: ['です', 'は', 'か', 'も'],
+        translation: 'I am a student',
+      },
+      {
+        id: 'ex-3-2-06',
+        type: 'word_order',
+        prompt: 'I am a student',
+        correctOrder: ['わたし', 'は', 'がくせい', 'です'],
+      },
+      {
+        id: 'ex-3-2-07',
+        type: 'multiple_choice',
+        prompt: 'How do you say "I am a teacher"?',
+        options: ['わたしはせんせいです', 'わたしはがくせいです', 'せんせいはわたしです', 'わたしはです'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-2-08',
+        type: 'word_order',
+        prompt: 'I am a teacher',
+        correctOrder: ['わたし', 'は', 'せんせい', 'です'],
+      },
+      {
+        id: 'ex-3-2-09',
+        type: 'fill_blank',
+        sentence: 'わたしは ＿ です',
+        answer: 'がくせい',
+        options: ['がくせい', 'せんせい', 'わたし', 'です'],
+        translation: 'I am a student',
+      },
+      {
+        id: 'ex-3-2-10',
+        type: 'multiple_choice',
+        prompt: 'は is pronounced ___ when used as a particle:',
+        options: ['wa', 'ha', 'wo', 'no'],
+        correctIndex: 0,
+      },
+      // Review U2
+      {
+        id: 'ex-3-2-11',
+        type: 'multiple_choice',
+        prompt: 'Which means "yes"?',
+        options: ['はい', 'いいえ', 'どうも', 'すみません'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-2-12',
+        type: 'multiple_choice',
+        prompt: 'Quick casual thanks:',
+        options: ['どうも', 'ありがとうございます', 'すみません', 'おねがいします'],
+        correctIndex: 0,
+      },
+      // Review U1
+      {
+        id: 'ex-3-2-13',
+        type: 'multiple_choice',
+        prompt: 'Before eating:',
+        options: ['いただきます', 'ごちそうさまでした', 'おやすみなさい', 'さようなら'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-2-14',
+        type: 'kana_build',
+        prompt: 'teacher',
+        emoji: '👩‍🏫',
+        correctChars: ['せ', 'ん', 'せ', 'い'],
+        distractors: ['が', 'く', 'わ'],
+      },
+    ],
+  },
+
+  // === Lesson 3.3: What's Your Name? ===
+  {
+    id: 'lesson-3-3',
+    unitId: 'unit-3',
+    title: "What's Your Name?",
+    titleJp: 'おなまえは？',
+    vocabulary: [
+      { japanese: 'わたし', reading: 'watashi', english: 'I, me' },
+      { japanese: 'がくせい', reading: 'gakusei', english: 'student' },
+      { japanese: 'せんせい', reading: 'sensei', english: 'teacher' },
+      { japanese: 'です', reading: 'desu', english: 'am / is / are' },
+      { japanese: 'なまえ', reading: 'namae', english: 'name' },
+      { japanese: 'おなまえは？', reading: 'onamae wa?', english: 'What is your name?' },
+      { japanese: '～さん', reading: '-san', english: 'Mr. / Ms. / Mrs.' },
+    ],
+    exercises: [
+      {
+        id: 'ex-3-3-00',
+        type: 'vocab_intro',
+        words: [
+          { japanese: 'なまえ', reading: 'namae', english: 'name', emoji: '📛' },
+          { japanese: 'おなまえは？', reading: 'onamae wa?', english: 'What is your name?', emoji: '❓' },
+          { japanese: '～さん', reading: '-san', english: 'Mr. / Ms. / Mrs.', emoji: '🙂' },
+        ],
+      },
+      {
+        id: 'ex-3-3-01',
+        type: 'grammar_intro',
+        title: 'Asking Someone\'s Name: おなまえは？',
+        explanation:
+          'おなまえは？ is a set phrase meaning "What is your name?" You\'ll hear this a lot in introductions.\n\nThe お at the start is an honorific prefix — it makes the word more polite. So なまえ = name, おなまえ = your name (polite). The は at the end is the same topic particle you just learned!\n\nTo answer, use the pattern you already know: わたしは [name] です. Easy!',
+        examples: [
+          { japanese: 'おなまえは？', english: 'What is your name?' },
+          { japanese: 'わたしはたなかです', english: 'I am Tanaka' },
+          { japanese: 'たなかさん', english: 'Mr./Ms. Tanaka' },
+        ],
+      },
+      {
+        id: 'ex-3-3-02',
+        type: 'multiple_choice',
+        prompt: 'What does なまえ mean?',
+        options: ['name', 'friend', 'student', 'teacher'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-3-03',
+        type: 'multiple_choice',
+        prompt: 'おなまえは？ means:',
+        options: ['What is your name?', 'Who are you?', 'Are you a student?', 'Where are you from?'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-3-04',
+        type: 'multiple_choice',
+        prompt: 'How do you politely address someone named Tanaka?',
+        options: ['たなかさん', 'たなかです', 'おたなか', 'たなかは'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-3-05',
+        type: 'matching',
+        pairs: [
+          { left: 'なまえ', right: 'name' },
+          { left: 'おなまえは？', right: 'What is your name?' },
+          { left: '～さん', right: 'Mr. / Ms.' },
+        ],
+      },
+      {
+        id: 'ex-3-3-06',
+        type: 'word_order',
+        prompt: 'I am Tanaka',
+        correctOrder: ['わたし', 'は', 'たなか', 'です'],
+      },
+      {
+        id: 'ex-3-3-07',
+        type: 'multiple_choice',
+        prompt: 'Someone asks おなまえは？ You are Yamada. You say:',
+        options: ['わたしはやまだです', 'やまだはわたしです', 'おなまえはやまだ', 'やまだがくせいです'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-3-08',
+        type: 'fill_blank',
+        sentence: 'わたし ＿ たなかです',
+        answer: 'は',
+        options: ['は', 'が', 'の', 'を'],
+        translation: 'I am Tanaka',
+      },
+      {
+        id: 'ex-3-3-09',
+        type: 'kana_build',
+        prompt: 'name',
+        emoji: '📛',
+        correctChars: ['な', 'ま', 'え'],
+        distractors: ['お', 'は', 'わ'],
+      },
+      // Review L3.2
+      {
+        id: 'ex-3-3-10',
+        type: 'multiple_choice',
+        prompt: 'わたしはがくせいです means:',
+        options: ['I am a student', 'I am a teacher', 'Are you a student?', 'I am Tanaka'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-3-11',
+        type: 'fill_blank',
+        sentence: 'わたしは せんせい ＿',
+        answer: 'です',
+        options: ['です', 'は', 'か', 'さん'],
+        translation: 'I am a teacher',
+      },
+      // Review U2
+      {
+        id: 'ex-3-3-12',
+        type: 'multiple_choice',
+        prompt: 'You bump into someone. You say:',
+        options: ['すみません', 'ありがとうございます', 'おねがいします', 'どうも'],
+        correctIndex: 0,
+      },
+      // Review U1
+      {
+        id: 'ex-3-3-13',
+        type: 'multiple_choice',
+        prompt: 'You leave for the day. You say:',
+        options: ['さようなら', 'こんにちは', 'おやすみなさい', 'こんばんは'],
+        correctIndex: 0,
+      },
+    ],
+  },
+
+  // === Lesson 3.4: Questions & Nationalities ===
+  {
+    id: 'lesson-3-4',
+    unitId: 'unit-3',
+    title: 'Questions & Nationalities',
+    titleJp: 'がくせいですか？',
+    vocabulary: [
+      { japanese: 'わたし', reading: 'watashi', english: 'I, me' },
+      { japanese: 'がくせい', reading: 'gakusei', english: 'student' },
+      { japanese: 'せんせい', reading: 'sensei', english: 'teacher' },
+      { japanese: 'です', reading: 'desu', english: 'am / is / are' },
+      { japanese: 'なまえ', reading: 'namae', english: 'name' },
+      { japanese: 'か', reading: 'ka', english: '? (question particle)' },
+      { japanese: 'にほんじん', reading: 'nihonjin', english: 'Japanese person' },
+      { japanese: 'アメリカじん', reading: 'amerikajin', english: 'American person' },
+    ],
+    exercises: [
+      {
+        id: 'ex-3-4-00',
+        type: 'vocab_intro',
+        words: [
+          { japanese: 'か', reading: 'ka', english: '? (question particle)', emoji: '❓' },
+          { japanese: 'にほんじん', reading: 'nihonjin', english: 'Japanese person', emoji: '🇯🇵' },
+          { japanese: 'アメリカじん', reading: 'amerikajin', english: 'American person', emoji: '🇺🇸' },
+        ],
+      },
+      {
+        id: 'ex-3-4-01',
+        type: 'grammar_intro',
+        title: 'Asking Questions with か',
+        explanation:
+          'Making a question in Japanese is wonderfully simple — just add か to the end of any statement and you\'re done. No need to rearrange words like in English!\n\nがくせいです (I am a student) → がくせいですか？ (Are you a student?)\n\nThat\'s it. The sentence stays exactly the same; か flips it into a question. You can answer with はい (yes) or いいえ (no) — words you already know from Unit 2!',
+        examples: [
+          { japanese: 'がくせいですか？', english: 'Are you a student?' },
+          { japanese: 'はい、がくせいです', english: 'Yes, I am a student' },
+          { japanese: 'にほんじんですか？', english: 'Are you Japanese?' },
+        ],
+      },
+      {
+        id: 'ex-3-4-02',
+        type: 'multiple_choice',
+        prompt: 'How do you make a question in Japanese?',
+        options: ['Add か to the end', 'Change the word order', 'Add a question mark', 'Use a rising tone only'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-4-03',
+        type: 'fill_blank',
+        sentence: 'がくせいです ＿',
+        answer: 'か',
+        options: ['か', 'は', 'です', 'も'],
+        translation: 'Are you a student?',
+      },
+      {
+        id: 'ex-3-4-04',
+        type: 'multiple_choice',
+        prompt: 'がくせいですか means:',
+        options: ['Are you a student?', 'I am a student', 'I am not a student', 'The student'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-4-05',
+        type: 'multiple_choice',
+        prompt: 'にほんじん means:',
+        options: ['Japanese person', 'American person', 'teacher', 'student'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-4-06',
+        type: 'multiple_choice',
+        prompt: 'アメリカじん means:',
+        options: ['American person', 'Japanese person', 'friend', 'doctor'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-4-07',
+        type: 'word_order',
+        prompt: 'Is Tanaka Japanese?',
+        correctOrder: ['たなかさん', 'は', 'にほんじん', 'です', 'か'],
+      },
+      {
+        id: 'ex-3-4-08',
+        type: 'fill_blank',
+        sentence: 'はい、にほんじん ＿',
+        answer: 'です',
+        options: ['です', 'か', 'は', 'じゃないです'],
+        translation: 'Yes, I am Japanese',
+      },
+      {
+        id: 'ex-3-4-09',
+        type: 'word_order',
+        prompt: 'I am American',
+        correctOrder: ['わたし', 'は', 'アメリカじん', 'です'],
+      },
+      {
+        id: 'ex-3-4-10',
+        type: 'kana_build',
+        prompt: 'Japanese person',
+        emoji: '🇯🇵',
+        correctChars: ['に', 'ほ', 'ん', 'じ', 'ん'],
+        distractors: ['が', 'く', 'せ'],
+      },
+      // Review L3.3
+      {
+        id: 'ex-3-4-11',
+        type: 'multiple_choice',
+        prompt: 'おなまえは？ means:',
+        options: ['What is your name?', 'Who are you?', 'Are you a student?', 'Where is it?'],
+        correctIndex: 0,
+      },
+      // Review L3.2
+      {
+        id: 'ex-3-4-12',
+        type: 'fill_blank',
+        sentence: 'わたし ＿ せんせいです',
+        answer: 'は',
+        options: ['は', 'が', 'か', 'を'],
+        translation: 'I am a teacher',
+      },
+      // Review U2
+      {
+        id: 'ex-3-4-13',
+        type: 'multiple_choice',
+        prompt: 'Which means "no"?',
+        options: ['いいえ', 'はい', 'すみません', 'どうも'],
+        correctIndex: 0,
+      },
+      // Review U1
+      {
+        id: 'ex-3-4-14',
+        type: 'matching',
+        pairs: [
+          { left: 'わたし', right: 'I, me' },
+          { left: 'がくせい', right: 'student' },
+          { left: 'せんせい', right: 'teacher' },
+          { left: 'なまえ', right: 'name' },
+        ],
+      },
+    ],
+  },
+
+  // === Lesson 3.5: Not a Doctor (Negation) ===
+  {
+    id: 'lesson-3-5',
+    unitId: 'unit-3',
+    title: 'Not a Doctor',
+    titleJp: 'いしゃじゃないです',
+    vocabulary: [
+      { japanese: 'わたし', reading: 'watashi', english: 'I, me' },
+      { japanese: 'がくせい', reading: 'gakusei', english: 'student' },
+      { japanese: 'せんせい', reading: 'sensei', english: 'teacher' },
+      { japanese: 'です', reading: 'desu', english: 'am / is / are' },
+      { japanese: 'か', reading: 'ka', english: '? (question particle)' },
+      { japanese: 'じゃないです', reading: 'ja nai desu', english: 'is not' },
+      { japanese: 'ともだち', reading: 'tomodachi', english: 'friend' },
+      { japanese: 'いしゃ', reading: 'isha', english: 'doctor' },
+    ],
+    exercises: [
+      {
+        id: 'ex-3-5-00',
+        type: 'vocab_intro',
+        words: [
+          { japanese: 'じゃないです', reading: 'ja nai desu', english: 'is not (polite negative)', emoji: '🚫' },
+          { japanese: 'ともだち', reading: 'tomodachi', english: 'friend', emoji: '🤝' },
+          { japanese: 'いしゃ', reading: 'isha', english: 'doctor', emoji: '👨‍⚕️' },
+        ],
+      },
+      {
+        id: 'ex-3-5-01',
+        type: 'grammar_intro',
+        title: 'Saying "Is Not": じゃないです',
+        explanation:
+          'You know です means "is." To say "is NOT," just swap です for じゃないです. The rest of the sentence stays the same!\n\nわたしはせんせいです → I am a teacher\nわたしはせんせいじゃないです → I am NOT a teacher\n\nThis pairs perfectly with か questions you just learned. Someone asks がくせいですか？ and you can say いいえ、がくせいじゃないです — "No, I\'m not a student."',
+        examples: [
+          { japanese: 'わたしはせんせいじゃないです', english: 'I am not a teacher' },
+          { japanese: 'いいえ、がくせいじゃないです', english: 'No, I am not a student' },
+          { japanese: 'わたしはいしゃじゃないです', english: 'I am not a doctor' },
+        ],
+      },
+      {
+        id: 'ex-3-5-02',
+        type: 'multiple_choice',
+        prompt: 'What does ともだち mean?',
+        options: ['friend', 'teacher', 'student', 'doctor'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-5-03',
+        type: 'multiple_choice',
+        prompt: 'What does いしゃ mean?',
+        options: ['doctor', 'friend', 'teacher', 'student'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-5-04',
+        type: 'multiple_choice',
+        prompt: 'What is the negative of です?',
+        options: ['じゃないです', 'ですか', 'ではない', 'でした'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-5-05',
+        type: 'fill_blank',
+        sentence: 'わたしはせんせい ＿',
+        answer: 'じゃないです',
+        options: ['じゃないです', 'です', 'ですか', 'は'],
+        translation: 'I am not a teacher',
+      },
+      {
+        id: 'ex-3-5-06',
+        type: 'multiple_choice',
+        prompt: 'わたしはいしゃじゃないです means:',
+        options: ['I am not a doctor', 'I am a doctor', 'Are you a doctor?', 'The doctor is not here'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-5-07',
+        type: 'word_order',
+        prompt: 'Tanaka is not a student',
+        correctOrder: ['たなかさん', 'は', 'がくせい', 'じゃないです'],
+      },
+      {
+        id: 'ex-3-5-08',
+        type: 'multiple_choice',
+        prompt: 'Your friend asks がくせいですか？ You are not a student. You say:',
+        options: ['いいえ、がくせいじゃないです', 'はい、がくせいです', 'がくせいですか', 'いいえ、せんせいです'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-5-09',
+        type: 'word_order',
+        prompt: 'I am not a doctor',
+        correctOrder: ['わたし', 'は', 'いしゃ', 'じゃないです'],
+      },
+      {
+        id: 'ex-3-5-10',
+        type: 'fill_blank',
+        sentence: 'いいえ、にほんじん ＿',
+        answer: 'じゃないです',
+        options: ['じゃないです', 'です', 'ですか', 'は'],
+        translation: 'No, I am not Japanese',
+      },
+      // Review L3.4
+      {
+        id: 'ex-3-5-11',
+        type: 'multiple_choice',
+        prompt: 'がくせいですか means:',
+        options: ['Are you a student?', 'I am a student', 'I am not a student', 'The student'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-5-12',
+        type: 'fill_blank',
+        sentence: 'せんせいです ＿',
+        answer: 'か',
+        options: ['か', 'は', 'です', 'も'],
+        translation: 'Are you a teacher?',
+      },
+      // Review U2
+      {
+        id: 'ex-3-5-13',
+        type: 'multiple_choice',
+        prompt: 'Which means "excuse me"?',
+        options: ['すみません', 'ありがとうございます', 'おねがいします', 'どうも'],
+        correctIndex: 0,
+      },
+      // Review
+      {
+        id: 'ex-3-5-14',
+        type: 'matching',
+        pairs: [
+          { left: 'ともだち', right: 'friend' },
+          { left: 'いしゃ', right: 'doctor' },
+          { left: 'がくせい', right: 'student' },
+          { left: 'せんせい', right: 'teacher' },
+        ],
+      },
+    ],
+  },
+
+  // === Lesson 3.6: Nice to Meet You (Self-Introduction) ===
+  {
+    id: 'lesson-3-6',
+    unitId: 'unit-3',
+    title: 'Nice to Meet You',
+    titleJp: 'はじめまして',
+    vocabulary: [
+      { japanese: 'わたし', reading: 'watashi', english: 'I, me' },
+      { japanese: 'です', reading: 'desu', english: 'am / is / are' },
+      { japanese: 'か', reading: 'ka', english: '? (question particle)' },
+      { japanese: 'じゃないです', reading: 'ja nai desu', english: 'is not' },
+      { japanese: 'はじめまして', reading: 'hajimemashite', english: 'nice to meet you' },
+      { japanese: 'どうぞよろしく', reading: 'douzo yoroshiku', english: 'pleased to meet you' },
+      { japanese: '～からきました', reading: 'kara kimashita', english: 'came from ~' },
+    ],
+    exercises: [
+      {
+        id: 'ex-3-6-00',
+        type: 'vocab_intro',
+        words: [
+          { japanese: 'はじめまして', reading: 'hajimemashite', english: 'nice to meet you', emoji: '🤝' },
+          { japanese: 'どうぞよろしく', reading: 'douzo yoroshiku', english: 'pleased to meet you', emoji: '😊' },
+          { japanese: '～からきました', reading: 'kara kimashita', english: 'came from ~', emoji: '✈️' },
+        ],
+      },
+      {
+        id: 'ex-3-6-01',
+        type: 'grammar_intro',
+        title: 'Introducing Yourself: から + きました',
+        explanation:
+          'Now you can put together a full self-introduction! Japanese self-intros follow a set pattern that everyone uses.\n\nから means "from" and きました means "came." Together, [place]からきました tells people where you\'re from.\n\nA typical self-intro goes: はじめまして (nice to meet you) → name → where you\'re from → どうぞよろしく (pleased to meet you). It\'s almost like a little script everyone follows!',
+        examples: [
+          { japanese: 'アメリカからきました', english: 'I came from America' },
+          { japanese: 'にほんからきました', english: 'I came from Japan' },
+          { japanese: 'はじめまして、わたしはたなかです、どうぞよろしく', english: 'Nice to meet you, I am Tanaka, pleased to meet you' },
+        ],
+      },
+      {
+        id: 'ex-3-6-02',
+        type: 'multiple_choice',
+        prompt: 'Which phrase do you say when meeting someone for the first time?',
+        options: ['はじめまして', 'さようなら', 'ありがとうございます', 'すみません'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-6-03',
+        type: 'multiple_choice',
+        prompt: 'What does どうぞよろしく mean?',
+        options: ['Pleased to meet you', 'Nice to meet you', 'Goodbye', 'Thank you'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-6-04',
+        type: 'multiple_choice',
+        prompt: 'から means:',
+        options: ['from', 'to', 'at', 'in'],
+        correctIndex: 0,
+      },
+      {
+        id: 'ex-3-6-05',
+        type: 'fill_blank',
+        sentence: 'にほん ＿ きました',
+        answer: 'から',
+        options: ['から', 'は', 'です', 'か'],
+        translation: 'I came from Japan',
+      },
+      {
+        id: 'ex-3-6-06',
+        type: 'word_order',
+        prompt: 'I came from America',
+        correctOrder: ['アメリカ', 'から', 'きました'],
+      },
+      {
+        id: 'ex-3-6-07',
+        type: 'word_order',
+        prompt: 'Nice to meet you, I am Tanaka, pleased to meet you',
+        correctOrder: ['はじめまして', 'わたし', 'は', 'たなか', 'です', 'どうぞよろしく'],
+      },
+      {
+        id: 'ex-3-6-08',
+        type: 'kana_build',
+        prompt: 'nice to meet you',
+        emoji: '🤝',
+        correctChars: ['は', 'じ', 'め', 'ま', 'し', 'て'],
+        distractors: ['ど', 'う', 'ぞ'],
+      },
+      {
+        id: 'ex-3-6-09',
+        type: 'multiple_choice',
+        prompt: 'Complete the self-introduction: はじめまして、わたしはたなかです。にほん___きました。',
+        options: ['から', 'は', 'です', 'か'],
+        correctIndex: 0,
+      },
+      // Review L3.5
+      {
+        id: 'ex-3-6-10',
+        type: 'fill_blank',
+        sentence: 'わたしはいしゃ ＿',
+        answer: 'じゃないです',
+        options: ['じゃないです', 'です', 'ですか', 'は'],
+        translation: 'I am not a doctor',
+      },
+      // Review L3.4
+      {
+        id: 'ex-3-6-11',
+        type: 'multiple_choice',
+        prompt: 'にほんじんですか means:',
+        options: ['Are you Japanese?', 'I am Japanese', 'I am not Japanese', 'Japanese person'],
+        correctIndex: 0,
+      },
+      // Review L3.2
+      {
+        id: 'ex-3-6-12',
+        type: 'word_order',
+        prompt: 'I am a student',
+        correctOrder: ['わたし', 'は', 'がくせい', 'です'],
+      },
+      // Review U2
+      {
+        id: 'ex-3-6-13',
+        type: 'multiple_choice',
+        prompt: 'Which means "thank you"?',
+        options: ['ありがとうございます', 'すみません', 'おねがいします', 'どうも'],
+        correctIndex: 0,
+      },
+      // Review U1
+      {
+        id: 'ex-3-6-14',
+        type: 'matching',
+        pairs: [
+          { left: 'はじめまして', right: 'nice to meet you' },
+          { left: 'どうぞよろしく', right: 'pleased to meet you' },
+          { left: '～からきました', right: 'came from ~' },
+        ],
+      },
+    ],
+  },
+];

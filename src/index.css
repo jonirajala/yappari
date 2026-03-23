@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* ===== Moshimoshi Color System =====
+ * Warm vermillion palette inspired by Japanese torii gates and autumn leaves.
+ * Clean, confident red — not aggressive, not pink.
+ */
+@theme {
+  /* Primary: Japanese vermillion (朱色 shuiro) */
+  --color-primary: #D94F3B;
+  --color-primary-dark: #B83A2A;
+
+  /* Feedback */
+  --color-correct: #4ADE80;
+  --color-correct-dark: #22c55e;
+  --color-incorrect: #F87171;
+
+  /* Accents */
+  --color-accent-blue: #60A5FA;
+  --color-accent-orange: #FB923C;
+  --color-accent-purple: #C084FC;
+  --color-accent-matcha: #86EFAC;
+
+  /* Surfaces */
+  --color-surface: #FAF9F7;
+  --color-surface-dark: #F0EEED;
+  --color-locked: #D1D5DB;
+
+  /* Fonts */
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --font-family-jp: 'Noto Sans JP', sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  background-color: #FFFFFF;
+  color: #374151;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-jp {
+  font-family: var(--font-family-jp);
+}
+
+/* ===== Furigana (ruby) ===== */
+ruby {
+  ruby-align: center;
+}
+ruby rt {
+  font-family: var(--font-family-jp);
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+/* ===== Animations ===== */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0; }
+  100% { transform: scale(1); opacity: 0; }
+}
+.animate-pulse-ring {
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-bounce-in {
+  animation: bounce-in 0.3s ease-out;
+}
+
+/* ===== Button style (3D press effect) ===== */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 700;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.125rem;
+  box-shadow: 0 4px 0 0 var(--color-primary-dark);
+  transition: all 0.1s;
+}
+.btn-primary:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+.btn-primary:disabled {
+  background-color: #E5E7EB;
+  color: #9CA3AF;
+  box-shadow: 0 4px 0 0 #D1D5DB;
+}

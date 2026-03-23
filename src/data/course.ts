@@ -1,0 +1,117 @@
+import type { Unit } from './types';
+import { unit1Lessons } from './v2/unit1';
+import { unit2Lessons } from './v2/unit2';
+import { unit3Lessons } from './v2/unit3';
+import { unit4Lessons } from './v2/unit4';
+import { unit5Lessons } from './v2/unit5';
+import { unit6Lessons } from './v2/unit6';
+
+export const course: Unit[] = [
+  {
+    id: 'unit-1',
+    title: 'Hello!',
+    titleJp: 'こんにちは',
+    description: 'Basic greetings — saying hello and goodbye',
+    color: '#D94F3B',
+    lessons: unit1Lessons,
+  },
+  {
+    id: 'unit-2',
+    title: 'Please & Thank You',
+    titleJp: 'おねがいします',
+    description: 'Polite phrases, yes, no, casual thanks',
+    color: '#3B82F6',
+    lessons: unit2Lessons,
+  },
+  {
+    id: 'unit-3',
+    title: 'I Am...',
+    titleJp: 'わたしは',
+    description: 'は/です pattern, questions, negation, self-intro',
+    color: '#E67E22',
+    lessons: unit3Lessons,
+  },
+  {
+    id: 'unit-4',
+    title: 'What Is This?',
+    titleJp: 'これはなに',
+    description: 'これ/それ/あれ, identifying objects',
+    color: '#8B5CF6',
+    lessons: unit4Lessons,
+  },
+  {
+    id: 'unit-5',
+    title: 'My Things',
+    titleJp: 'わたしのもの',
+    description: 'この/その/あの, の possession, more objects',
+    color: '#10B981',
+    lessons: unit5Lessons,
+  },
+  {
+    id: 'unit-6',
+    title: 'Also & Where?',
+    titleJp: 'もとどこ',
+    description: 'も particle, location words, どれ/どの',
+    color: '#D94F3B',
+    lessons: unit6Lessons,
+  },
+  // Future units (content from old Units 3-10, to be expanded similarly)
+  {
+    id: 'unit-7',
+    title: 'People & Family',
+    titleJp: 'ひととかぞく',
+    description: 'Family, occupations, adjectives',
+    color: '#3B82F6',
+    lessons: [],
+  },
+  {
+    id: 'unit-8',
+    title: 'Numbers',
+    titleJp: 'すうじ',
+    description: 'Numbers 1-10, counting',
+    color: '#E67E22',
+    lessons: [],
+  },
+  {
+    id: 'unit-9',
+    title: 'Time & Days',
+    titleJp: 'じかん',
+    description: 'Telling time, days of the week',
+    color: '#8B5CF6',
+    lessons: [],
+  },
+  {
+    id: 'unit-10',
+    title: 'Places',
+    titleJp: 'ばしょ',
+    description: 'Locations, buildings, position words',
+    color: '#10B981',
+    lessons: [],
+  },
+];
+
+export function getAllLessons() {
+  return course.flatMap((unit) => unit.lessons);
+}
+
+export function getLessonById(lessonId: string) {
+  return getAllLessons().find((l) => l.id === lessonId);
+}
+
+export function getUnitByLessonId(lessonId: string) {
+  return course.find((u) => u.lessons.some((l) => l.id === lessonId));
+}
+
+export function getNextLessonId(currentLessonId: string): string | null {
+  const allLessons = getAllLessons();
+  const idx = allLessons.findIndex((l) => l.id === currentLessonId);
+  if (idx === -1 || idx >= allLessons.length - 1) return null;
+  return allLessons[idx + 1].id;
+}
+
+export function getPreviousLessonId(currentLessonId: string): string | null {
+  const allLessons = getAllLessons();
+  const idx = allLessons.findIndex((l) => l.id === currentLessonId);
+  if (idx <= 0) return null;
+  return allLessons[idx - 1].id;
+}
