@@ -46,10 +46,10 @@ export function Translation({ exercise, onAnswer }: Props) {
     if (correct) {
       playCorrect();
       setTimeout(() => speakJapanese(exercise.correctAnswer.join('')), 300);
+      setTimeout(() => onAnswer(true), 800);
     } else {
       playIncorrect();
     }
-    setTimeout(() => onAnswer(correct), 1000);
   };
 
   return (
@@ -126,18 +126,28 @@ export function Translation({ exercise, onAnswer }: Props) {
       </div>
 
       <div className="p-4 pb-8">
-        <button
-          onClick={handleCheck}
-          disabled={selectedWords.length === 0 || answered}
-          className={cn(
-            'w-full py-4 rounded-2xl text-lg font-bold transition-all',
-            selectedWords.length > 0 && !answered
-              ? 'bg-primary text-white shadow-[0_4px_0_0_#B83A2A] active:shadow-none active:translate-y-1'
-              : 'bg-gray-200 text-gray-400'
-          )}
-        >
-          Check
-        </button>
+        {answered && !isCorrect ? (
+          <button
+            onClick={() => onAnswer(false)}
+            className="w-full py-4 rounded-2xl text-lg font-bold bg-incorrect text-white
+                       shadow-[0_4px_0_0_#dc2626] active:shadow-none active:translate-y-1 transition-all"
+          >
+            Continue
+          </button>
+        ) : (
+          <button
+            onClick={handleCheck}
+            disabled={selectedWords.length === 0 || answered}
+            className={cn(
+              'w-full py-4 rounded-2xl text-lg font-bold transition-all',
+              selectedWords.length > 0 && !answered
+                ? 'bg-primary text-white shadow-[0_4px_0_0_#B83A2A] active:shadow-none active:translate-y-1'
+                : 'bg-gray-200 text-gray-400'
+            )}
+          >
+            Check
+          </button>
+        )}
       </div>
     </div>
   );

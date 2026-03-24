@@ -59,7 +59,7 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l1-e7',
         type: 'kana_build',
-        prompt: "Build 'thank you' (casual form)",
+        prompt: "thank you (short form)",
         emoji: '🙏',
         correctChars: ['あ', 'り', 'が', 'と', 'う'],
         distractors: ['す', 'み', 'ま'],
@@ -67,7 +67,7 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l1-e8',
         type: 'kana_build',
-        prompt: "Build 'excuse me'",
+        prompt: "excuse me",
         emoji: '🙇',
         correctChars: ['す', 'み', 'ま', 'せ', 'ん'],
         distractors: ['あ', 'り', 'が'],
@@ -177,7 +177,7 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l2-e7',
         type: 'kana_build',
-        prompt: "Build 'yes'",
+        prompt: "yes",
         emoji: '✅',
         correctChars: ['は', 'い'],
         distractors: ['い', 'え', 'す'],
@@ -185,7 +185,7 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l2-e8',
         type: 'kana_build',
-        prompt: "Build 'no'",
+        prompt: "no",
         emoji: '❌',
         correctChars: ['い', 'い', 'え'],
         distractors: ['は', 'す', 'み'],
@@ -238,16 +238,16 @@ export const unit2Lessons: Lesson[] = [
     ],
   },
 
-  // ─── Lesson 2.3: Please & Casual Thanks ───
+  // ─── Lesson 2.3: Please & Friendly Phrases ───
   {
     id: 'u2-l3',
     unitId: 'unit-2',
-    title: 'Please & Casual Thanks',
+    title: 'Please & Friendly Phrases',
     titleJp: 'おねがいします・どうも',
     vocabulary: [
       { japanese: 'おねがいします', reading: 'onegaishimasu', english: 'please', emoji: '🙏' },
-      { japanese: 'どうも', reading: 'doumo', english: 'thanks (casual)', emoji: '👍' },
-      { japanese: 'おはよう', reading: 'ohayou', english: 'morning (casual)', emoji: '🌅' },
+      { japanese: 'どうも', reading: 'doumo', english: 'thanks (friendly)', emoji: '👍' },
+      { japanese: 'おはよう', reading: 'ohayou', english: 'good morning (friendly)', emoji: '🌅' },
     ],
     exercises: [
       {
@@ -255,8 +255,8 @@ export const unit2Lessons: Lesson[] = [
         type: 'vocab_intro',
         words: [
           { japanese: 'おねがいします', reading: 'onegaishimasu', english: 'please', emoji: '🙏' },
-          { japanese: 'どうも', reading: 'doumo', english: 'thanks (casual)', emoji: '👍' },
-          { japanese: 'おはよう', reading: 'ohayou', english: 'morning (casual)', emoji: '🌅' },
+          { japanese: 'どうも', reading: 'doumo', english: 'thanks (friendly)', emoji: '👍' },
+          { japanese: 'おはよう', reading: 'ohayou', english: 'good morning (friendly)', emoji: '🌅' },
         ],
       },
       {
@@ -269,14 +269,14 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l3-e3',
         type: 'multiple_choice',
-        prompt: "Which is a casual way to say 'thanks'?",
+        prompt: "Which is a friendly way to say 'thanks'?",
         options: ['どうも', 'ありがとうございます', 'おねがいします', 'すみません'],
         correctIndex: 0,
       },
       {
         id: 'u2-l3-e4',
         type: 'multiple_choice',
-        prompt: 'おはよう is the casual form of:',
+        prompt: 'おはよう is the short form of:',
         options: ['おはようございます', 'こんにちは', 'こんばんは', 'おやすみなさい'],
         correctIndex: 0,
       },
@@ -292,14 +292,14 @@ export const unit2Lessons: Lesson[] = [
         type: 'matching',
         pairs: [
           { left: 'おねがいします', right: 'please' },
-          { left: 'どうも', right: 'thanks (casual)' },
-          { left: 'おはよう', right: 'morning (casual)' },
+          { left: 'どうも', right: 'thanks (friendly)' },
+          { left: 'おはよう', right: 'good morning (friendly)' },
         ],
       },
       {
         id: 'u2-l3-e7',
         type: 'kana_build',
-        prompt: "Build 'please'",
+        prompt: "please",
         emoji: '🙏',
         correctChars: ['お', 'ね', 'が', 'い', 'し', 'ま', 'す'],
         distractors: ['ど', 'う', 'も'],
@@ -307,14 +307,14 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l3-e8',
         type: 'multiple_choice',
-        prompt: 'A friend passes you a pen. You say casually:',
+        prompt: 'A friend passes you a pen. You say to a friend:',
         options: ['どうも', 'ありがとうございます', 'おねがいします', 'すみません'],
         correctIndex: 0,
       },
       {
         id: 'u2-l3-e9',
         type: 'kana_build',
-        prompt: "Build 'thanks' (casual)",
+        prompt: "thanks (friendly)",
         emoji: '👍',
         correctChars: ['ど', 'う', 'も'],
         distractors: ['お', 'ね', 'が'],
@@ -379,8 +379,8 @@ export const unit2Lessons: Lesson[] = [
       { japanese: 'はい', reading: 'hai', english: 'yes', emoji: '✅' },
       { japanese: 'いいえ', reading: 'iie', english: 'no', emoji: '❌' },
       { japanese: 'おねがいします', reading: 'onegaishimasu', english: 'please', emoji: '🙏' },
-      { japanese: 'どうも', reading: 'doumo', english: 'thanks (casual)', emoji: '👍' },
-      { japanese: 'おはよう', reading: 'ohayou', english: 'morning (casual)', emoji: '🌅' },
+      { japanese: 'どうも', reading: 'doumo', english: 'thanks (friendly)', emoji: '👍' },
+      { japanese: 'おはよう', reading: 'ohayou', english: 'good morning (friendly)', emoji: '🌅' },
     ],
     exercises: [
       {
@@ -392,8 +392,8 @@ export const unit2Lessons: Lesson[] = [
           { left: 'はい', right: 'yes' },
           { left: 'いいえ', right: 'no' },
           { left: 'おねがいします', right: 'please' },
-          { left: 'どうも', right: 'thanks (casual)' },
-          { left: 'おはよう', right: 'morning (casual)' },
+          { left: 'どうも', right: 'thanks (friendly)' },
+          { left: 'おはよう', right: 'good morning (friendly)' },
         ],
       },
       {
@@ -441,7 +441,7 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l4-e8',
         type: 'kana_build',
-        prompt: "Build 'thank you' (formal)",
+        prompt: "thank you (formal)",
         emoji: '🙏',
         correctChars: ['あ', 'り', 'が', 'と', 'う', 'ご', 'ざ', 'い', 'ま', 'す'],
         distractors: ['す', 'み', 'せ'],
@@ -449,7 +449,7 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l4-e9',
         type: 'kana_build',
-        prompt: "Build 'excuse me'",
+        prompt: "excuse me",
         emoji: '🙇',
         correctChars: ['す', 'み', 'ま', 'せ', 'ん'],
         distractors: ['あ', 'り', 'が'],
@@ -457,7 +457,7 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l4-e10',
         type: 'multiple_choice',
-        prompt: "Review: It's morning. You say casually:",
+        prompt: "Review: It's morning. You say to a friend:",
         options: ['おはよう', 'おはようございます', 'こんにちは', 'こんばんは'],
         correctIndex: 0,
       },
@@ -507,8 +507,8 @@ export const unit2Lessons: Lesson[] = [
       { japanese: 'はい', reading: 'hai', english: 'yes', emoji: '✅' },
       { japanese: 'いいえ', reading: 'iie', english: 'no', emoji: '❌' },
       { japanese: 'おねがいします', reading: 'onegaishimasu', english: 'please', emoji: '🙏' },
-      { japanese: 'どうも', reading: 'doumo', english: 'thanks (casual)', emoji: '👍' },
-      { japanese: 'おはよう', reading: 'ohayou', english: 'morning (casual)', emoji: '🌅' },
+      { japanese: 'どうも', reading: 'doumo', english: 'thanks (friendly)', emoji: '👍' },
+      { japanese: 'おはよう', reading: 'ohayou', english: 'good morning (friendly)', emoji: '🌅' },
     ],
     exercises: [
       {
@@ -520,8 +520,8 @@ export const unit2Lessons: Lesson[] = [
           { left: 'はい', right: 'yes' },
           { left: 'いいえ', right: 'no' },
           { left: 'おねがいします', right: 'please' },
-          { left: 'どうも', right: 'thanks (casual)' },
-          { left: 'おはよう', right: 'morning (casual)' },
+          { left: 'どうも', right: 'thanks (friendly)' },
+          { left: 'おはよう', right: 'good morning (friendly)' },
         ],
       },
       {
@@ -555,7 +555,7 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l5-e6',
         type: 'kana_build',
-        prompt: "Build 'please'",
+        prompt: "please",
         emoji: '🙏',
         correctChars: ['お', 'ね', 'が', 'い', 'し', 'ま', 'す'],
         distractors: ['ど', 'う', 'も'],
@@ -604,13 +604,13 @@ export const unit2Lessons: Lesson[] = [
           { left: 'はい', right: 'yes' },
           { left: 'いいえ', right: 'no' },
           { left: 'おねがいします', right: 'please' },
-          { left: 'どうも', right: 'thanks (casual)' },
+          { left: 'どうも', right: 'thanks (friendly)' },
         ],
       },
       {
         id: 'u2-l5-e12',
         type: 'kana_build',
-        prompt: "Build 'thank you' (casual form)",
+        prompt: "thank you (short form)",
         emoji: '🙏',
         correctChars: ['あ', 'り', 'が', 'と', 'う'],
         distractors: ['す', 'み', 'ま'],

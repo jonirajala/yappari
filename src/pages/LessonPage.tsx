@@ -4,6 +4,21 @@ import { getLessonById, getUnitByLessonId } from '../data/course';
 import { useSessionStore } from '../store/useSessionStore';
 import { ExerciseRenderer } from '../components/exercises/ExerciseRenderer';
 import { LessonProvider } from '../lib/LessonContext';
+import { ReportBug } from '../components/common/ReportBug';
+import type { Exercise } from '../data/types';
+
+function getExerciseContent(ex: Exercise): string {
+  switch (ex.type) {
+    case 'multiple_choice': return `Q: ${ex.prompt} | Options: ${ex.options.join(', ')}`;
+    case 'fill_blank': return `Sentence: ${ex.sentence} | Answer: ${ex.answer}`;
+    case 'word_order': return `Prompt: ${ex.prompt} | Answer: ${ex.correctOrder.join(' ')}`;
+    case 'translation': return `Translate: ${ex.prompt} | Answer: ${ex.correctAnswer.join(' ')}`;
+    case 'kana_build': return `Build: ${ex.prompt} | Answer: ${ex.correctChars.join('')}`;
+    case 'matching': return `Match: ${ex.pairs.map(p => `${p.left}=${p.right}`).join(', ')}`;
+    case 'grammar_intro': return `Grammar: ${ex.title}`;
+    case 'vocab_intro': return `Vocab: ${ex.words.map(w => `${w.japanese}(${w.english})`).join(', ')}`;
+  }
+}
 
 export function LessonPage() {
   const { lessonId } = useParams<{ lessonId: string }>();
@@ -82,6 +97,17 @@ export function LessonPage() {
         <span className="text-sm text-gray-400 font-medium min-w-10 text-right">
           {currentIndex + 1}/{totalExercises}
         </span>
+      </div>
+
+      {/* Bug report */}
+      <div className="px-4 flex justify-end -mt-1 mb-1">
+        <ReportBug
+          lessonId={lessonId ?? ''}
+          exerciseId={currentExercise.id}
+          exerciseType={currentExercise.type}
+          exerciseNumber={currentIndex + 1}
+          exerciseContent={getExerciseContent(currentExercise)}
+        />
       </div>
 
       {/* Exercise area */}

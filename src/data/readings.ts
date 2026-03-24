@@ -6,8 +6,12 @@ export const readings: Record<string, string> = {
   // Greetings
   'こんにちは': 'konnichiwa',
   'おはようございます': 'ohayou gozaimasu',
+  'おはよう': 'ohayou',
   'こんばんは': 'konbanwa',
   'さようなら': 'sayounara',
+  'おやすみなさい': 'oyasuminasai',
+  'いただきます': 'itadakimasu',
+  'ごちそうさまでした': 'gochisousama deshita',
   'ありがとうございます': 'arigatou gozaimasu',
   'すみません': 'sumimasen',
   'はい': 'hai',
@@ -33,6 +37,9 @@ export const readings: Record<string, string> = {
   'か': 'ka',
   'の': 'no',
   'も': 'mo',
+
+  // Adjectives
+  'おおきい': 'ookii',
   'を': 'wo',
   'が': 'ga',
   'に': 'ni',

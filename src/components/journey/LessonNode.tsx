@@ -26,21 +26,6 @@ export function LessonNode({ lesson, status, unitColor, result, onTap }: Props) 
 
   return (
     <div className="flex flex-col items-center">
-      {/* Pulse ring */}
-      {isAvailable && (
-        <div
-          className="absolute rounded-full animate-pulse-ring"
-          style={{
-            width: 120,
-            height: 120,
-            backgroundColor: unitColor + '20',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-          }}
-        />
-      )}
-
       <motion.button
         whileTap={!isLocked ? { scale: 0.93 } : undefined}
         onClick={() => { if (!isLocked) onTap(); }}
@@ -62,6 +47,17 @@ export function LessonNode({ lesson, status, unitColor, result, onTap }: Props) 
             : 'bg-gray-200 text-gray-400 cursor-not-allowed'}
         `}
       >
+        {/* Pulse ring — inside button so it's centered on it */}
+        {isAvailable && (
+          <div
+            className="absolute inset-0 rounded-full animate-pulse-ring"
+            style={{
+              backgroundColor: unitColor + '25',
+              margin: -10,
+            }}
+          />
+        )}
+
         {isCompleted ? (
           <>
             <span className="text-sm leading-none mb-1">{'★'.repeat(result?.stars ?? 1)}</span>
@@ -71,7 +67,7 @@ export function LessonNode({ lesson, status, unitColor, result, onTap }: Props) 
           </>
         ) : isAvailable ? (
           <>
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" className="mb-1">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" className="mb-1 animate-pulse">
               <path d="M8 5v14l11-7z" fill="currentColor" />
             </svg>
             <span className="text-[13px] font-semibold leading-snug text-center">
@@ -91,16 +87,6 @@ export function LessonNode({ lesson, status, unitColor, result, onTap }: Props) 
         )}
       </motion.button>
 
-      {isAvailable && (
-        <div className="mt-2 animate-bounce">
-          <span
-            className="text-xs font-bold px-3 py-1 rounded-full text-white shadow-md"
-            style={{ backgroundColor: unitColor }}
-          >
-            START
-          </span>
-        </div>
-      )}
     </div>
   );
 }

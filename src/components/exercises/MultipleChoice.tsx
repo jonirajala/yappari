@@ -16,15 +16,14 @@ interface Props {
 export function MultipleChoice({ exercise, onAnswer }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
+  const [wasCorrect, setWasCorrect] = useState(false);
 
-  // Check if options contain Japanese text (for emoji/audio display)
   const hasJapaneseOptions = exercise.options.some((o) => getEmoji(o));
 
   const handleSelect = (index: number) => {
     if (answered) return;
     playTap();
     setSelected(index);
-    // Speak the option if it's Japanese
     const option = exercise.options[index];
     if (getReading(option)) {
       speakJapanese(option);
@@ -35,19 +34,18 @@ export function MultipleChoice({ exercise, onAnswer }: Props) {
     if (selected === null) return;
     const isCorrect = selected === exercise.correctIndex;
     setAnswered(true);
+    setWasCorrect(isCorrect);
 
     if (isCorrect) {
       playCorrect();
+      setTimeout(() => onAnswer(true), 800);
     } else {
       playIncorrect();
-      // Only speak the correct answer if user picked wrong (they already heard their pick)
       const correctOption = exercise.options[exercise.correctIndex];
       if (getReading(correctOption)) {
         setTimeout(() => speakJapanese(correctOption), 300);
       }
     }
-
-    setTimeout(() => onAnswer(isCorrect), 1000);
   };
 
   return (
@@ -90,9 +88,7 @@ export function MultipleChoice({ exercise, onAnswer }: Props) {
                 className={cn(
                   'rounded-2xl border-2 font-medium text-center transition-all',
                   hasJapaneseOptions ? 'p-3 flex flex-col items-center gap-1' : 'p-4 text-lg font-jp',
-                  borderColor,
-                  bgColor,
-                  textColor,
+                  borderColor, bgColor, textColor,
                   answered && isSelected && !isCorrect && 'animate-shake',
                   answered && isCorrect && 'animate-bounce-in',
                   !answered && 'active:scale-[0.98]'
@@ -105,7 +101,6 @@ export function MultipleChoice({ exercise, onAnswer }: Props) {
           })}
         </div>
 
-        {/* Audio replay for correct answer after answering */}
         {answered && getReading(exercise.options[exercise.correctIndex]) && (
           <div className="flex justify-center mt-4">
             <SpeakButton text={exercise.options[exercise.correctIndex]} size="md" />
@@ -114,18 +109,28 @@ export function MultipleChoice({ exercise, onAnswer }: Props) {
       </div>
 
       <div className="p-4 pb-8">
-        <button
-          onClick={handleCheck}
-          disabled={selected === null || answered}
-          className={cn(
-            'w-full py-4 rounded-2xl text-lg font-bold transition-all',
-            selected !== null && !answered
-              ? 'bg-primary text-white shadow-[0_4px_0_0_#B83A2A] active:shadow-none active:translate-y-1'
-              : 'bg-gray-200 text-gray-400'
-          )}
-        >
-          Check
-        </button>
+        {answered && !wasCorrect ? (
+          <button
+            onClick={() => onAnswer(false)}
+            className="w-full py-4 rounded-2xl text-lg font-bold bg-incorrect text-white
+                       shadow-[0_4px_0_0_#dc2626] active:shadow-none active:translate-y-1 transition-all"
+          >
+            Continue
+          </button>
+        ) : (
+          <button
+            onClick={handleCheck}
+            disabled={selected === null || answered}
+            className={cn(
+              'w-full py-4 rounded-2xl text-lg font-bold transition-all',
+              selected !== null && !answered
+                ? 'bg-primary text-white shadow-[0_4px_0_0_#B83A2A] active:shadow-none active:translate-y-1'
+                : 'bg-gray-200 text-gray-400'
+            )}
+          >
+            Check
+          </button>
+        )}
       </div>
     </div>
   );

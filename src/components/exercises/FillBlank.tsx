@@ -14,6 +14,7 @@ interface Props {
 export function FillBlank({ exercise, onAnswer }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
   const [answered, setAnswered] = useState(false);
+  const [wasCorrect, setWasCorrect] = useState(false);
   const [shuffledOptions] = useState(() => shuffleArray(exercise.options));
 
   const handleSelect = (option: string) => {
@@ -25,17 +26,17 @@ export function FillBlank({ exercise, onAnswer }: Props) {
 
   const handleCheck = () => {
     if (selected === null) return;
-    setAnswered(true);
     const isCorrect = selected === exercise.answer;
+    setAnswered(true);
+    setWasCorrect(isCorrect);
     if (isCorrect) {
       playCorrect();
-      // Speak the full sentence on correct — user heard the word but not the sentence
       const completeSentence = exercise.sentence.replace('＿', exercise.answer);
       setTimeout(() => speakJapanese(completeSentence), 300);
+      setTimeout(() => onAnswer(true), 800);
     } else {
       playIncorrect();
     }
-    setTimeout(() => onAnswer(isCorrect), 1000);
   };
 
   // Split sentence by ＿
@@ -124,18 +125,28 @@ export function FillBlank({ exercise, onAnswer }: Props) {
       </div>
 
       <div className="p-4 pb-8">
-        <button
-          onClick={handleCheck}
-          disabled={selected === null || answered}
-          className={cn(
-            'w-full py-4 rounded-2xl text-lg font-bold transition-all',
-            selected !== null && !answered
-              ? 'bg-primary text-white shadow-[0_4px_0_0_#B83A2A] active:shadow-none active:translate-y-1'
-              : 'bg-gray-200 text-gray-400'
-          )}
-        >
-          Check
-        </button>
+        {answered && !wasCorrect ? (
+          <button
+            onClick={() => onAnswer(false)}
+            className="w-full py-4 rounded-2xl text-lg font-bold bg-incorrect text-white
+                       shadow-[0_4px_0_0_#dc2626] active:shadow-none active:translate-y-1 transition-all"
+          >
+            Continue
+          </button>
+        ) : (
+          <button
+            onClick={handleCheck}
+            disabled={selected === null || answered}
+            className={cn(
+              'w-full py-4 rounded-2xl text-lg font-bold transition-all',
+              selected !== null && !answered
+                ? 'bg-primary text-white shadow-[0_4px_0_0_#B83A2A] active:shadow-none active:translate-y-1'
+                : 'bg-gray-200 text-gray-400'
+            )}
+          >
+            Check
+          </button>
+        )}
       </div>
     </div>
   );

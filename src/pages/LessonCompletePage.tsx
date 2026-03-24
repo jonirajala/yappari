@@ -4,29 +4,35 @@ import { motion } from 'framer-motion';
 import { useSessionStore } from '../store/useSessionStore';
 import { useProgressStore } from '../store/useProgressStore';
 import { getLessonById } from '../data/course';
-import { playComplete } from '../lib/sounds';
+import { playComplete, playIncorrect } from '../lib/sounds';
 
 export function LessonCompletePage() {
   const { lessonId } = useParams<{ lessonId: string }>();
   const navigate = useNavigate();
-  const { getScore, getStars, mistakes, reset } = useSessionStore();
+  const { getScore, getStars, isFailed, mistakes, reset } = useSessionStore();
   const { completeLesson } = useProgressStore();
   const [saved, setSaved] = useState(false);
 
   const score = getScore();
   const stars = getStars();
+  const failed = isFailed();
   const lesson = lessonId ? getLessonById(lessonId) : null;
 
   useEffect(() => {
     if (!lessonId || saved) return;
-    playComplete();
-    completeLesson({
-      lessonId,
-      completedAt: new Date().toISOString(),
-      score,
-      stars,
-      mistakes,
-    });
+
+    if (failed) {
+      playIncorrect();
+    } else {
+      playComplete();
+      completeLesson({
+        lessonId,
+        completedAt: new Date().toISOString(),
+        score,
+        stars,
+        mistakes,
+      });
+    }
     setSaved(true);
   }, [lessonId, saved]);
 
@@ -39,6 +45,65 @@ export function LessonCompletePage() {
     reset();
     navigate(`/lesson/${lessonId}`);
   };
+
+  if (failed) {
+    return (
+      <div className="h-dvh flex flex-col items-center justify-center bg-white px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center max-w-sm w-full"
+        >
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: 'spring', stiffness: 200 }}
+            className="text-6xl mb-6"
+          >
+            😔
+          </motion.div>
+
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">
+            Not quite yet
+          </h1>
+          <p className="text-gray-500 mb-2">
+            You need at least 50% to pass.
+          </p>
+
+          {lesson && (
+            <p className="text-gray-400 text-sm mb-6">{lesson.title}</p>
+          )}
+
+          <div className="flex justify-center gap-8 mb-10">
+            <div className="text-center">
+              <p className="text-3xl font-bold text-incorrect">{score}%</p>
+              <p className="text-sm text-gray-400">Score</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl font-bold text-incorrect">{mistakes}</p>
+              <p className="text-sm text-gray-400">Mistakes</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <button
+              onClick={handleRetry}
+              className="w-full btn-primary"
+            >
+              Try Again
+            </button>
+            <button
+              onClick={handleContinue}
+              className="w-full py-4 bg-gray-100 text-gray-500 text-lg font-bold rounded-2xl
+                         active:bg-gray-200 transition-all"
+            >
+              Back to Home
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
 
   return (
     <div className="h-dvh flex flex-col items-center justify-center bg-white px-6">
@@ -109,9 +174,7 @@ export function LessonCompletePage() {
         >
           <button
             onClick={handleContinue}
-            className="w-full py-4 bg-primary text-white text-lg font-bold rounded-2xl
-                       shadow-[0_4px_0_0_#B83A2A] active:shadow-none active:translate-y-1
-                       transition-all duration-100"
+            className="w-full btn-primary"
           >
             Continue
           </button>

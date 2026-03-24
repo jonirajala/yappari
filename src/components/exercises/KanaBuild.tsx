@@ -45,9 +45,13 @@ export function KanaBuild({ exercise, onAnswer }: Props) {
       selectedChars.every((c, i) => c === exercise.correctChars[i]);
     setIsCorrect(correct);
     setAnswered(true);
-    if (correct) { playCorrect(); } else { playIncorrect(); }
-    setTimeout(() => speakJapanese(exercise.correctChars.join('')), 300);
-    setTimeout(() => onAnswer(correct), 1200);
+    if (correct) {
+      playCorrect();
+      setTimeout(() => speakJapanese(exercise.correctChars.join('')), 300);
+      setTimeout(() => onAnswer(true), 800);
+    } else {
+      playIncorrect();
+    }
   };
 
   // Show the target word joined (for display after answer)
@@ -57,7 +61,7 @@ export function KanaBuild({ exercise, onAnswer }: Props) {
     <div className="flex flex-col h-full">
       <div className="flex-1 flex flex-col justify-center px-4">
         <h2 className="text-lg font-bold text-gray-800 text-center mb-1">
-          Spell this word
+          Build this word
         </h2>
         <div className="flex items-center justify-center gap-2 mb-6">
           {exercise.emoji && <span className="text-3xl">{exercise.emoji}</span>}
@@ -127,18 +131,28 @@ export function KanaBuild({ exercise, onAnswer }: Props) {
       </div>
 
       <div className="p-4 pb-8">
-        <button
-          onClick={handleCheck}
-          disabled={selectedChars.length === 0 || answered}
-          className={cn(
-            'w-full py-4 rounded-2xl text-lg font-bold transition-all',
-            selectedChars.length > 0 && !answered
-              ? 'bg-primary text-white shadow-[0_4px_0_0_#B83A2A] active:shadow-none active:translate-y-1'
-              : 'bg-gray-200 text-gray-400'
-          )}
-        >
-          Check
-        </button>
+        {answered && !isCorrect ? (
+          <button
+            onClick={() => onAnswer(false)}
+            className="w-full py-4 rounded-2xl text-lg font-bold bg-incorrect text-white
+                       shadow-[0_4px_0_0_#dc2626] active:shadow-none active:translate-y-1 transition-all"
+          >
+            Continue
+          </button>
+        ) : (
+          <button
+            onClick={handleCheck}
+            disabled={selectedChars.length === 0 || answered}
+            className={cn(
+              'w-full py-4 rounded-2xl text-lg font-bold transition-all',
+              selectedChars.length > 0 && !answered
+                ? 'bg-primary text-white shadow-[0_4px_0_0_#B83A2A] active:shadow-none active:translate-y-1'
+                : 'bg-gray-200 text-gray-400'
+            )}
+          >
+            Check
+          </button>
+        )}
       </div>
     </div>
   );

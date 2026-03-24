@@ -621,7 +621,7 @@ export const unit5Lessons: Lesson[] = [
       {
         id: 'ex-5-5-13',
         type: 'multiple_choice',
-        prompt: 'Quick casual thanks:',
+        prompt: 'Quick friendly thanks:',
         options: ['どうも', 'ありがとうございます', 'すみません', 'おねがいします'],
         correctIndex: 0,
       },

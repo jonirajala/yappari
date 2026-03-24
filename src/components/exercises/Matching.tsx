@@ -28,7 +28,6 @@ export function Matching({ exercise, onAnswer }: Props) {
       const isMatch = pairMap.get(selectedLeft) === selectedRight;
       if (isMatch) {
         playMatch();
-        speakJapanese(selectedLeft);
         setMatchedPairs((prev) => {
           const next = new Set(prev);
           next.add(selectedLeft);

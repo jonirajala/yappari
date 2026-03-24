@@ -59,7 +59,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l1-e7',
         type: 'kana_build',
-        prompt: "Build 'hello'",
+        prompt: "hello",
         emoji: '👋',
         correctChars: ['こ', 'ん', 'に', 'ち', 'は'],
         distractors: ['か', 'す', 'お'],
@@ -74,10 +74,10 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l1-e9',
         type: 'kana_build',
-        prompt: "Build 'good morning' (casual)",
-        emoji: '🌅',
-        correctChars: ['お', 'は', 'よ', 'う'],
-        distractors: ['こ', 'に', 'ち'],
+        prompt: 'hello',
+        emoji: '👋',
+        correctChars: ['こ', 'ん', 'に', 'ち', 'は'],
+        distractors: ['お', 'よ', 'う'],
       },
       {
         id: 'u1-l1-e10',
@@ -111,7 +111,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l1-e14',
         type: 'kana_build',
-        prompt: "Build 'hello' again",
+        prompt: "helloagain",
         emoji: '👋',
         correctChars: ['こ', 'ん', 'に', 'ち', 'は'],
         distractors: ['か', 'す', 'お'],
@@ -177,7 +177,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l2-e7',
         type: 'kana_build',
-        prompt: "Build 'good evening'",
+        prompt: "good evening",
         emoji: '🌙',
         correctChars: ['こ', 'ん', 'ば', 'ん', 'は'],
         distractors: ['に', 'ち', 'よ'],
@@ -192,7 +192,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l2-e9',
         type: 'kana_build',
-        prompt: "Build 'goodbye'",
+        prompt: "goodbye",
         emoji: '👋',
         correctChars: ['さ', 'よ', 'う', 'な', 'ら'],
         distractors: ['こ', 'ん', 'は'],
@@ -306,7 +306,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l3-e8',
         type: 'kana_build',
-        prompt: "Build 'good night' (short form)",
+        prompt: "good night (short form)",
         emoji: '🌙',
         correctChars: ['お', 'や', 'す', 'み'],
         distractors: ['こ', 'ん', 'は'],
@@ -314,7 +314,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l3-e9',
         type: 'kana_build',
-        prompt: "Build 'bon appetit'",
+        prompt: "bon appetit",
         emoji: '🍽️',
         correctChars: ['い', 'た', 'だ', 'き', 'ま', 'す'],
         distractors: ['ご', 'ち', 'そ'],
@@ -451,7 +451,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l4-e9',
         type: 'kana_build',
-        prompt: "Build 'good evening'",
+        prompt: "good evening",
         emoji: '🌙',
         correctChars: ['こ', 'ん', 'ば', 'ん', 'は'],
         distractors: ['に', 'ち', 'よ'],
@@ -459,7 +459,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l4-e10',
         type: 'kana_build',
-        prompt: "Build 'goodbye'",
+        prompt: "goodbye",
         emoji: '👋',
         correctChars: ['さ', 'よ', 'う', 'な', 'ら'],
         distractors: ['こ', 'ん', 'は'],
@@ -489,7 +489,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l4-e13',
         type: 'kana_build',
-        prompt: "Build 'bon appetit'",
+        prompt: "bon appetit",
         emoji: '🍽️',
         correctChars: ['い', 'た', 'だ', 'き', 'ま', 'す'],
         distractors: ['ご', 'ち', 'そ'],
@@ -557,7 +557,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l5-e5',
         type: 'kana_build',
-        prompt: "Build 'thank you for the meal'",
+        prompt: "thank you for the meal",
         emoji: '🙏',
         correctChars: ['ご', 'ち', 'そ', 'う', 'さ', 'ま', 'で', 'し', 'た'],
         distractors: ['い', 'お', 'に'],
@@ -584,7 +584,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l5-e8',
         type: 'kana_build',
-        prompt: "Build 'hello'",
+        prompt: "hello",
         emoji: '👋',
         correctChars: ['こ', 'ん', 'に', 'ち', 'は'],
         distractors: ['か', 'す', 'お'],
@@ -621,7 +621,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l5-e12',
         type: 'kana_build',
-        prompt: "Build 'good morning'",
+        prompt: "good morning",
         emoji: '🌅',
         correctChars: ['お', 'は', 'よ', 'う', 'ご', 'ざ', 'い', 'ま', 'す'],
         distractors: ['こ', 'ん', 'に'],
@@ -643,7 +643,7 @@ export const unit1Lessons: Lesson[] = [
       {
         id: 'u1-l5-e15',
         type: 'kana_build',
-        prompt: "Build 'goodbye'",
+        prompt: "goodbye",
         emoji: '👋',
         correctChars: ['さ', 'よ', 'う', 'な', 'ら'],
         distractors: ['こ', 'ん', 'は'],

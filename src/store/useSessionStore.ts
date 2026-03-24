@@ -12,6 +12,8 @@ interface SessionState {
   currentIndex: number;
   answers: AnswerRecord[];
   mistakes: number;
+  /** Whether retry exercises have been appended */
+  retriesAdded: boolean;
   startLesson: (lessonId: string, exercises: Exercise[]) => void;
   submitAnswer: (exerciseId: string, wasCorrect: boolean) => void;
   nextExercise: () => void;
@@ -19,8 +21,12 @@ interface SessionState {
   isComplete: () => boolean;
   getScore: () => number;
   getStars: () => number;
+  isFailed: () => boolean;
   reset: () => void;
 }
+
+// Exercise types that are scored (not intros)
+const SCORED_TYPES = ['multiple_choice', 'matching', 'fill_blank', 'word_order', 'translation', 'kana_build'];
 
 export const useSessionStore = create<SessionState>()((set, get) => ({
   lessonId: null,
@@ -28,15 +34,48 @@ export const useSessionStore = create<SessionState>()((set, get) => ({
   currentIndex: 0,
   answers: [],
   mistakes: 0,
+  retriesAdded: false,
 
   startLesson: (lessonId, exercises) =>
-    set({ lessonId, exercises, currentIndex: 0, answers: [], mistakes: 0 }),
+    set({ lessonId, exercises, currentIndex: 0, answers: [], mistakes: 0, retriesAdded: false }),
 
   submitAnswer: (exerciseId, wasCorrect) =>
-    set((state) => ({
-      answers: [...state.answers, { exerciseId, wasCorrect }],
-      mistakes: wasCorrect ? state.mistakes : state.mistakes + 1,
-    })),
+    set((state) => {
+      const newAnswers = [...state.answers, { exerciseId, wasCorrect }];
+      const newMistakes = wasCorrect ? state.mistakes : state.mistakes + 1;
+
+      // Check if we've reached the end of the original exercises
+      // and need to add retry exercises for wrong answers
+      const nextIndex = state.currentIndex + 1;
+      if (!state.retriesAdded && nextIndex >= state.exercises.length) {
+        // Find exercises that were answered wrong (only scored types)
+        const wrongExerciseIds = new Set(
+          newAnswers
+            .filter((a) => !a.wasCorrect)
+            .map((a) => a.exerciseId)
+        );
+
+        const retryExercises = state.exercises.filter(
+          (ex) => wrongExerciseIds.has(ex.id) && SCORED_TYPES.includes(ex.type)
+        );
+
+        if (retryExercises.length > 0) {
+          // Append retry exercises with modified IDs
+          const retries = retryExercises.map((ex) => ({
+            ...ex,
+            id: ex.id + '-retry',
+          }));
+          return {
+            answers: newAnswers,
+            mistakes: newMistakes,
+            exercises: [...state.exercises, ...retries],
+            retriesAdded: true,
+          };
+        }
+      }
+
+      return { answers: newAnswers, mistakes: newMistakes };
+    }),
 
   nextExercise: () =>
     set((state) => ({ currentIndex: state.currentIndex + 1 })),
@@ -53,7 +92,10 @@ export const useSessionStore = create<SessionState>()((set, get) => ({
 
   getScore: () => {
     const { answers } = get();
-    const scored = answers.filter((a) => a.wasCorrect !== undefined);
+    // Only count scored exercises (exclude intros and retries)
+    const scored = answers.filter(
+      (a) => !a.exerciseId.endsWith('-retry') && a.wasCorrect !== undefined
+    );
     if (scored.length === 0) return 100;
     const correct = scored.filter((a) => a.wasCorrect).length;
     return Math.round((correct / scored.length) * 100);
@@ -62,10 +104,15 @@ export const useSessionStore = create<SessionState>()((set, get) => ({
   getStars: () => {
     const score = get().getScore();
     if (score >= 95) return 3;
-    if (score >= 75) return 2;
-    return 1;
+    if (score >= 80) return 2;
+    if (score >= 50) return 1;
+    return 0; // failed
+  },
+
+  isFailed: () => {
+    return get().getScore() < 50;
   },
 
   reset: () =>
-    set({ lessonId: null, exercises: [], currentIndex: 0, answers: [], mistakes: 0 }),
+    set({ lessonId: null, exercises: [], currentIndex: 0, answers: [], mistakes: 0, retriesAdded: false }),
 }));
