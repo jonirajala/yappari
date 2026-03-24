@@ -6,11 +6,13 @@ import { useAuthStore } from '../store/useAuthStore';
 import { Logo } from '../components/common/Logo';
 import { isSupabaseConfigured } from '../lib/supabase';
 import { AuthModal } from '../components/auth/AuthModal';
+import { AboutModal } from '../components/common/AboutModal';
 
 export function OnboardingPage() {
   const [step, setStep] = useState(0);
   const [name, setName] = useState('');
   const [showAuth, setShowAuth] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signup');
   const { setName: storeName, completeOnboarding } = useUserStore();
   const user = useAuthStore((s) => s.user);
@@ -91,6 +93,12 @@ export function OnboardingPage() {
               >
                 {isSupabaseConfigured() ? 'Continue as Guest' : 'Get Started'}
               </button>
+              <button
+                onClick={() => setShowAbout(true)}
+                className="w-full py-3 text-sm font-semibold text-gray-500 rounded-2xl border border-gray-200 bg-white active:bg-gray-50 transition-all"
+              >
+                What is this?
+              </button>
             </div>
           </motion.div>
         )}
@@ -134,6 +142,7 @@ export function OnboardingPage() {
       </AnimatePresence>
 
       {showAuth && <AuthModal onClose={() => setShowAuth(false)} defaultMode={authMode} />}
+      {showAbout && <AboutModal onClose={() => setShowAbout(false)} />}
     </div>
   );
 }

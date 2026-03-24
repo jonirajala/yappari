@@ -5,12 +5,14 @@ import { useProgressStore } from '../store/useProgressStore';
 import { useAuthStore } from '../store/useAuthStore';
 import { AccountSection } from '../components/auth/AccountSection';
 import { clearSupabaseProgress } from '../lib/syncProgress';
+import { AboutModal } from '../components/common/AboutModal';
 
 export function SettingsPage() {
   const navigate = useNavigate();
   const { name, showRomaji, toggleRomaji, scriptMode, setScriptMode } = useUserStore();
   const { completedLessons, totalXp, reset: resetProgress } = useProgressStore();
   const [showResetConfirm, setShowResetConfirm] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
 
   const completedCount = Object.keys(completedLessons).length;
 
@@ -139,6 +141,52 @@ export function SettingsPage() {
           </div>
         </section>
 
+        <section>
+          <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wide mb-3">About</h2>
+          <div className="bg-surface rounded-2xl p-4 space-y-4">
+            <div>
+              <p className="font-bold text-gray-800">Mojibun v0.1</p>
+              <p className="text-sm text-gray-500 mt-1">
+                Many language apps are expensive. With modern LLMs, making a learning app is
+                not hard anymore. Learning should be free, so this app exists.
+              </p>
+              <p className="text-sm text-gray-500 mt-3">
+                The course still needs a lot of work, and all feedback is appreciated.
+              </p>
+            </div>
+
+            <div className="text-sm text-gray-600 space-y-1">
+              <p>
+                Open source:{' '}
+                <a
+                  href="https://github.com/jonirajala/mojibun"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-primary font-semibold underline underline-offset-2"
+                >
+                  github.com/jonirajala/mojibun
+                </a>
+              </p>
+              <p>
+                Questions:{' '}
+                <a
+                  href="mailto:joni.m.rajala@gmail.com"
+                  className="text-primary font-semibold underline underline-offset-2"
+                >
+                  joni.m.rajala@gmail.com
+                </a>
+              </p>
+            </div>
+
+            <button
+              onClick={() => setShowAbout(true)}
+              className="w-full py-3 bg-white border-2 border-gray-200 text-gray-700 font-bold rounded-2xl"
+            >
+              Read More
+            </button>
+          </div>
+        </section>
+
         {/* About */}
         <section className="text-center pt-4">
           <p className="font-jp text-lg text-gray-300">やっぱり v 0.1</p>
@@ -178,6 +226,8 @@ export function SettingsPage() {
           </div>
         </div>
       )}
+
+      {showAbout && <AboutModal onClose={() => setShowAbout(false)} />}
     </div>
   );
 }
