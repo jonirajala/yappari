@@ -9,7 +9,7 @@ import { AboutModal } from '../components/common/AboutModal';
 
 export function SettingsPage() {
   const navigate = useNavigate();
-  const { name, showRomaji, toggleRomaji, scriptMode, setScriptMode } = useUserStore();
+  const { showRomaji, toggleRomaji, scriptMode, setScriptMode } = useUserStore();
   const { completedLessons, totalXp, reset: resetProgress } = useProgressStore();
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
@@ -34,23 +34,8 @@ export function SettingsPage() {
       </div>
 
       <div className="max-w-lg mx-auto px-4 py-6 space-y-6">
-        {/* Profile */}
-        <section>
-          <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wide mb-3">Profile</h2>
-          <div className="bg-surface rounded-2xl p-4">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                <span className="text-2xl font-bold text-primary">
-                  {name.charAt(0).toUpperCase()}
-                </span>
-              </div>
-              <div>
-                <p className="text-lg font-bold text-gray-800">{name}</p>
-                <p className="text-sm text-gray-400">Japanese Learner</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Account */}
+        <AccountSection />
 
         {/* Stats */}
         <section>
@@ -66,9 +51,6 @@ export function SettingsPage() {
             </div>
           </div>
         </section>
-
-        {/* Account */}
-        <AccountSection />
 
         {/* Reading Aid */}
         <section>
