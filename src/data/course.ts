@@ -1,10 +1,12 @@
-import type { Unit } from './types.ts';
+import type { Unit, JourneyItem, MilestoneReview } from './types.ts';
 import { unit1Lessons } from './v2/unit1.ts';
 import { unit2Lessons } from './v2/unit2.ts';
 import { unit3Lessons } from './v2/unit3.ts';
 import { unit4Lessons } from './v2/unit4.ts';
 import { unit5Lessons } from './v2/unit5.ts';
 import { unit6Lessons } from './v2/unit6.ts';
+import { milestone1 } from './v2/milestone1.ts';
+import { milestone2 } from './v2/milestone2.ts';
 
 export const course: Unit[] = [
   {
@@ -90,12 +92,54 @@ export const course: Unit[] = [
   },
 ];
 
+export const milestones: MilestoneReview[] = [milestone1, milestone2];
+
+/** Journey sequence interleaving units and milestones */
+export const journey: JourneyItem[] = buildJourney();
+
+function buildJourney(): JourneyItem[] {
+  const milestoneMap = new Map(milestones.map((m) => [m.afterUnitId, m]));
+  const items: JourneyItem[] = [];
+  for (const unit of course) {
+    items.push({ type: 'unit', unit });
+    const ms = milestoneMap.get(unit.id);
+    if (ms) items.push({ type: 'milestone', milestone: ms });
+  }
+  return items;
+}
+
+/**
+ * Flat ordered sequence of all playable IDs (lessons + milestones).
+ * Used for gating logic and "next" navigation.
+ */
+const _journeySequence: { id: string; type: 'lesson' | 'milestone' }[] = (() => {
+  const seq: { id: string; type: 'lesson' | 'milestone' }[] = [];
+  for (const item of journey) {
+    if (item.type === 'unit') {
+      for (const lesson of item.unit.lessons) {
+        seq.push({ id: lesson.id, type: 'lesson' });
+      }
+    } else {
+      seq.push({ id: item.milestone.id, type: 'milestone' });
+    }
+  }
+  return seq;
+})();
+
+export function getJourneySequence() {
+  return _journeySequence;
+}
+
 export function getAllLessons() {
   return course.flatMap((unit) => unit.lessons);
 }
 
 export function getLessonById(lessonId: string) {
   return getAllLessons().find((l) => l.id === lessonId);
+}
+
+export function getMilestoneById(id: string): MilestoneReview | undefined {
+  return milestones.find((m) => m.id === id);
 }
 
 export function getUnitByLessonId(lessonId: string) {
@@ -114,4 +158,8 @@ export function getPreviousLessonId(currentLessonId: string): string | null {
   const idx = allLessons.findIndex((l) => l.id === currentLessonId);
   if (idx <= 0) return null;
   return allLessons[idx - 1].id;
+}
+
+export function isMilestoneId(id: string): boolean {
+  return milestones.some((m) => m.id === id);
 }

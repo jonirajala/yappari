@@ -1,25 +1,21 @@
 import { useState, useEffect, useMemo } from 'react';
-import type { MultipleChoiceExercise } from '../../data/types';
+import type { DialogueResponseExercise } from '../../data/types';
 import { cn } from '../../lib/utils';
 import { JpText } from '../common/JpText';
-import { VisualIcon } from '../common/VisualIcon';
 import { getReading } from '../../data/readings';
-import { getEmoji, hasVisual } from '../../data/emoji';
-import { SpeakButton } from '../common/SpeakButton';
 import { speakJapanese } from '../../lib/speech';
 import { playTap, playCorrect, playIncorrect } from '../../lib/sounds';
 
 interface Props {
-  exercise: MultipleChoiceExercise;
+  exercise: DialogueResponseExercise;
   onAnswer: (correct: boolean) => void;
 }
 
-export function MultipleChoice({ exercise, onAnswer }: Props) {
+export function DialogueResponse({ exercise, onAnswer }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
   const [wasCorrect, setWasCorrect] = useState(false);
 
-  // Shuffle options but track which shuffled index is correct
   const { shuffledOptions, correctShuffledIndex } = useMemo(() => {
     const indices = exercise.options.map((_, i) => i);
     for (let i = indices.length - 1; i > 0; i--) {
@@ -32,23 +28,18 @@ export function MultipleChoice({ exercise, onAnswer }: Props) {
     };
   }, [exercise.id]);
 
-  const hasJapaneseOptions = exercise.options.some((o) => hasVisual(o));
-  const isListening = exercise.prompt.toLowerCase().includes('what do you hear');
-
   useEffect(() => {
-    if (isListening) {
-      speakJapanese(shuffledOptions[correctShuffledIndex]);
+    if (getReading(exercise.speakerLine)) {
+      speakJapanese(exercise.speakerLine);
     }
-  }, []);
+  }, [exercise.id]);
 
   const handleSelect = (index: number) => {
     if (answered) return;
     playTap();
     setSelected(index);
-    const option = exercise.options[index];
-    if (getReading(option)) {
-      speakJapanese(option);
-    }
+    const option = shuffledOptions[index];
+    if (getReading(option)) speakJapanese(option);
   };
 
   const handleCheck = () => {
@@ -56,41 +47,41 @@ export function MultipleChoice({ exercise, onAnswer }: Props) {
     const isCorrect = selected === correctShuffledIndex;
     setAnswered(true);
     setWasCorrect(isCorrect);
-
     if (isCorrect) {
       playCorrect();
-      setTimeout(() => onAnswer(true), 800);
-    } else {
-      playIncorrect();
       const correctOption = shuffledOptions[correctShuffledIndex];
       if (getReading(correctOption)) {
         setTimeout(() => speakJapanese(correctOption), 300);
       }
+      setTimeout(() => onAnswer(true), 800);
+    } else {
+      playIncorrect();
     }
   };
 
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 flex flex-col justify-center px-4">
-        {isListening ? (
-          <div className="flex flex-col items-center gap-3 mb-8">
-            <h2 className="text-xl font-bold text-gray-800">What do you hear?</h2>
-            <SpeakButton text={shuffledOptions[correctShuffledIndex]} size="lg" />
+        {/* Speaker bubble */}
+        <div className="max-w-sm mx-auto w-full mb-6">
+          <p className="text-xs font-bold text-gray-400 mb-1 ml-3">{exercise.speaker}</p>
+          <div className="bg-gray-100 rounded-2xl rounded-tl-sm p-4">
+            <p className="font-jp text-lg">
+              <JpText text={exercise.speakerLine} reading={getReading(exercise.speakerLine)} />
+            </p>
           </div>
-        ) : (
-          <h2 className="text-xl font-bold text-gray-800 text-center mb-8">
-            {exercise.prompt}
-          </h2>
-        )}
+        </div>
 
-        <div className={cn(
-          'gap-3 max-w-md mx-auto w-full',
-          hasJapaneseOptions ? 'grid grid-cols-2' : 'grid grid-cols-1'
-        )}>
+        {/* Prompt */}
+        <p className="text-center text-sm text-gray-500 mb-6">
+          {exercise.prompt ?? 'You reply:'}
+        </p>
+
+        {/* Options */}
+        <div className="grid grid-cols-1 gap-3 max-w-md mx-auto w-full">
           {shuffledOptions.map((option, i) => {
             const isCorrect = i === correctShuffledIndex;
             const isSelected = i === selected;
-            const emoji = getEmoji(option);
 
             let borderColor = 'border-gray-200';
             let bgColor = 'bg-white';
@@ -114,26 +105,17 @@ export function MultipleChoice({ exercise, onAnswer }: Props) {
                 key={i}
                 onClick={() => handleSelect(i)}
                 className={cn(
-                  'rounded-2xl border-2 font-medium text-center transition-all',
-                  hasJapaneseOptions ? 'p-3 flex flex-col items-center gap-1' : 'p-4 text-lg font-jp',
+                  'font-jp p-4 rounded-2xl border-2 text-base font-medium text-left transition-all',
                   borderColor, bgColor, textColor,
                   answered && isSelected && !isCorrect && 'animate-shake',
-                  answered && isCorrect && 'animate-bounce-in',
                   !answered && 'active:scale-[0.98]'
                 )}
               >
-                {emoji && <VisualIcon text={option} sizeClass="w-14 h-14" />}
-                <JpText text={option} reading={getReading(option)} className={hasJapaneseOptions ? 'text-base' : ''} />
+                <JpText text={option} reading={getReading(option)} />
               </button>
             );
           })}
         </div>
-
-        {answered && getReading(shuffledOptions[correctShuffledIndex]) && (
-          <div className="flex justify-center mt-4">
-            <SpeakButton text={shuffledOptions[correctShuffledIndex]} size="md" />
-          </div>
-        )}
       </div>
 
       <div className="p-4 pb-8">

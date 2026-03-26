@@ -46,6 +46,12 @@ Each unit follows this internal pattern:
 - `KB` = kana_build
 - `FB` = fill_blank
 - `WO` = word_order
+- `TR` = translation
+- `LI` = listening
+- `TF` = true_false
+- `DR` = dialogue_response
+- `VI` = vocab_intro
+- `GI` = grammar_intro
 
 ---
 
@@ -68,1211 +74,1150 @@ should be treated as the source of truth.
 
 ---
 
-## Cumulative Vocabulary & Grammar Tracker
-
-This table shows the intended cumulative knowledge after each current detailed unit.
-
-| After Unit | Total Vocab | Total Grammar | Cumulative Words |
-|------------|-------------|---------------|-----------------|
-| 1 | 4 | 0 | こんにちは おはようございます こんばんは さようなら |
-| 2 | 9 | 0 | + ありがとうございます すみません はい いいえ おねがいします |
-| 3 | 19 | 3 (は, です, か) | + わたし がくせい せんせい です なまえ おなまえは さん か じゃないです ともだち |
-| 4 | 27 | 5 (+これ/それ/あれ, なん) | + これ それ あれ なん ほん ペン かばん でんわ |
-| 5 | 36 | 8 (+この/その/あの, の) | + この その あの の とけい くるま かさ テーブル いす |
-| 6 | 45 | 10 (+も, ここ/そこ/あそこ/どこ, どれ/どの) | + も ここ そこ あそこ どこ どれ どの トイレ えき |
-
----
+<!-- AUTO-GENERATED BELOW - DO NOT EDIT MANUALLY -->
 
 ## Unit 1: Hello!
 
-**Theme:** Shortest, highest-confidence greetings first
-**Grammar:** None (pure vocabulary, set phrases)
-**New vocabulary:** 4 words across 2 content lessons
-**Review material:** None (first unit)
+**Theme:** Shortest, highest-confidence greetings only
 
 ---
 
-### Lesson 1.1: Good Morning, Good Afternoon
+### Good Morning, Good Afternoon (おはよう、こんにちは)
 
-**New vocabulary (2 words):**
+**Vocabulary (2 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | こんにちは | konnichiwa | hello / good afternoon |
 | おはようございます | ohayou gozaimasu | good morning |
 
-**Grammar:** None
-**Review:** None (first lesson ever)
-**Lesson flow:** vocab_intro → recognition → spelling
-
-**Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'hello'?" → こんにちは / おはようございます | New |
-| 2 | MC | "What does おはようございます mean?" → Good morning / Hello / Goodbye / Excuse me | New |
-| 3 | MC | "You meet a friend at 3pm. You say:" → こんにちは | New |
-| 4 | MC | "You arrive at school at 8am. You say:" → おはようございます | New |
-| 5 | MA | Match こんにちは, おはようございます to hello, good morning | New |
-| 6 | KB | Build こんにちは from kana: こ ん に ち は (distractors: か, す, お) | New |
-| 7 | MC | "It's lunchtime. You greet your coworker. You say:" → こんにちは | New |
-| 8 | KB | Build おはよう from kana: お は よ う (distractors: こ, に, ち) | New |
-| 9 | MC | "Which greeting is for the morning?" → おはようございます | New |
-| 10 | MC | Hear こんにちは, pick correct text from options | New |
-| 11 | MA | Match again: こんにちは, おはようございます to meanings (reinforcement) | New |
-| 12 | MC | "It's 7am. What do you say?" → おはようございます | New |
-| 13 | KB | Build こんにちは again (faster recognition) | New |
+**Exercises (14):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: こんにちは, おはようございます |
+| 2 | MC | "Which means 'hello'?" → こんにちは |
+| 3 | MC | "What does おはようございます mean?" → Good morning |
+| 4 | MC | "You meet a friend at 3pm. You say:" → こんにちは |
+| 5 | MC | "You arrive at school at 8am. You say:" → おはようございます |
+| 6 | MA | Match 2 pairs: こんにちは=hello, おはようございます=good morning |
+| 7 | KB | Build "hello" 👋: こ ん に ち は (distractors: か, す, お) |
+| 8 | LI | Listen: こんにちは → hello / good morning / good evening / goodbye |
+| 9 | KB | Build "good morning" 🌅: お は よ う ご ざ い ま す (distractors: こ, に, ち) |
+| 10 | MC | "Which greeting is for the morning?" → おはようございます |
+| 11 | MC | "What does こんにちは mean?" → Hello |
+| 12 | LI | Listen: おはようございます → good morning / hello / good evening / goodbye |
+| 13 | MC | "It's 7am. What do you say?" → おはようございます |
+| 14 | KB | Build "hello again" 👋: こ ん に ち は (distractors: か, す, お) |
 
 ---
 
-### Lesson 1.2: Good Evening, Goodbye
+### Good Evening, Goodbye (こんばんは、さようなら)
 
-**New vocabulary (2 words):**
+**Vocabulary (2 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | こんばんは | konbanwa | good evening |
 | さようなら | sayounara | goodbye |
 
-**Grammar:** None
-**Review:** L1.1 (こんにちは, おはようございます)
-**Lesson flow:** vocab_intro → recognition → spelling → review
-
 **Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'good evening'?" → こんばんは | New |
-| 2 | MC | "What does さようなら mean?" → Goodbye / Good evening / Hello / Good morning | New |
-| 3 | MC | "It's 8pm. You greet someone. You say:" → こんばんは | New |
-| 4 | MC | "You're leaving for the day. You say:" → さようなら | New |
-| 5 | MA | Match こんばんは, さようなら to good evening, goodbye | New |
-| 6 | KB | Build こんばんは from kana: こ ん ば ん は (distractors: に, ち, よ) | New |
-| 7 | MC | "Which is a farewell, not a greeting?" → さようなら | New |
-| 8 | KB | Build さようなら from kana: さ よ う な ら (distractors: こ, ん, は) | New |
-| 9 | MC | **Review L1.1:** "You arrive at school at 8am. You say:" → おはようございます | Review |
-| 10 | MC | **Review L1.1:** "Which means 'hello'?" → こんにちは | Review |
-| 11 | MA | Match all 4 words: こんにちは, おはようございます, こんばんは, さようなら | Review |
-| 12 | MC | "It's 2pm. What do you say?" → こんにちは | Review |
-| 13 | MC | "It's 9pm. You greet a neighbor. You say:" → こんばんは | New |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: こんばんは, さようなら |
+| 2 | MC | "Which means 'good evening'?" → こんばんは |
+| 3 | MC | "What does さようなら mean?" → Goodbye |
+| 4 | MC | "It's 8pm. You greet someone. You say:" → こんばんは |
+| 5 | MC | "You're leaving for the day. You say:" → さようなら |
+| 6 | MA | Match 2 pairs: こんばんは=good evening, さようなら=goodbye |
+| 7 | KB | Build "good evening" 🌙: こ ん ば ん は (distractors: に, ち, よ) |
+| 8 | KB | Build "goodbye" 👋: さ よ う な ら (distractors: こ, ん, は) |
+| 9 | MC | "Review: You arrive at school at 8am. You say:" → おはようございます |
+| 10 | DR | Tanaka: "こんにちは！" — You reply: → こんにちは |
+| 11 | MA | Match 4 pairs: こんにちは=hello, おはようございます=good morning, こんばんは=good evening, さようなら=goodbye |
+| 12 | MC | "It's 2pm. What do you say?" → こんにちは |
+| 13 | LI | Listen: こんばんは → good evening / good morning / hello / goodbye |
 
 ---
 
-### Lesson 1.3: Time-of-Day Review
+### Time-of-Day Review (じかんのあいさつ)
 
-**New vocabulary:** None
-**Grammar:** None
-**Review:** L1.1-1.2 (こんにちは, おはようございます, こんばんは, さようなら)
-**Lesson flow:** contrast practice → recognition → spelling → review
+**Vocabulary (4 words):**
+| Japanese | Reading | English |
+|----------|---------|---------|
+| こんにちは | konnichiwa | hello / good afternoon |
+| おはようございます | ohayou gozaimasu | good morning |
+| こんばんは | konbanwa | good evening |
+| さようなら | sayounara | goodbye |
 
 **Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "It's 7am. What do you say?" → おはようございます | Review |
-| 2 | MC | "It's 2pm. What do you say?" → こんにちは | Review |
-| 3 | MC | "It's 8pm. What do you say?" → こんばんは | Review |
-| 4 | MC | "You are leaving for the day. You say:" → さようなら | Review |
-| 5 | MA | Match all 4 Unit 1 words to meanings | Review |
-| 6 | KB | Build こんにちは from kana | Review |
-| 7 | KB | Build こんばんは from kana | Review |
-| 8 | MC | "Which greeting is used in the morning?" → おはようございます | Review |
-| 9 | MC | "Which greeting is used in the evening?" → こんばんは | Review |
-| 10 | MC | Hear おはようございます, pick correct text from options | Review |
-| 11 | MA | Match time of day to greeting: morning, afternoon, evening, leaving | Review |
-| 12 | MC | "Which one is a farewell?" → さようなら | Review |
-| 13 | KB | Build さようなら from kana | Review |
-| 14 | MC | "Friend says こんにちは. What time is it likely?" → Afternoon | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | MC | "It's 7am. What do you say?" → おはようございます |
+| 2 | MC | "It's 2pm. What do you say?" → こんにちは |
+| 3 | MC | "It's 8pm. What do you say?" → こんばんは |
+| 4 | MC | "You are leaving for the day. You say:" → さようなら |
+| 5 | MA | Match 4 pairs: こんにちは=hello, おはようございます=good morning, こんばんは=good evening, さようなら=goodbye |
+| 6 | KB | Build "hello" 👋: こ ん に ち は (distractors: か, す, お) |
+| 7 | KB | Build "good evening" 🌙: こ ん ば ん は (distractors: に, ち, よ) |
+| 8 | MC | "Which greeting is used in the morning?" → おはようございます |
+| 9 | MC | "Which greeting is used in the evening?" → こんばんは |
+| 10 | TF | おはようございます = "Good morning" → Correct |
+| 11 | MA | Match 4 pairs: morning=おはようございます, afternoon=こんにちは, evening=こんばんは, leaving=さようなら |
+| 12 | MC | "Which one is a farewell?" → さようなら |
+| 13 | KB | Build "goodbye" 🚪: さ よ う な ら (distractors: こ, ん, は) |
+| 14 | DR | Friend: "おはようございます！" — It is probably: → Morning |
 
 ---
 
-### Lesson 1.4: Practice — All Greetings
+### Practice — All Greetings (れんしゅう)
 
-**New vocabulary:** None
-**Grammar:** None
-**Review:** All Unit 1 (4 words from L1.1-1.3)
-**Lesson flow:** Mixed review, consolidation
+**Vocabulary (4 words):**
+| Japanese | Reading | English |
+|----------|---------|---------|
+| こんにちは | konnichiwa | hello / good afternoon |
+| おはようございます | ohayou gozaimasu | good morning |
+| こんばんは | konbanwa | good evening |
+| さようなら | sayounara | goodbye |
 
 **Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MA | Match all 4 words to meanings (timed feel) | Review |
-| 2 | MC | "It's 7:30am. You see your neighbor. You say:" → おはようございます | Review |
-| 3 | MC | "It's noon. You greet a friend:" → こんにちは | Review |
-| 4 | MC | "It's 7pm. You arrive at a party:" → こんばんは | Review |
-| 5 | MC | "You're heading home. You say:" → さようなら | Review |
-| 6 | MC | "Which greeting fits 9pm?" → こんばんは | Review |
-| 7 | MC | "Which phrase means goodbye?" → さようなら | Review |
-| 8 | MC | "It's 3pm. You say:" → こんにちは | Review |
-| 9 | KB | Build こんばんは from kana | Review |
-| 10 | KB | Build さようなら from kana | Review |
-| 11 | MA | Match: おはようございます, こんにちは, こんばんは, さようなら to morning, afternoon, evening, goodbye | Review |
-| 12 | MC | "Which greeting is NOT tied to a time of day?" → さようなら | Review |
-| 13 | KB | Build おはよう from kana: お は よ う | Review |
-| 14 | MC | "Friend says こんにちは. What time is it likely?" → Afternoon | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | MA | Match 4 pairs: こんにちは=hello, おはようございます=good morning, こんばんは=good evening, さようなら=goodbye |
+| 2 | MC | "It's 7:30am. You see your neighbor. You say:" → おはようございます |
+| 3 | MC | "It's noon. You greet a friend:" → こんにちは |
+| 4 | MC | "It's 7pm. You arrive at a party:" → こんばんは |
+| 5 | MC | "You're heading home. You say:" → さようなら |
+| 6 | MC | "Which greeting fits 9pm?" → こんばんは |
+| 7 | LI | Listen: さようなら → goodbye / hello / good morning / good evening |
+| 8 | MC | "It's 3pm. You say:" → こんにちは |
+| 9 | KB | Build "good evening" 🌙: こ ん ば ん は (distractors: に, ち, よ) |
+| 10 | KB | Build "goodbye" 🚪: さ よ う な ら (distractors: こ, ん, は) |
+| 11 | MA | Match 4 pairs: おはようございます=morning, こんにちは=afternoon, こんばんは=evening, さようなら=goodbye |
+| 12 | MC | "Which greeting is NOT tied to a time of day?" → さようなら |
+| 13 | KB | Build "good morning" 🌅: お は よ う (distractors: こ, に, ち) |
+| 14 | TF | こんばんは = "Good morning" → Wrong (Good evening) |
 
 ---
 
-### Lesson 1.5: Unit 1 Quiz
-
-**New vocabulary:** None
-**Grammar:** None
-**Review:** Full Unit 1 — all 4 words
-**Lesson flow:** Quiz format, mixed exercises, slightly harder
+### Unit 1 Quiz (テスト)
 
 **Exercises (15):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "What does こんにちは mean?" → hello | Review |
-| 2 | MC | "What does おはようございます mean?" → good morning | Review |
-| 3 | MA | Match all 4 words to English meanings | Review |
-| 4 | MC | "You're going home. You say:" → さようなら | Review |
-| 5 | KB | Build こんばんは from kana | Review |
-| 6 | MC | "Pick the WRONG pairing:" → こんばんは = good morning (trap) | Review |
-| 7 | MC | "Which phrase means 'goodbye'?" → さようなら | Review |
-| 8 | KB | Build こんにちは from kana | Review |
-| 9 | MC | "At 8pm, you greet someone with ___." → こんばんは | Review |
-| 10 | MC | "It's 6am. You greet someone:" → おはようございます | Review |
-| 11 | MA | Match time-of-day to greeting: morning→おはようございます, afternoon→こんにちは, evening→こんばんは, leaving→さようなら | Review |
-| 12 | KB | Build おはようございます from kana | Review |
-| 13 | MC | "Which is NOT tied to a time of day?" → さようなら | Review |
-| 14 | MC | "You leave school. You say:" → さようなら | Review |
-| 15 | KB | Build さようなら from kana | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | TR | "Good morning" → おはようございます |
+| 2 | FB | "A: ＿　B: こんばんは！" → こんばんは — "A: Good evening! B: Good evening!" |
+| 3 | MC | "Pick the WRONG pairing:" → こんばんは = good morning |
+| 4 | KB | Build "good evening": こ ん ば ん は (distractors: に, ち, よ) |
+| 5 | TR | "Goodbye" → さようなら |
+| 6 | MC | "Your friend says こんにちは. What time is it most likely?" → Afternoon |
+| 7 | FB | "It's 7am. You say: ＿" → おはようございます — "Good morning" |
+| 8 | KB | Build "hello": こ ん に ち は (distractors: ば, す, お) |
+| 9 | MC | "Which is NOT tied to a specific time of day?" → さようなら |
+| 10 | TR | "Good evening" → こんばんは |
+| 11 | KB | Build "good morning (formal)": お は よ う ご ざ い ま す (distractors: こ, に, ち) |
+| 12 | FB | "You are leaving school. You say: ＿" → さようなら — "Goodbye" |
+| 13 | MC | "Someone says おはようございます. It is probably:" → Morning |
+| 14 | KB | Build "goodbye": さ よ う な ら (distractors: こ, ん, は) |
+| 15 | MA | Match 4 pairs: こんにちは=hello, おはようございます=good morning, こんばんは=good evening, さようなら=goodbye |
 
 ---
 
 ## Unit 2: Please & Thank You
 
 **Theme:** Social survival with short useful phrases
-**Grammar:** None (pure vocabulary, set phrases)
-**New vocabulary:** 5 words across 3 content lessons
-**Review material:** Unit 1 (greetings)
 
 ---
 
-### Lesson 2.1: Thank You & Excuse Me
+### Thank You & Excuse Me (ありがとう・すみません)
 
-**New vocabulary (2 words):**
+**Vocabulary (2 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | ありがとうございます | arigatou gozaimasu | thank you |
 | すみません | sumimasen | excuse me / sorry |
 
-**Grammar:** None
-**Review:** Unit 1 (greetings)
-
-**Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'thank you'?" → ありがとうございます | New |
-| 2 | MC | "Someone bumps into you. They say:" → すみません | New |
-| 3 | MC | "Someone helps you carry bags. You say:" → ありがとうございます | New |
-| 4 | MC | "You need to get past someone on the train. You say:" → すみません | New |
-| 5 | MA | Match ありがとうございます, すみません to thank you, excuse me | New |
-| 6 | KB | Build ありがとう from kana: あ り が と う (distractors: す, み, ま) | New |
-| 7 | KB | Build すみません from kana: す み ま せ ん (distractors: あ, り, が) | New |
-| 8 | MC | "すみません can also mean:" → sorry | New |
-| 9 | MC | **Review U1:** "It's 8am. You say:" → おはようございます | Review |
-| 10 | MC | **Review U1:** "Which means 'goodbye'?" → さようなら | Review |
-| 11 | MA | **Review U1:** Match こんにちは, こんばんは, さようなら to meanings | Review |
-| 12 | MC | "A stranger drops their wallet. You call out:" → すみません | New |
-| 13 | MC | **Review U1:** "Which means 'goodbye'?" → さようなら | Review |
+**Exercises (14):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: ありがとうございます, すみません |
+| 2 | MC | "Which means 'thank you'?" → ありがとうございます |
+| 3 | MC | "Someone bumps into you. They say:" → すみません |
+| 4 | LI | Listen: ありがとうございます → thank you / excuse me / hello / goodbye |
+| 5 | MC | "You need to get past someone on the train. You say:" → すみません |
+| 6 | MA | Match 2 pairs: ありがとうございます=thank you, すみません=excuse me |
+| 7 | KB | Build "thank you (short form)" 🙏: あ り が と う (distractors: す, み, ま) |
+| 8 | KB | Build "excuse me" 🙇: す み ま せ ん (distractors: あ, り, が) |
+| 9 | MC | "すみません can also mean:" → Sorry |
+| 10 | MC | "Review: It's 8am. You say:" → おはようございます |
+| 11 | MC | "Review: Which means 'goodbye'?" → さようなら |
+| 12 | MA | Match 3 pairs: こんにちは=hello, こんばんは=good evening, さようなら=goodbye |
+| 13 | MC | "A stranger drops their wallet. You call out:" → すみません |
+| 14 | TF | さようなら = "Goodbye" → Correct |
 
 ---
 
-### Lesson 2.2: Yes & No
+### Yes & No (はい・いいえ)
 
-**New vocabulary (2 words):**
+**Vocabulary (2 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | はい | hai | yes |
 | いいえ | iie | no |
 
-**Grammar:** None
-**Review:** L2.1 + Unit 1
-
-**Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'yes'?" → はい | New |
-| 2 | MC | "Which means 'no'?" → いいえ | New |
-| 3 | MC | "Someone asks if you want tea. You do. You say:" → はい | New |
-| 4 | MC | "Someone asks if you're finished. You're not. You say:" → いいえ | New |
-| 5 | MA | Match はい, いいえ to yes, no | New |
-| 6 | KB | Build はい from kana: は い (distractors: い い え, す) | New |
-| 7 | KB | Build いいえ from kana: い い え (distractors: は, す, み) | New |
-| 8 | MC | "はい is the opposite of:" → いいえ | New |
-| 9 | MC | **Review L2.1:** "Which means 'thank you'?" → ありがとうございます | Review |
-| 10 | MC | **Review L2.1:** "You accidentally step on someone's foot. You say:" → すみません | Review |
-| 11 | MC | **Review U1:** "It's 10pm. You greet someone:" → こんばんは | Review |
-| 12 | MA | **Review:** Match ありがとうございます, すみません, はい, いいえ to meanings | Review |
-| 13 | MC | **Review U1:** "You arrive at 8am. You say:" → おはようございます | Review |
+**Exercises (14):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: はい, いいえ |
+| 2 | MC | "Which means 'yes'?" → はい |
+| 3 | MC | "Which means 'no'?" → いいえ |
+| 4 | MC | "Someone asks if you want tea. You do. You say:" → はい |
+| 5 | MC | "Someone asks if you're finished. You're not. You say:" → いいえ |
+| 6 | MA | Match 2 pairs: はい=yes, いいえ=no |
+| 7 | KB | Build "yes" ✅: は い (distractors: い, え, す) |
+| 8 | KB | Build "no" ❌: い い え (distractors: は, す, み) |
+| 9 | DR | Friend: "コーヒー？" — You don't want any: → いいえ |
+| 10 | MC | "Review: Which means 'thank you'?" → ありがとうございます |
+| 11 | MC | "Review: You accidentally step on someone's foot. You say:" → すみません |
+| 12 | LI | Listen: こんばんは → こんばんは / おはようございます / こんにちは / さようなら |
+| 13 | MA | Match 4 pairs: ありがとうございます=thank you, すみません=excuse me, はい=yes, いいえ=no |
+| 14 | MC | "Review: You arrive at 8am. You say:" → おはようございます |
 
 ---
 
-### Lesson 2.3: Please
+### Please & Goodnight (おねがいします・おやすみなさい)
 
-**New vocabulary (1 word):**
+**Vocabulary (2 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | おねがいします | onegaishimasu | please |
-
-**Grammar:** None
-**Review:** L2.1-2.2 + Unit 1
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'please'?" → おねがいします | New |
-| 2 | MC | "You want water at a restaurant. You say: みず, ___" → おねがいします | New |
-| 3 | MC | "You ask for help politely. You add:" → おねがいします | New |
-| 4 | MC | "Which phrase sounds like a request?" → おねがいします | New |
-| 5 | MA | Match ありがとうございます, すみません, おねがいします to thank you, excuse me, please | Review |
-| 6 | KB | Build おねがいします from kana: お ね が い し ま す | New |
-| 7 | MC | "At a cafe, you say: みず ___" → おねがいします | New |
-| 8 | MC | "Which phrase would you use to request something?" → おねがいします | New |
-| 9 | MC | **Review L2.2:** "Someone asks if you want coffee. You do:" → はい | Review |
-| 10 | MC | **Review L2.1:** "Which means 'excuse me'?" → すみません | Review |
-| 11 | MC | **Review U1:** "It's 3pm. You greet someone:" → こんにちは | Review |
-| 12 | MA | **Review:** Match はい, いいえ, ありがとうございます, すみません to meanings | Review |
-| 13 | MC | **Review U1:** "Which means 'good evening'?" → こんばんは | Review |
-| 14 | MC | "Which phrase is most useful for asking politely?" → おねがいします | New |
-
----
-
-### Lesson 2.4: Practice — Polite Phrases
-
-**New vocabulary:** None
-**Grammar:** None
-**Review:** All Unit 2 (5 words) + Unit 1 (4 words)
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MA | Match all 5 Unit 2 words to meanings | Review |
-| 2 | MC | "Someone gives you a gift. You say:" → ありがとうございます | Review |
-| 3 | MC | "You want the check at a restaurant. You say: ___" → すみません | Review |
-| 4 | MC | "A friend asks: Coffee? You want some. You say:" → はい | Review |
-| 5 | MC | "You don't want more rice. You say:" → いいえ | Review |
-| 6 | MC | "You'd like a window seat. You add: まどがわ, ___" → おねがいします | Review |
-| 7 | MC | "Which phrase means 'please'?" → おねがいします | Review |
-| 8 | KB | Build ありがとうございます from kana | Review |
-| 9 | KB | Build すみません from kana | Review |
-| 10 | MC | **Review U1:** "It's morning. You say:" → おはようございます | Review |
-| 11 | MC | **Review U1:** "You leave school. You say:" → さようなら | Review |
-| 12 | MA | **Review U1:** Match all greetings to time of day | Review |
-| 13 | MC | **Review U1:** "It's evening. You greet someone:" → こんばんは | Review |
-| 14 | MC | "Which phrase is most useful in a polite request?" → おねがいします | Review |
-
----
-
-### Lesson 2.5: Unit 2 Quiz
-
-**New vocabulary:** None
-**Grammar:** None
-**Review:** All Units 1-2 (9 words total)
+| おやすみなさい | oyasuminasai | goodnight |
 
 **Exercises (15):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MA | Match 5 Unit 2 words to meanings | Review |
-| 2 | MC | "Someone holds the door for you. You say:" → ありがとうございます | Review |
-| 3 | MC | "You bump into someone. You say:" → すみません | Review |
-| 4 | MC | "Do you understand? You do. You say:" → はい | Review |
-| 5 | MC | "Do you want more? You don't. You say:" → いいえ | Review |
-| 6 | KB | Build おねがいします from kana | Review |
-| 7 | MC | "You want help politely. You say:" → おねがいします | Review |
-| 8 | MC | "Pick the WRONG pairing:" → はい = no (trap) | Review |
-| 9 | MC | **Review U1:** "It's evening. You greet someone:" → こんばんは | Review |
-| 10 | MC | **Review U1:** "You're leaving. You say:" → さようなら | Review |
-| 11 | MA | **Review U1+2:** Match 8 mixed words from both units | Review |
-| 12 | KB | Build ありがとう from kana | Review |
-| 13 | MC | **Review U1:** "Which means 'hello'?" → こんにちは | Review |
-| 14 | MC | "Which phrase would you use in a polite request?" → おねがいします | Review |
-| 15 | MC | "Formal morning greeting:" → おはようございます | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: おねがいします, おやすみなさい |
+| 2 | MC | "Which means 'please'?" → おねがいします |
+| 3 | MC | "You want water at a restaurant. You say: みず, ___" → おねがいします |
+| 4 | MC | "What does おねがいします mean?" → please |
+| 5 | MC | "Which phrase sounds like a request?" → おねがいします |
+| 6 | MA | Match 3 pairs: ありがとうございます=thank you, すみません=excuse me, おねがいします=please |
+| 7 | KB | Build "please" 🙏: お ね が い し ま す (distractors: あ, り, が) |
+| 8 | MC | "At a cafe, you say: みず ___" → おねがいします |
+| 9 | DR | Waiter: "なにがいいですか？" — You want water: → みず、おねがいします |
+| 10 | MC | "Review: Someone asks if you want coffee. You do:" → はい |
+| 11 | MC | "Which means "goodnight"?" → おやすみなさい |
+| 12 | MC | "You're going to bed. You say:" → おやすみなさい |
+| 13 | MA | Match 4 pairs: はい=yes, いいえ=no, ありがとうございます=thank you, すみません=excuse me |
+| 14 | TF | すみません = "Thank you" → Wrong (Excuse me / Sorry) |
+| 15 | MC | "Which phrase is most useful for asking politely?" → おねがいします |
+
+---
+
+### Practice — Polite Phrases (れんしゅう)
+
+**Vocabulary (6 words):**
+| Japanese | Reading | English |
+|----------|---------|---------|
+| ありがとうございます | arigatou gozaimasu | thank you |
+| すみません | sumimasen | excuse me / sorry |
+| はい | hai | yes |
+| いいえ | iie | no |
+| おねがいします | onegaishimasu | please |
+| おやすみなさい | oyasuminasai | goodnight |
+
+**Exercises (14):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | MA | Match 5 pairs: ありがとうございます=thank you, すみません=excuse me, はい=yes, いいえ=no, おねがいします=please |
+| 2 | MC | "Someone gives you a gift. You say:" → ありがとうございます |
+| 3 | MC | "You want to call the waiter at a restaurant. You say:" → すみません |
+| 4 | MC | "A friend asks: Coffee? You want some. You say:" → はい |
+| 5 | MC | "You don't want more rice. You say:" → いいえ |
+| 6 | MC | "You'd like a window seat. You add: まどがわ, ___" → おねがいします |
+| 7 | LI | Listen: おねがいします → please / thank you / excuse me / yes |
+| 8 | KB | Build "thank you (formal)" 🙏: あ り が と う ご ざ い ま す (distractors: す, み, せ) |
+| 9 | KB | Build "excuse me" 🙇: す み ま せ ん (distractors: あ, り, が) |
+| 10 | MC | "Review: It's morning. You say:" → おはようございます |
+| 11 | MC | "Review: You leave school. You say:" → さようなら |
+| 12 | MA | Match 4 pairs: おはようございます=good morning, こんにちは=hello, こんばんは=good evening, さようなら=goodbye |
+| 13 | DR | Neighbor: "こんばんは！" — You reply: → こんばんは |
+| 14 | DR | Family: "おやすみなさい！" — You reply: → おやすみなさい |
+
+---
+
+### Unit 2 Quiz (テスト)
+
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | TR | "Thank you" → ありがとうございます |
+| 2 | FB | "You bump into someone. You say: ＿" → すみません — "Excuse me / Sorry" |
+| 3 | KB | Build "please": お ね が い し ま す (distractors: あ, り, と) |
+| 4 | MC | "Pick the WRONG pairing:" → はい = no |
+| 5 | FB | "Do you want more? You don't. You say: ＿" → いいえ — "No" |
+| 6 | TR | "Please" → おねがいします |
+| 7 | KB | Build "excuse me": す み ま せ ん (distractors: お, ね, が) |
+| 8 | FB | "Someone gives you a gift. You say: ＿" → ありがとうございます — "Thank you" |
+| 9 | MC | "Which can mean BOTH "excuse me" and "sorry"?" → すみません |
+| 10 | KB | Build "thank you": あ り が と う ご ざ い ま す (distractors: お, ね, せ) |
+| 11 | FB | "It's 9pm. You greet someone: ＿" → こんばんは — "Good evening" |
+| 12 | TR | "Goodbye" → さようなら |
+| 13 | MC | "Someone says おはようございます. It is probably:" → Morning |
+| 14 | MA | Match 6 pairs: ありがとうございます=thank you, すみません=excuse me, おねがいします=please, はい=yes, いいえ=no, おやすみなさい=goodnight |
+| 15 | MC | "You're going to bed. You say:" → おやすみなさい |
 
 ---
 
 ## Unit 3: I Am...
 
-**Theme:** Self-introduction, basic sentence structure, occupations, questions, negation
-**Grammar:** は + です (L3.2), おなまえは set phrase (L3.3), か question particle (L3.5), じゃないです (L3.5)
-**New vocabulary:** 10 words across 4 content lessons
-**Review material:** Units 1-2
+**Theme:** は/です pattern, questions, negation, self-intro
 
 ---
 
-### Lesson 3.1: I, Student, Teacher
+### I, Student, Teacher (わたし、がくせい、せんせい)
 
-**New vocabulary (3 words):**
+**Vocabulary (3 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | わたし | watashi | I, me |
 | がくせい | gakusei | student |
 | せんせい | sensei | teacher |
 
-**Grammar:** None (vocab only — grammar in next lesson)
-**Review:** Units 1-2
-
-**Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'I' or 'me'?" → わたし | New |
-| 2 | MC | "Which means 'student'?" → がくせい | New |
-| 3 | MC | "Which means 'teacher'?" → せんせい | New |
-| 4 | MA | Match わたし, がくせい, せんせい to I, student, teacher | New |
-| 5 | KB | Build わたし from kana: わ た し (distractors: が, く, せ) | New |
-| 6 | KB | Build がくせい from kana: が く せ い (distractors: わ, た, し) | New |
-| 7 | KB | Build せんせい from kana: せ ん せ い (distractors: が, く, わ) | New |
-| 8 | MC | "A person who teaches is a:" → せんせい | New |
-| 9 | MC | "A person who studies is a:" → がくせい | New |
-| 10 | MC | **Review U2:** "Which means 'thank you'?" → ありがとうございます | Review |
-| 11 | MC | **Review U2:** "Which means 'please'?" → おねがいします | Review |
-| 12 | MC | **Review U1:** "It's morning. Formal greeting:" → おはようございます | Review |
-| 13 | MA | **Review U1:** Match こんにちは, こんばんは, さようなら to meanings | Review |
-
----
-
-### Lesson 3.2: X は Y です (I Am a Student)
-
-**New vocabulary (1 word):**
-| Japanese | Reading | English |
-|----------|---------|---------|
-| です | desu | am / is / are (polite copula) |
-
-**Grammar:** は (topic particle) + です (copula) — "X は Y です"
-**grammar_intro:**
-> は (pronounced "wa" as a particle) marks the topic of the sentence.
-> です means "is/am/are" and makes the sentence polite.
-> わたし は がくせい です = "I am a student"
-
-**Review:** L3.1 + Units 1-2
-
 **Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "What does です mean?" → am / is / are | New |
-| 2 | MC | "わたしはがくせいです means:" → I am a student | New |
-| 3 | FB | "わたし ＿ がくせいです" → は | New |
-| 4 | FB | "わたしは がくせい ＿" → です | New |
-| 5 | WO | Build: わたし / は / がくせい / です → わたしはがくせいです | New |
-| 6 | MC | "How do you say 'I am a teacher'?" → わたしはせんせいです | New |
-| 7 | WO | Build: わたし / は / せんせい / です | New |
-| 8 | FB | "わたしは ＿ です" (picture of student) → がくせい | New |
-| 9 | MC | "は is pronounced ___ when used as a particle:" → wa | New |
-| 10 | MC | **Review U2:** "Which means 'yes'?" → はい | Review |
-| 11 | MC | **Review U2:** "Which means 'please'?" → おねがいします | Review |
-| 12 | MC | **Review U1:** "Which means 'goodbye'?" → さようなら | Review |
-| 13 | MA | **Review U1:** Match おはようございます, こんにちは, こんばんは, さようなら to meaning/time use | Review |
-| 14 | KB | **Review L3.1:** Build せんせい from kana | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: わたし, がくせい, せんせい |
+| 2 | MC | "Which means "I" or "me"?" → わたし |
+| 3 | MC | "Which means "student"?" → がくせい |
+| 4 | MC | "Which means "teacher"?" → せんせい |
+| 5 | MA | Match 3 pairs: わたし=I, me, がくせい=student, せんせい=teacher |
+| 6 | KB | Build "I, me" 🙋: わ た し (distractors: が, く, せ) |
+| 7 | KB | Build "student" 🎒: が く せ い (distractors: わ, た, し) |
+| 8 | KB | Build "teacher" 👩‍🏫: せ ん せ い (distractors: が, く, わ) |
+| 9 | TF | せんせい = "Student" → Wrong (Teacher) |
+| 10 | MC | "A person who studies is a:" → がくせい |
+| 11 | LI | Listen: ありがとうございます → ありがとうございます / すみません / おねがいします / さようなら |
+| 12 | MC | "Which means "please"?" → おねがいします |
+| 13 | MC | "It's morning. Formal greeting:" → おはようございます |
+| 14 | MA | Match 3 pairs: こんにちは=hello, こんばんは=good evening, さようなら=goodbye |
 
 ---
 
-### Lesson 3.3: What's Your Name?
+### I Am a Student (わたしはがくせいです)
 
-**New vocabulary (3 words):**
+**Vocabulary (4 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
+| わたし | watashi | I, me |
+| がくせい | gakusei | student |
+| せんせい | sensei | teacher |
+| です | desu | am / is / are |
+
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: です |
+| 2 | GI | "Building Your First Sentence: X は Y です" — grammar explanation |
+| 3 | MC | "What does です mean?" → am / is / are |
+| 4 | MC | "わたしはがくせいです means:" → I am a student |
+| 5 | FB | "わたし ＿ がくせいです" → は — "I am a student" |
+| 6 | FB | "わたしは がくせい ＿" → です — "I am a student" |
+| 7 | WO | "I am a student" → わたし / は / がくせい / です |
+| 8 | MC | "How do you say "I am a teacher"?" → わたしはせんせいです |
+| 9 | WO | "I am a teacher" → わたし / は / せんせい / です |
+| 10 | FB | "わたしは ＿ です" → がくせい — "I am a student" |
+| 11 | TF | わたしはがくせいです = "I am a teacher" → Wrong (I am a student) |
+| 12 | MC | "Which means "yes"?" → はい |
+| 13 | MC | "Which means "excuse me"?" → すみません |
+| 14 | MC | "Which means "no"?" → いいえ |
+| 15 | KB | Build "teacher" 👩‍🏫: せ ん せ い (distractors: が, く, わ) |
+
+---
+
+### What's Your Name? (おなまえは？)
+
+**Vocabulary (7 words):**
+| Japanese | Reading | English |
+|----------|---------|---------|
+| わたし | watashi | I, me |
+| がくせい | gakusei | student |
+| せんせい | sensei | teacher |
+| です | desu | am / is / are |
 | なまえ | namae | name |
-| おなまえは？ | onamae wa? | What is your name? (set phrase) |
+| おなまえは？ | onamae wa? | What is your name? |
 | ～さん | -san | Mr. / Ms. / Mrs. |
 
-**Grammar:** None new (おなまえは？ taught as a set phrase; uses は/です from L3.2)
-**Note:** おなまえは？ is a fixed conversational phrase, not decomposed grammatically. Students use わたしは [name] です to answer.
-**Review:** L3.1-3.2 + Units 1-2
-
-**Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "What does なまえ mean?" → name | New |
-| 2 | MC | "おなまえは？ means:" → What is your name? | New |
-| 3 | MC | "How do you politely address someone named Tanaka?" → たなかさん | New |
-| 4 | MA | Match なまえ, おなまえは, さん to name, What is your name?, Mr./Ms. | New |
-| 5 | WO | Build: わたし / は / たなか / です → わたしはたなかです | New |
-| 6 | MC | "Someone asks おなまえは？ You are Yamada. You say:" → わたしはやまだです | New |
-| 7 | FB | "わたし ＿ たなかです" → は | New |
-| 8 | KB | Build なまえ from kana: な ま え (distractors: お, は, わ) | New |
-| 9 | MC | **Review L3.2:** "わたしはがくせいです means:" → I am a student | Review |
-| 10 | FB | **Review L3.2:** "わたしは せんせい ＿" → です | Review |
-| 11 | MC | **Review U2:** "You bump into someone. You say:" → すみません | Review |
-| 12 | MC | **Review U1:** "You leave for the day. You say:" → さようなら | Review |
-| 13 | WO | Build: わたし / は / やまだ / です | Review |
+**Exercises (14):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: なまえ, おなまえは？, ～さん |
+| 2 | GI | "Asking Someone's Name: おなまえは？" — grammar explanation |
+| 3 | MC | "What does なまえ mean?" → name |
+| 4 | MC | "おなまえは？ means:" → What is your name? |
+| 5 | MC | "How do you politely address someone named Tanaka?" → たなかさん |
+| 6 | MA | Match 3 pairs: なまえ=name, おなまえは？=What is your name?, ～さん=Mr. / Ms. |
+| 7 | WO | "I am Tanaka" → わたし / は / たなか / です |
+| 8 | DR | New colleague: "おなまえは？" — You are Yamada: → わたしはやまだです |
+| 9 | FB | "わたし ＿ たなかです" → は — "I am Tanaka" |
+| 10 | KB | Build "name" 📛: な ま え (distractors: お, は, わ) |
+| 11 | MC | "わたしはがくせいです means:" → I am a student |
+| 12 | FB | "わたしは せんせい ＿" → です — "I am a teacher" |
+| 13 | MC | "You bump into someone. You say:" → すみません |
+| 14 | MC | "You leave for the day. You say:" → さようなら |
 
 ---
 
-### Lesson 3.4: Questions & Nationalities
+### Questions & Nationalities (がくせいですか？)
 
-**New vocabulary (3 words):**
+**Vocabulary (8 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
+| わたし | watashi | I, me |
+| がくせい | gakusei | student |
+| せんせい | sensei | teacher |
+| です | desu | am / is / are |
+| なまえ | namae | name |
 | か | ka | ? (question particle) |
 | にほんじん | nihonjin | Japanese person |
 | アメリカじん | amerikajin | American person |
 
-**Grammar:** か (question particle) — add か to the end of a statement to make it a question
-**grammar_intro:**
-> Add か to the end of a sentence to make it a question.
-> がくせいですか？ = "Are you a student?"
-> はい、がくせいです。/ いいえ、がくせいじゃないです。
-
-**Note:** ～じん (nationality suffix) taught here as vocabulary, not as a grammar pattern.
-**Review:** L3.1-3.3 + Units 1-2
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "How do you make a question in Japanese?" → Add か to the end | New |
-| 2 | FB | "がくせいです ＿" (to make it a question) → か | New |
-| 3 | MC | "がくせいですか means:" → Are you a student? | New |
-| 4 | MC | "にほんじん means:" → Japanese person | New |
-| 5 | MC | "アメリカじん means:" → American person | New |
-| 6 | WO | Build: たなかさん / は / にほんじん / です / か | New |
-| 7 | FB | "はい、にほんじん ＿" → です | New |
-| 8 | WO | Build: わたし / は / アメリカじん / です | New |
-| 9 | KB | Build にほんじん from kana: に ほ ん じ ん | New |
-| 10 | MC | **Review L3.3:** "おなまえは means:" → What is your name? | Review |
-| 11 | FB | **Review L3.2:** "わたし ＿ せんせいです" → は | Review |
-| 12 | MC | **Review U2:** "Which means 'no'?" → いいえ | Review |
-| 13 | MC | **Review U1:** "Which means 'good evening'?" → こんばんは | Review |
-| 14 | MA | **Review:** Match わたし, がくせい, せんせい, なまえ to meanings | Review |
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: か, にほんじん, アメリカじん |
+| 2 | GI | "Asking Questions with か" — grammar explanation |
+| 3 | MC | "How do you make a question in Japanese?" → Add か to the end |
+| 4 | FB | "がくせいです ＿" → か — "Are you a student?" |
+| 5 | MC | "がくせいですか means:" → Are you a student? |
+| 6 | MC | "にほんじん means:" → Japanese person |
+| 7 | MC | "アメリカじん means:" → American person |
+| 8 | WO | "Is Tanaka Japanese?" → たなかさん / は / にほんじん / です / か |
+| 9 | FB | "はい、にほんじん ＿" → です — "Yes, I am Japanese" |
+| 10 | WO | "I am American" → わたし / は / アメリカじん / です |
+| 11 | KB | Build "Japanese person" 🇯🇵: に ほ ん じ ん (distractors: が, く, せ) |
+| 12 | TF | にほんじんですか = "Are you Japanese?" → Correct |
+| 13 | FB | "わたし ＿ せんせいです" → は — "I am a teacher" |
+| 14 | MC | "Which means "no"?" → いいえ |
+| 15 | MA | Match 4 pairs: わたし=I, me, がくせい=student, せんせい=teacher, なまえ=name |
 
 ---
 
-### Lesson 3.5: Not a Doctor (Negation)
+### Not a Doctor (いしゃじゃないです)
 
-**New vocabulary (3 words):**
+**Vocabulary (8 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
-| じゃないです | ja nai desu | is not (polite negative) |
+| わたし | watashi | I, me |
+| がくせい | gakusei | student |
+| せんせい | sensei | teacher |
+| です | desu | am / is / are |
+| か | ka | ? (question particle) |
+| じゃないです | ja nai desu | is not |
 | ともだち | tomodachi | friend |
 | いしゃ | isha | doctor |
 
-**Grammar:** じゃないです (negative copula) — X は Y じゃないです = "X is not Y"
-**grammar_intro:**
-> To say "is not", replace です with じゃないです.
-> わたしはせんせいじゃないです = "I am not a teacher"
-> いいえ、がくせいじゃないです。= "No, I am not a student."
-
-**Review:** L3.1-3.4 + Units 1-2
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "What does ともだち mean?" → friend | New |
-| 2 | MC | "What does いしゃ mean?" → doctor | New |
-| 3 | MC | "What is the negative of です?" → じゃないです | New |
-| 4 | FB | "わたしはせんせい ＿" (negative) → じゃないです | New |
-| 5 | MC | "わたしはいしゃじゃないです means:" → I am not a doctor | New |
-| 6 | WO | Build: たなかさん / は / がくせい / じゃないです | New |
-| 7 | MC | "Your friend asks がくせいですか？ You are not. You say:" → いいえ、がくせいじゃないです | New |
-| 8 | WO | Build: わたし / は / いしゃ / じゃないです | New |
-| 9 | FB | "いいえ、にほんじん ＿" → じゃないです | New |
-| 10 | MC | **Review L3.4:** "がくせいですか means:" → Are you a student? | Review |
-| 11 | FB | **Review L3.4:** "せんせいです ＿" (to ask) → か | Review |
-| 12 | MC | **Review U2:** "Which means 'excuse me'?" → すみません | Review |
-| 13 | MA | **Review:** Match ともだち, いしゃ, がくせい, せんせい to friend, doctor, student, teacher | Review |
-| 14 | MC | **Review U1:** "It's 3pm. You greet someone:" → こんにちは | Review |
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: じゃないです, ともだち, いしゃ |
+| 2 | GI | "Saying "Is Not": じゃないです" — grammar explanation |
+| 3 | MC | "What does ともだち mean?" → friend |
+| 4 | MC | "What does いしゃ mean?" → doctor |
+| 5 | MC | "What is the negative of です?" → じゃないです |
+| 6 | FB | "いいえ、わたしはせんせい ＿" → じゃないです — "No, I am not a teacher" |
+| 7 | MC | "わたしはいしゃじゃないです means:" → I am not a doctor |
+| 8 | WO | "Tanaka is not a student" → たなかさん / は / がくせい / じゃないです |
+| 9 | DR | Friend: "がくせいですか？" — You are not a student: → いいえ、がくせいじゃないです |
+| 10 | WO | "I am not a doctor" → わたし / は / いしゃ / じゃないです |
+| 11 | FB | "いいえ、にほんじん ＿" → じゃないです — "No, I am not Japanese" |
+| 12 | MC | "がくせいですか means:" → Are you a student? |
+| 13 | FB | "せんせいです ＿" → か — "Are you a teacher?" |
+| 14 | MC | "Which means "excuse me"?" → すみません |
+| 15 | MA | Match 4 pairs: ともだち=friend, いしゃ=doctor, がくせい=student, せんせい=teacher |
 
 ---
 
-### Lesson 3.6: Nice to Meet You (Self-Introduction)
+### Nice to Meet You (はじめまして)
 
-**New vocabulary (3 bonus words — introduction phrases):**
+**Vocabulary (7 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
+| わたし | watashi | I, me |
+| です | desu | am / is / are |
+| か | ka | ? (question particle) |
+| じゃないです | ja nai desu | is not |
 | はじめまして | hajimemashite | nice to meet you |
 | どうぞよろしく | douzo yoroshiku | pleased to meet you |
 | ～からきました | kara kimashita | came from ~ |
 
-**Grammar:** から + きました (origin) — Place + から + きました = "came from Place"
-**grammar_intro:**
-> から means "from". Combined with きました (came), it expresses where someone is from.
-> アメリカからきました = "I came from America"
-
-**Pacing note:** This is the most stretch-like part of Unit 3. If Unit 3 ever feels too dense in implementation, this is the first lesson to simplify, delay, or split.
-
-**Review:** All Unit 3 + Units 1-2
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which phrase do you say when meeting someone for the first time?" → はじめまして | New |
-| 2 | MC | "What does どうぞよろしく mean?" → Pleased to meet you | New |
-| 3 | MC | "から means:" → from | New |
-| 4 | FB | "にほん ＿ きました" → から | New |
-| 5 | WO | Build: アメリカ / から / きました | New |
-| 6 | WO | Build: はじめまして / わたし / は / たなか / です / どうぞよろしく | New |
-| 7 | KB | Build はじめまして from kana: は じ め ま し て | New |
-| 8 | MC | "Complete the self-introduction: はじめまして、わたしはたなかです。にほん___きました。" → から | New |
-| 9 | FB | **Review L3.5:** "わたしはいしゃ ＿" → じゃないです | Review |
-| 10 | MC | **Review L3.4:** "にほんじんですか means:" → Are you Japanese? | Review |
-| 11 | WO | **Review L3.2:** Build: わたし / は / がくせい / です | Review |
-| 12 | MC | **Review U2:** "Which means 'thank you'?" → ありがとうございます | Review |
-| 13 | MC | **Review U1:** "Good evening:" → こんばんは | Review |
-| 14 | MA | **Review:** Match はじめまして, どうぞよろしく, からきました to nice to meet you, pleased to meet you, came from | Review |
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: はじめまして, どうぞよろしく, ～からきました |
+| 2 | GI | "Introducing Yourself: から + きました" — grammar explanation |
+| 3 | DR | Tanaka: "はじめまして。わたしはたなかです。どうぞよろしく。" — You reply: → はじめまして。どうぞよろしく。 |
+| 4 | MC | "What does どうぞよろしく mean?" → Pleased to meet you |
+| 5 | MC | "から means:" → from |
+| 6 | FB | "にほん ＿ きました" → から — "I came from Japan" |
+| 7 | WO | "I came from America" → アメリカ / から / きました |
+| 8 | WO | "Nice to meet you, I am Tanaka, pleased to meet you" → はじめまして / わたし / は / たなか / です / どうぞよろしく |
+| 9 | KB | Build "nice to meet you" 🤝: は じ め ま し て (distractors: ど, う, ぞ) |
+| 10 | MC | "Complete the self-introduction: はじめまして、わたしはたなかです。にほん___きました。" → から |
+| 11 | FB | "いいえ、わたしはいしゃ ＿" → じゃないです — "No, I am not a doctor" |
+| 12 | MC | "にほんじんですか means:" → Are you Japanese? |
+| 13 | WO | "I am a student" → わたし / は / がくせい / です |
+| 14 | KR | 学生 (student) → がくせい |
+| 15 | MA | Match 3 pairs: はじめまして=nice to meet you, どうぞよろしく=pleased to meet you, ～からきました=came from ~ |
 
 ---
 
-### BONUS Lesson 3.7: Unit 3 Mega Review
-
-**New vocabulary:** None
-**Grammar:** None
-**Review:** All Unit 3 (10 words, 3 grammar points) + Units 1-2 (9 words)
-**Note:** This is a 6th lesson for Unit 3 because it introduced complex grammar.
+### Unit 3 Quiz (テスト)
 
 **Exercises (15):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MA | Match all Unit 3 occupation/people words: がくせい, せんせい, ともだち, いしゃ, にほんじん, アメリカじん | Review |
-| 2 | WO | Build a self-introduction: はじめまして / わたし / は / やまだ / です | Review |
-| 3 | FB | "わたし ＿ がくせいです" → は | Review |
-| 4 | FB | "がくせいです ＿" (question) → か | Review |
-| 5 | FB | "わたしはせんせい ＿" (negative) → じゃないです | Review |
-| 6 | WO | Build: アメリカ / から / きました | Review |
-| 7 | MC | "おなまえは means:" → What is your name? | Review |
-| 8 | WO | Build: たなかさん / は / にほんじん / です / か | Review |
-| 9 | MC | "わたしはいしゃじゃないです means:" → I am not a doctor | Review |
-| 10 | FB | "にほん ＿ きました" → から | Review |
-| 11 | MC | **Review U2:** "You want to say 'please':" → おねがいします | Review |
-| 12 | MC | **Review U1:** "Which means 'good morning'?" → おはようございます | Review |
-| 13 | WO | Build: わたし / も / がくせい / です (preview of も — exposure only) | Review |
-| 14 | MA | **Review U1+2:** Match 6 mixed words from Units 1-2 | Review |
-| 15 | MC | "Someone says はじめまして. You reply:" → どうぞよろしく | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | TR | "I am a student" → わたし は がくせい です |
+| 2 | FB | "わたし ＿ がくせいです" → は — "I am a student" |
+| 3 | MC | "がくせいですか means:" → Are you a student? |
+| 4 | WO | "I am not a doctor" → わたし / は / いしゃ / じゃないです |
+| 5 | FB | "いいえ、わたしはせんせい ＿" → じゃないです — "No, I am not a teacher" |
+| 6 | TR | "I came from America" → アメリカ から きました |
+| 7 | MC | "Pick the WRONG pairing:" → せんせい = student |
+| 8 | WO | "Nice to meet you, I am Tanaka, pleased to meet you" → はじめまして / わたし / は / たなか / です / どうぞよろしく |
+| 9 | FB | "にほん ＿ きました" → から — "I came from Japan" |
+| 10 | RD | "わたしはやまだです。
+せんせいです。
+にほんからきました。" — Q: What is Yamada's job? → Teacher |
+| 11 | MC | "にほんじんじゃないです means:" → I am not Japanese |
+| 12 | KR | 先生 → せんせい |
+| 13 | FB | "Someone helps you. You say: ＿" → ありがとうございます — "Thank you" |
+| 14 | FB | "It's 8pm. You say: ＿" → こんばんは — "Good evening" |
+| 15 | MA | Match 4 pairs: がくせい=student, せんせい=teacher, いしゃ=doctor, ともだち=friend |
+
+---
+
+## ⭐ Survival Checkpoint (after unit-3)
+
+Test everything from Units 1-3: greetings, social phrases, self-introduction, は/です, questions, negation.
+
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | MA | Match 6 pairs: こんにちは=hello, ありがとうございます=thank you, すみません=excuse me, がくせい=student, せんせい=teacher, いしゃ=doctor |
+| 2 | WO | "Nice to meet you. I am Tanaka. Pleased to meet you." → はじめまして / わたし / は / たなか / です / どうぞよろしく (distractors: も, か) |
+| 3 | FB | "わたし ＿ がくせいです" → は |
+| 4 | MC | "It's 8pm. You meet a friend. You say:" → こんばんは |
+| 5 | WO | "I am not a teacher." → わたし / は / せんせい / じゃないです (distractors: か) |
+| 6 | FB | "せんせいです ＿" → か |
+| 7 | MC | "Someone says はじめまして. You reply:" → どうぞよろしく |
+| 8 | WO | "I came from America." → アメリカ / から / きました (distractors: です) |
+| 9 | MC | "わたしはいしゃじゃないです means:" → I am not a doctor |
+| 10 | FB | "いいえ、がくせい ＿" → じゃないです |
+| 11 | MC | "Someone helps you carry your bags. You say:" → ありがとうございます |
+| 12 | KB | Build "thank you": あ り が と う (distractors: す, み, ま) |
+| 13 | MC | "You accidentally bump someone. You say:" → すみません |
+| 14 | RD | "はじめまして。
+わたしはたなかです。
+せんせいです。
+どうぞ..." — Q: What do we know about Tanaka? → Tanaka is a teacher |
+| 15 | WO | "Nice to meet you. I am Yamada. Pleased to meet you." → はじめまして / わたし / は / やまだ / です / どうぞよろしく (distractors: も) |
 
 ---
 
 ## Unit 4: What Is This?
 
-**Theme:** Demonstrative pronouns, common objects, asking about things
-**Grammar:** これ/それ/あれ (L4.2), なん (L4.2)
-**New vocabulary:** 8 words across 3 content lessons
-**Review material:** Units 1-3
+**Theme:** これ/それ/あれ, identifying objects
 
 ---
 
-### Lesson 4.1: Book & Pen
+### Book & Pen (ほんとペン)
 
-**New vocabulary (2 words):**
+**Vocabulary (2 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | ほん | hon | book |
 | ペン | pen | pen |
 
-**Grammar:** None (vocab only — demonstratives in next lesson)
-**Review:** Unit 3
-
-**Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'book'?" → ほん | New |
-| 2 | MC | "Which means 'pen'?" → ペン | New |
-| 3 | MA | Match ほん, ペン to book, pen | New |
-| 4 | KB | Build ほん from kana: ほ ん (distractors: ペ, は, か) | New |
-| 5 | KB | Build ペン from katakana: ペ ン (distractors: ほ, ん, テ) | New |
-| 6 | MC | "You write with a:" → ペン | New |
-| 7 | MC | "You read a:" → ほん | New |
-| 8 | MC | "ペン uses katakana because it is:" → a foreign word | New |
-| 9 | MC | **Review U3:** "わたしはがくせいです means:" → I am a student | Review |
-| 10 | FB | **Review U3:** "わたし ＿ せんせいです" → は | Review |
-| 11 | MC | **Review U2:** "Which means 'yes'?" → はい | Review |
-| 12 | MC | **Review U1:** "Goodbye:" → さようなら | Review |
-| 13 | MA | **Review U3:** Match わたし, がくせい, せんせい, なまえ to meanings | Review |
+**Exercises (14):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: ほん, ペン |
+| 2 | MC | "Which means "book"?" → ほん |
+| 3 | MC | "Which means "pen"?" → ペン |
+| 4 | MA | Match 2 pairs: ほん=book, ペン=pen |
+| 5 | KB | Build "book" 📖: ほ ん (distractors: は, か, せ) |
+| 6 | MC | "You write with a:" → ペン |
+| 7 | LI | Listen: ほん → book / pen / bag / phone |
+| 8 | MC | "ペン uses katakana because it is:" → a foreign word |
+| 9 | GI | "Why Katakana?" — grammar explanation |
+| 10 | MC | "わたしはがくせいです means:" → I am a student |
+| 11 | FB | "わたし ＿ せんせいです" → は |
+| 12 | TF | はい = "Yes" → Correct |
+| 13 | MC | "Goodbye:" → さようなら |
+| 14 | MA | Match 4 pairs: わたし=I, me, がくせい=student, せんせい=teacher, なまえ=name |
 
 ---
 
-### Lesson 4.2: This, That, That Over There
+### This, That, That Over There (これ、それ、あれ)
 
-**New vocabulary (4 words):**
+**Vocabulary (6 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
+| ほん | hon | book |
+| ペン | pen | pen |
 | これ | kore | this (thing here) |
 | それ | sore | that (thing near you) |
 | あれ | are | that (thing over there) |
 | なん | nan | what |
 
-**Grammar:** これ/それ/あれ (demonstrative pronouns) — standalone words for "this/that/that over there"
-**grammar_intro:**
-> これ = this (near me), それ = that (near you), あれ = that (far from both)
-> これはなんですか？ = "What is this?"
-> これはほんです。 = "This is a book."
-
-**Review:** L4.1 + Units 1-3
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'this'?" → これ | New |
-| 2 | MC | "Which means 'that' (near the listener)?" → それ | New |
-| 3 | MC | "Which means 'that over there'?" → あれ | New |
-| 4 | MC | "なん means:" → what | New |
-| 5 | MA | Match これ, それ, あれ, なん to this, that, that over there, what | New |
-| 6 | FB | "＿ はほんです" (pointing at something near you) → これ | New |
-| 7 | FB | "＿ はペンです" (pointing at something far away) → あれ | New |
-| 8 | WO | Build: これ / は / なん / です / か → これはなんですか | New |
-| 9 | MC | "これはなんですか means:" → What is this? | New |
-| 10 | WO | Build: それ / は / ほん / です | New |
-| 11 | MC | **Review L4.1:** "You write with a:" → ペン | Review |
-| 12 | MC | **Review U3:** "がくせいですか means:" → Are you a student? | Review |
-| 13 | FB | **Review U3:** "わたしはいしゃ ＿" (negative) → じゃないです | Review |
-| 14 | MC | **Review U2:** "Which means 'excuse me'?" → すみません | Review |
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: これ, それ, あれ, なん |
+| 2 | GI | "The Three-Way Pointing System: これ・それ・あれ" — grammar explanation |
+| 3 | MC | "Which means "this"?" → これ |
+| 4 | MC | "Which means "that" (near the listener)?" → それ |
+| 5 | MC | "Which means "that over there"?" → あれ |
+| 6 | MC | "なん means:" → what |
+| 7 | MA | Match 4 pairs: これ=this, それ=that (near you), あれ=that over there, なん=what |
+| 8 | TF | これはほんです = "This is a book" → Correct |
+| 9 | FB | "それ ＿ ペンです" → は |
+| 10 | WO | "What is this?" → これ / は / なん / です / か |
+| 11 | MC | "これはなんですか means:" → What is this? |
+| 12 | WO | "That is a book" → それ / は / ほん / です |
+| 13 | LI | Listen: ペン → ペン / ほん / かばん / でんわ |
+| 14 | MC | "がくせいですか means:" → Are you a student? |
+| 15 | FB | "いいえ、わたしはいしゃ ＿" → じゃないです |
 
 ---
 
-### Lesson 4.3: Bag & Phone
+### Bag & Phone (かばんとでんわ)
 
-**New vocabulary (2 words):**
+**Vocabulary (8 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
+| ほん | hon | book |
+| ペン | pen | pen |
+| これ | kore | this (thing here) |
+| それ | sore | that (thing near you) |
+| あれ | are | that (thing over there) |
+| なん | nan | what |
 | かばん | kaban | bag |
 | でんわ | denwa | phone |
 
-**Grammar:** None (practice demonstratives from L4.2 with new vocab)
-**Review:** L4.1-4.2 + Units 1-3
-
-**Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'bag'?" → かばん | New |
-| 2 | MC | "Which means 'phone'?" → でんわ | New |
-| 3 | MA | Match かばん, でんわ to bag, phone | New |
-| 4 | KB | Build かばん from kana: か ば ん (distractors: で, ん, わ) | New |
-| 5 | KB | Build でんわ from kana: で ん わ (distractors: か, ば, ほ) | New |
-| 6 | FB | "これは ＿ です" (picture of bag) → かばん | New |
-| 7 | WO | Build: あれ / は / でんわ / です | New |
-| 8 | MC | "それはかばんです means:" → That is a bag | New |
-| 9 | MC | **Review L4.2:** "これはなんですか means:" → What is this? | Review |
-| 10 | FB | **Review L4.2:** "＿ はほんです" (near me) → これ | Review |
-| 11 | MA | **Review:** Match ほん, ペン, かばん, でんわ to book, pen, bag, phone | Review |
-| 12 | MC | **Review U3:** "はじめまして means:" → Nice to meet you | Review |
-| 13 | MC | **Review U1:** "Which means 'goodbye'?" → さようなら | Review |
+**Exercises (14):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: かばん, でんわ |
+| 2 | MC | "Which means "bag"?" → かばん |
+| 3 | MC | "Which means "phone"?" → でんわ |
+| 4 | MA | Match 2 pairs: かばん=bag, でんわ=phone |
+| 5 | KB | Build "bag" 👜: か ば ん (distractors: で, わ, ほ) |
+| 6 | KB | Build "phone" 📱: で ん わ (distractors: か, ば, ほ) |
+| 7 | FB | "これは ＿ です" → かばん — "This is a bag" |
+| 8 | WO | "That over there is a phone" → あれ / は / でんわ / です |
+| 9 | DR | Friend: "これはなんですか？" — They're holding a bag: → それはかばんです |
+| 10 | MC | "これはなんですか means:" → What is this? |
+| 11 | TF | あれはでんわです = "This is a phone" → Wrong (That over there is a phone) |
+| 12 | MA | Match 4 pairs: ほん=book, ペン=pen, かばん=bag, でんわ=phone |
+| 13 | MC | "はじめまして means:" → Nice to meet you |
+| 14 | MC | "Which means "please"?" → おねがいします |
 
 ---
 
-### Lesson 4.4: Practice — What Is This/That?
+### Practice: What Is This/That? (れんしゅう)
 
-**New vocabulary:** None
-**Grammar:** None
-**Review:** All Unit 4 (8 words) + Units 1-3
+**Vocabulary (8 words):**
+| Japanese | Reading | English |
+|----------|---------|---------|
+| ほん | hon | book |
+| ペン | pen | pen |
+| これ | kore | this (thing here) |
+| それ | sore | that (thing near you) |
+| あれ | are | that (thing over there) |
+| なん | nan | what |
+| かばん | kaban | bag |
+| でんわ | denwa | phone |
 
 **Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MA | Match これ, それ, あれ to this, that, that over there | Review |
-| 2 | FB | "これは ＿ です" (picture of pen) → ペン | Review |
-| 3 | WO | Build: これ / は / なん / です / か | Review |
-| 4 | MC | "あれはでんわです means:" → That (over there) is a phone | Review |
-| 5 | FB | "＿ はかばんです" (thing near listener) → それ | Review |
-| 6 | WO | Build: あれ / は / ほん / です | Review |
-| 7 | MC | "これはかばんですか means:" → Is this a bag? | Review |
-| 8 | FB | "それは ＿ です" (picture of book) → ほん | Review |
-| 9 | WO | Build: これ / は / でんわ / です / か | Review |
-| 10 | MC | **Review U3:** "わたしはせんせいじゃないです means:" → I am not a teacher | Review |
-| 11 | FB | **Review U3:** "にほん ＿ きました" → から | Review |
-| 12 | MC | **Review U2:** "Which means 'please'?" → おねがいします | Review |
-| 13 | MC | **Review U1:** "Good morning (formal):" → おはようございます | Review |
-| 14 | MA | **Review:** Match all 4 objects: ほん, ペン, かばん, でんわ to English | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | MA | Match 3 pairs: これ=this, それ=that (near you), あれ=that over there |
+| 2 | FB | "これは ＿ です" → ペン — "This is a pen" |
+| 3 | WO | "What is this?" → これ / は / なん / です / か (distractors: も) |
+| 4 | LI | Listen: かばん → bag / phone / book / pen |
+| 5 | FB | "これ ＿ かばんです" → は |
+| 6 | WO | "That over there is a book" → あれ / は / ほん / です (distractors: か) |
+| 7 | MC | "これはかばんですか means:" → Is this a bag? |
+| 8 | FB | "それは ＿ です" → ほん — "That is a book" |
+| 9 | WO | "Is this a phone?" → これ / は / でんわ / です / か (distractors: ほん) |
+| 10 | RD | "これはほんです。
+それはペンです。
+あれはかばんです。" — Q: What is near the listener? → A pen |
+| 11 | FB | "にほん ＿ きました" → から |
+| 12 | TF | ありがとうございます = "Please" → Wrong (Thank you) |
+| 13 | KR | 本 (book) → ほん |
+| 14 | MA | Match 4 pairs: ほん=book, ペン=pen, かばん=bag, でんわ=phone |
 
 ---
 
-### Lesson 4.5: Unit 4 Quiz
+### Unit 4 Quiz (テスト)
 
-**New vocabulary:** None
-**Grammar:** None
-**Review:** All Unit 4 + Units 1-3
+**Vocabulary (8 words):**
+| Japanese | Reading | English |
+|----------|---------|---------|
+| ほん | hon | book |
+| ペン | pen | pen |
+| これ | kore | this (thing here) |
+| それ | sore | that (thing near you) |
+| あれ | are | that (thing over there) |
+| なん | nan | what |
+| かばん | kaban | bag |
+| でんわ | denwa | phone |
 
 **Exercises (15):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MA | Match これ, それ, あれ, なん to meanings | Review |
-| 2 | MC | "これはなんですか — pick the correct answer if it's a pen:" → これはペンです | Review |
-| 3 | FB | "＿ はかばんです" (pointing far away) → あれ | Review |
-| 4 | WO | Build: それ / は / でんわ / です / か | Review |
-| 5 | MC | "Which word means 'bag'?" → かばん | Review |
-| 6 | MC | "Pick the WRONG pairing:" → それ = this (trap) | Review |
-| 7 | FB | "これは ＿ です" (picture of book) → ほん | Review |
-| 8 | WO | Build: あれ / は / なん / です / か | Review |
-| 9 | KB | Build かばん from kana | Review |
-| 10 | KB | Build でんわ from kana | Review |
-| 11 | MC | **Review U3:** "おなまえは means:" → What is your name? | Review |
-| 12 | FB | **Review U3:** "がくせいです ＿" (question) → か | Review |
-| 13 | MC | **Review U2:** "Which means 'please'?" → おねがいします | Review |
-| 14 | MC | **Review U1:** "You're leaving. You say:" → さようなら | Review |
-| 15 | MA | **Review U3:** Match がくせい, せんせい, ともだち, いしゃ to meanings | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | MA | Match 4 pairs: これ=this, それ=that (near you), あれ=that over there, なん=what |
+| 2 | MC | "Someone asks you これはなんですか while holding a pen. You reply:" → それはペンです |
+| 3 | MC | "それはかばんです means:" → That is a bag |
+| 4 | WO | "Is that a phone?" → それ / は / でんわ / です / か (distractors: の) |
+| 5 | MC | "Which word means "bag"?" → かばん |
+| 6 | MC | "Pick the WRONG pairing:" → それ = this |
+| 7 | FB | "これは ＿ です" → ほん — "This is a book" |
+| 8 | WO | "What is that over there?" → あれ / は / なん / です / か (distractors: これ) |
+| 9 | KB | Build "bag": か ば ん (distractors: で, わ, ほ) |
+| 10 | KB | Build "phone": で ん わ (distractors: か, ば, ほ) |
+| 11 | MC | "おなまえは？ means:" → What is your name? |
+| 12 | FB | "がくせいです ＿" → か |
+| 13 | KR | 電話 → でんわ |
+| 14 | RD | "たなかさんはがくせいです。
+やまださんもがくせいです。
+たな..." — Q: What do Tanaka and Yamada have in common? → Both are students |
+| 15 | MA | Match 4 pairs: がくせい=student, せんせい=teacher, ともだち=friend, いしゃ=doctor |
 
 ---
 
 ## Unit 5: My Things
 
-**Theme:** Demonstrative adjectives (this/that + noun), possession, more objects
-**Grammar:** この/その/あの (L5.2), の possession particle (L5.4)
-**New vocabulary:** 9 words across 3 content lessons
-**Review material:** Units 1-4
+**Theme:** この/その/あの, の possession, more objects
 
 ---
 
-### Lesson 5.1: Watch, Car, Umbrella
+### Watch, Car, Umbrella (とけい、くるま、かさ)
 
-**New vocabulary (3 words):**
+**Vocabulary (3 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | とけい | tokei | watch / clock |
 | くるま | kuruma | car |
 | かさ | kasa | umbrella |
 
-**Grammar:** None (vocab only)
-**Review:** Unit 4
-
-**Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'watch' or 'clock'?" → とけい | New |
-| 2 | MC | "Which means 'car'?" → くるま | New |
-| 3 | MC | "Which means 'umbrella'?" → かさ | New |
-| 4 | MA | Match とけい, くるま, かさ to watch, car, umbrella | New |
-| 5 | KB | Build とけい from kana: と け い (distractors: く, る, ま) | New |
-| 6 | KB | Build くるま from kana: く る ま (distractors: と, け, い) | New |
-| 7 | KB | Build かさ from kana: か さ (distractors: く, る, ま) | New |
-| 8 | MC | "You check the time on your:" → とけい | New |
-| 9 | MC | "It's raining. You need a:" → かさ | New |
-| 10 | MC | **Review U4:** "これはなんですか means:" → What is this? | Review |
-| 11 | FB | **Review U4:** "＿ はほんです" (near me) → これ | Review |
-| 12 | MC | **Review U3:** "わたしはがくせいです means:" → I am a student | Review |
-| 13 | MA | **Review U4:** Match ほん, ペン, かばん, でんわ to meanings | Review |
+**Exercises (14):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: とけい, くるま, かさ |
+| 2 | MC | "Which means "watch" or "clock"?" → とけい |
+| 3 | MC | "Which means "car"?" → くるま |
+| 4 | MC | "Which means "umbrella"?" → かさ |
+| 5 | MA | Match 3 pairs: とけい=watch / clock, くるま=car, かさ=umbrella |
+| 6 | KB | Build "watch / clock" ⌚: と け い (distractors: く, る, ま) |
+| 7 | KB | Build "car" 🚗: く る ま (distractors: と, け, い) |
+| 8 | KB | Build "umbrella" ☂️: か さ (distractors: く, る, ま) |
+| 9 | LI | Listen: とけい → watch / clock / car / umbrella / bag |
+| 10 | MC | "It's raining. You need a:" → かさ |
+| 11 | MC | "これはなんですか means:" → What is this? |
+| 12 | TF | これはほんです = "This is a book" → Correct |
+| 13 | MC | "わたしはがくせいです means:" → I am a student |
+| 14 | MA | Match 4 pairs: ほん=book, ペン=pen, かばん=bag, でんわ=phone |
 
 ---
 
-### Lesson 5.2: This Book, That Car
+### This Book, That Car (このほん、そのくるま)
 
-**New vocabulary (3 words):**
+**Vocabulary (3 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | この | kono | this ~ (+ noun) |
 | その | sono | that ~ (+ noun) |
 | あの | ano | that ~ over there (+ noun) |
 
-**Grammar:** この/その/あの + noun (demonstrative adjectives) — must be followed by a noun
-**grammar_intro:**
-> この/その/あの go BEFORE a noun (unlike これ/それ/あれ which stand alone).
-> このほん = this book, そのペン = that pen, あのくるま = that car (over there)
-> Key difference: これ stands alone, この needs a noun!
-
-**Review:** L5.1 + Unit 4
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "How do you say 'this book'?" → このほん | New |
-| 2 | MC | "How do you say 'that car' (near you)?" → そのくるま | New |
-| 3 | MC | "How do you say 'that umbrella over there'?" → あのかさ | New |
-| 4 | MC | "What's the difference between これ and この?" → この needs a noun after it | New |
-| 5 | MA | Match この, その, あの to this~, that~, that~over there | New |
-| 6 | FB | "＿ ほんはわたしのです" (this book near me) → この | New |
-| 7 | FB | "＿ くるまはせんせいのです" (that car far away) → あの | New |
-| 8 | WO | Build: この / ほん / は / なん / です / か | New |
-| 9 | MC | "このとけい means:" → this watch | New |
-| 10 | MC | **Review L5.1:** "Which means 'umbrella'?" → かさ | Review |
-| 11 | MC | **Review U4:** "それ means:" → that (near you) | Review |
-| 12 | MA | **Review U4:** Match これ, それ, あれ to この, その, あの (concept pairing) | Review |
-| 13 | MC | **Review U3:** "にほんじんですか means:" → Are you Japanese? | Review |
-| 14 | MC | **Review U2:** "Which means 'thank you'?" → ありがとうございます | Review |
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: この, その, あの |
+| 2 | GI | "この/その/あの — Pointing at Nouns" — grammar explanation |
+| 3 | MC | "How do you say "this book"?" → このほん |
+| 4 | MC | "How do you say "that car" (near you)?" → そのくるま |
+| 5 | MC | "How do you say "that umbrella over there"?" → あのかさ |
+| 6 | MC | "What's the difference between これ and この?" → この needs a noun after it |
+| 7 | MA | Match 3 pairs: この=this ~, その=that ~, あの=that ~ over there |
+| 8 | MC | "このほんはわたしのです means:" → This book is mine |
+| 9 | MC | "あのくるまはせんせいのです means:" → That car (over there) is the teacher's |
+| 10 | WO | "What is this book?" → この / ほん / は / なん / です / か |
+| 11 | TF | このとけい = "That watch" → Wrong (This watch) |
+| 12 | MC | "Which means "umbrella"?" → かさ |
+| 13 | MC | "それ means:" → that (near you) |
+| 14 | MA | Match 3 pairs: これ=この, それ=その, あれ=あの |
+| 15 | LI | Listen: くるま → car / umbrella / watch / table |
 
 ---
 
-### Lesson 5.3: Table & Chair
+### Table & Chair (テーブルといす)
 
-**New vocabulary (2 words):**
+**Vocabulary (2 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | テーブル | teeburu | table |
 | いす | isu | chair |
 
-**Grammar:** None (practice この/その/あの with new + old vocab)
-**Review:** L5.1-5.2 + Units 1-4
-
 **Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'table'?" → テーブル | New |
-| 2 | MC | "Which means 'chair'?" → いす | New |
-| 3 | MA | Match テーブル, いす to table, chair | New |
-| 4 | KB | Build テーブル from katakana: テ ー ブ ル (distractors: ペ, ン, ア) | New |
-| 5 | KB | Build いす from kana: い す (distractors: か, さ, と) | New |
-| 6 | MC | "テーブル uses katakana because it is:" → a foreign word | New |
-| 7 | FB | "＿ テーブルはおおきいです" (this table) → この | New |
-| 8 | MC | "そのいす means:" → that chair | New |
-| 9 | MC | **Review L5.2:** "このほん means:" → this book | Review |
-| 10 | FB | **Review L5.2:** "＿ くるまはせんせいのです" → あの | Review |
-| 11 | MA | **Review:** Match all objects: とけい, くるま, かさ, テーブル, いす to meanings | Review |
-| 12 | MC | **Review U3:** "わたしはいしゃじゃないです means:" → I am not a doctor | Review |
-| 13 | MC | **Review U1:** "Which means 'hello'?" → こんにちは | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: テーブル, いす |
+| 2 | MC | "Which means "table"?" → テーブル |
+| 3 | MC | "Which means "chair"?" → いす |
+| 4 | MA | Match 2 pairs: テーブル=table, いす=chair |
+| 5 | KB | Build "chair" 💺: い す (distractors: か, さ, と) |
+| 6 | MC | "テーブル uses katakana because it is:" → a foreign word |
+| 7 | FB | "＿ テーブルはおおきいです" → この — "This table is big." |
+| 8 | TF | そのいす = "This chair" → Wrong (That chair) |
+| 9 | MC | "このほん means:" → this book |
+| 10 | FB | "あのくるま ＿ せんせいのです" → は |
+| 11 | MA | Match 5 pairs: とけい=watch / clock, くるま=car, かさ=umbrella, テーブル=table, いす=chair |
+| 12 | MC | "わたしはいしゃじゃないです means:" → I am not a doctor |
+| 13 | LI | Listen: テーブル → table / chair / watch / umbrella |
 
 ---
 
-### Lesson 5.4: My Book, Your Pen (Possession)
+### My Book, Your Pen (わたしのほん)
 
-**New vocabulary (1 word):**
+**Vocabulary (1 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | の | no | 's (possession particle) |
 
-**Grammar:** の (possession particle) — X の Y = "X's Y"
-**grammar_intro:**
-> の connects a possessor to what they possess.
-> わたしのほん = my book
-> たなかさんのペン = Tanaka's pen
-> せんせいのくるま = the teacher's car
-
-**Review:** L5.1-5.3 + Units 1-4
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "わたしのほん means:" → my book | New |
-| 2 | FB | "たなかさん ＿ ペン" → の | New |
-| 3 | MC | "せんせいのくるま means:" → the teacher's car | New |
-| 4 | WO | Build: これ / は / わたし / の / とけい / です | New |
-| 5 | FB | "せんせい ＿ かさ" → の | New |
-| 6 | MC | "それはだれのほんですか means:" → Whose book is that? | New |
-| 7 | WO | Build: それ / は / だれ / の / かばん / です / か | New |
-| 8 | FB | "この くるま は せんせい ＿ です" → の | New |
-| 9 | WO | Build: この / ペン / は / わたし / の / です | New |
-| 10 | MC | **Review L5.3:** "Which means 'table'?" → テーブル | Review |
-| 11 | MC | **Review L5.2:** "How do you say 'that umbrella'?" → そのかさ | Review |
-| 12 | FB | **Review U4:** "＿ はでんわです" (pointing near me) → これ | Review |
-| 13 | MC | **Review U3:** "おなまえは means:" → What is your name? | Review |
-| 14 | MA | **Review:** Match わたしのほん, せんせいのくるま, たなかさんのペン to my book, teacher's car, Tanaka's pen | Review |
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: の |
+| 2 | GI | "の — The Possession Particle" — grammar explanation |
+| 3 | MC | "わたしのほん means:" → my book |
+| 4 | FB | "たなかさん ＿ ペン" → の |
+| 5 | MC | "せんせいのくるま means:" → the teacher's car |
+| 6 | WO | "This is my watch." → これ / は / わたし / の / とけい / です |
+| 7 | FB | "せんせい ＿ かさ" → の |
+| 8 | MC | "それはだれのほんですか means:" → Whose book is that? |
+| 9 | WO | "Whose bag is that?" → それ / は / だれ / の / かばん / です / か |
+| 10 | FB | "このくるまはせんせい ＿ です" → の |
+| 11 | WO | "This pen is mine." → この / ペン / は / わたし / の / です |
+| 12 | LI | Listen: いす → chair / table / car / clock |
+| 13 | TF | わたしのかさ = "My umbrella" → Correct |
+| 14 | FB | "これ ＿ でんわです" → は |
+| 15 | MA | Match 3 pairs: わたしのほん=my book, せんせいのくるま=the teacher's car, たなかさんのペン=Tanaka's pen |
 
 ---
 
-### Lesson 5.5: Practice — Whose Is This?
-
-**New vocabulary:** None
-**Grammar:** None
-**Review:** All Unit 5 (9 words, 2 grammar points) + Units 1-4
+### Practice: Whose Is This? (これはだれの？)
 
 **Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | FB | "これはわたし ＿ かばんです" → の | Review |
-| 2 | WO | Build: この / とけい / は / だれ / の / です / か | Review |
-| 3 | MC | "そのかさはたなかさんのです means:" → That umbrella is Tanaka's | Review |
-| 4 | FB | "＿ テーブルはおおきいです" (this) → この | Review |
-| 5 | WO | Build: あの / くるま / は / せんせい / の / です | Review |
-| 6 | MC | "このいすはだれのですか means:" → Whose chair is this? | Review |
-| 7 | FB | "それは わたし ＿ ペンです" → の | Review |
-| 8 | MA | Match all Unit 5 objects: とけい, くるま, かさ, テーブル, いす to meanings | Review |
-| 9 | WO | Build: これ / は / ともだち / の / でんわ / です | Review |
-| 10 | MC | **Review U4:** "あれはなんですか means:" → What is that (over there)? | Review |
-| 11 | MC | **Review U3:** "がくせいですか means:" → Are you a student? | Review |
-| 12 | FB | **Review U3:** "わたしはせんせい ＿" (negative) → じゃないです | Review |
-| 13 | MC | **Review U2:** "Which means 'please'?" → おねがいします | Review |
-| 14 | MC | **Review U1:** "Good evening:" → こんばんは | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | FB | "これはわたし ＿ かばんです" → の |
+| 2 | WO | "Whose watch is this?" → この / とけい / は / だれ / の / です / か (distractors: あの) |
+| 3 | MC | "そのかさはたなかさんのです means:" → That umbrella is Tanaka's |
+| 4 | FB | "＿ テーブルはおおきいです" → この — "This table is big." |
+| 5 | WO | "That car (over there) is the teacher's." → あの / くるま / は / せんせい / の / です (distractors: この) |
+| 6 | MC | "このいすはだれのですか means:" → Whose chair is this? |
+| 7 | FB | "それはわたし ＿ ペンです" → の |
+| 8 | MA | Match 5 pairs: とけい=watch / clock, くるま=car, かさ=umbrella, テーブル=table, いす=chair |
+| 9 | WO | "This is my friend's phone." → これ / は / ともだち / の / でんわ / です (distractors: かばん) |
+| 10 | RD | "このほんはたなかさんのです。
+そのペンはわたしのです。
+あの..." — Q: Whose is the pen? → Mine |
+| 11 | MC | "がくせいですか means:" → Are you a student? |
+| 12 | FB | "いいえ、わたしはせんせい ＿" → じゃないです |
+| 13 | KR | 車 (car) → くるま |
+| 14 | MC | "Good evening:" → こんばんは |
 
 ---
 
-### Lesson 5.6: Unit 5 Quiz
-
-**New vocabulary:** None
-**Grammar:** None
-**Review:** All Unit 5 + Units 1-4
+### Unit 5 Quiz (ユニット5クイズ)
 
 **Exercises (15):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MA | Match この, その, あの to this~, that~, that~over there | Review |
-| 2 | FB | "たなかさん ＿ ほん" → の | Review |
-| 3 | MC | "このくるまはせんせいのです means:" → This car is the teacher's | Review |
-| 4 | WO | Build: それ / は / だれ / の / とけい / です / か | Review |
-| 5 | MC | "Pick the WRONG pairing:" → この = that (trap) | Review |
-| 6 | FB | "＿ かさはわたしのです" (that umbrella near you) → その | Review |
-| 7 | MC | "テーブル means:" → table | Review |
-| 8 | MC | "いす means:" → chair | Review |
-| 9 | WO | Build: あの / ペン / は / ともだち / の / です | Review |
-| 10 | KB | Build とけい from kana | Review |
-| 11 | KB | Build くるま from kana | Review |
-| 12 | MC | **Review U4:** "これはペンですか means:" → Is this a pen? | Review |
-| 13 | MC | **Review U3:** "アメリカからきました means:" → I came from America | Review |
-| 14 | MC | **Review U2:** "You bump into someone:" → すみません | Review |
-| 15 | MA | **Review:** Match 6 objects from Units 4-5 to meanings | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | MA | Match 3 pairs: この=this ~, その=that ~, あの=that ~ over there |
+| 2 | FB | "たなかさん ＿ ほん" → の |
+| 3 | MC | "このくるまはせんせいのです means:" → This car is the teacher's |
+| 4 | WO | "Whose watch is that?" → それ / は / だれ / の / とけい / です / か (distractors: この) |
+| 5 | MC | "Pick the WRONG pairing:" → この = that |
+| 6 | MC | "そのかさはわたしのです means:" → That umbrella is mine |
+| 7 | MC | "テーブル means:" → table |
+| 8 | MC | "いす means:" → chair |
+| 9 | WO | "That pen is my friend's." → あの / ペン / は / ともだち / の / です (distractors: か, この) |
+| 10 | KB | Build "watch / clock": と け い (distractors: く, る, ま, か) |
+| 11 | KB | Build "car": く る ま (distractors: と, け, い, か) |
+| 12 | RD | "わたしはたなかです。
+このくるまはわたしのです。
+あのかさも..." — Q: What does Tanaka say is his? → A car and an umbrella |
+| 13 | KR | 時計 → とけい |
+| 14 | MA | Match 6 pairs: とけい=watch / clock, くるま=car, かさ=umbrella, ほん=book, でんわ=phone, かばん=bag |
+| 15 | MC | "わたしはいしゃじゃないです means:" → I am not a doctor |
 
 ---
 
 ## Unit 6: Also & Where?
 
-**Theme:** The particle も (also), location words, question words
-**Grammar:** も (L6.1), ここ/そこ/あそこ (L6.2), どこ (L6.3), どれ/どの (L6.4)
-**New vocabulary:** 9 words across 4 content lessons
-**Review material:** Units 1-5
+**Theme:** も particle, location words, どれ/どの
 
 ---
 
-### Lesson 6.1: Also! (も Particle)
+### Also! (も)
 
-**New vocabulary (2 words):**
+**Vocabulary (2 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | も | mo | also, too |
 | だれ | dare | who |
 
-**Grammar:** も (also particle) — も replaces は to mean "also/too"
-**grammar_intro:**
-> も replaces は to mean "also" or "too".
-> たなかさんはがくせいです。やまださんもがくせいです。
-> = "Tanaka is a student. Yamada is also a student."
-> Note: も takes the place of は — you do NOT say はも.
-
-**Review:** Unit 5
-
 **Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "What does も mean?" → also, too | New |
-| 2 | MC | "わたしもがくせいです means:" → I am also a student | New |
-| 3 | FB | "たなかさんはがくせいです。やまださん ＿ がくせいです" → も | New |
-| 4 | MC | "も replaces which particle?" → は | New |
-| 5 | WO | Build: わたし / も / せんせい / です | New |
-| 6 | MC | "だれ means:" → who | New |
-| 7 | FB | "これはテーブルです。それ ＿ テーブルです" → も | New |
-| 8 | WO | Build: やまださん / も / にほんじん / です | New |
-| 9 | MC | **Review U5:** "わたしのほん means:" → my book | Review |
-| 10 | FB | **Review U5:** "たなかさん ＿ ペン" → の | Review |
-| 11 | MC | **Review U4:** "これはなんですか means:" → What is this? | Review |
-| 12 | MC | **Review U3:** "にほんじんですか means:" → Are you Japanese? | Review |
-| 13 | MA | **Review U5:** Match この, その, あの to meanings | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: も, だれ |
+| 2 | GI | "も — The "Also" Particle" — grammar explanation |
+| 3 | MC | "What does も mean?" → also, too |
+| 4 | MC | "わたしもがくせいです means:" → I am also a student |
+| 5 | FB | "やまださん ＿ がくせいです" → も |
+| 6 | MC | "も replaces which particle?" → は |
+| 7 | WO | "I am also a teacher." → わたし / も / せんせい / です |
+| 8 | MC | "だれ means:" → who |
+| 9 | FB | "これはテーブルです。それ ＿ テーブルです" → も |
+| 10 | WO | "Yamada is also Japanese." → やまださん / も / にほんじん / です |
+| 11 | TF | わたしもがくせいです = "I am a student" → Wrong (I am also a student) |
+| 12 | FB | "たなかさん ＿ ペン" → の |
+| 13 | MA | Match 3 pairs: この=this ~, その=that ~, あの=that ~ over there |
 
 ---
 
-### Lesson 6.2: Here, There, Over There
+### Here, There, Over There (ここ、そこ、あそこ)
 
-**New vocabulary (3 words):**
+**Vocabulary (3 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | ここ | koko | here |
 | そこ | soko | there |
 | あそこ | asoko | over there |
 
-**Grammar:** ここ/そこ/あそこ — location words following the こ/そ/あ pattern
-**grammar_intro:**
-> ここ = here (near me), そこ = there (near you), あそこ = over there (far from both)
-> These follow the same こ/そ/あ pattern as これ/それ/あれ and この/その/あの.
-> がっこうはここです。 = "The school is here."
-
-**Review:** L6.1 + Units 1-5
-
-**Exercises (13):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'here'?" → ここ | New |
-| 2 | MC | "Which means 'there' (near you)?" → そこ | New |
-| 3 | MC | "Which means 'over there'?" → あそこ | New |
-| 4 | MA | Match ここ, そこ, あそこ to here, there, over there | New |
-| 5 | MC | "ここ is to これ as そこ is to:" → それ | New |
-| 6 | FB | "がっこうは ＿ です" (pointing here) → ここ | New |
-| 7 | MC | "でんわはあそこです means:" → The phone is over there | New |
-| 8 | WO | Build: ほん / は / そこ / です | New |
-| 9 | MC | **Review L6.1:** "わたしもがくせいです means:" → I am also a student | Review |
-| 10 | FB | **Review L6.1:** "やまださん ＿ せんせいです" (also) → も | Review |
-| 11 | MC | **Review U5:** "このくるま means:" → this car | Review |
-| 12 | MC | **Review U3:** "はじめまして means:" → Nice to meet you | Review |
-| 13 | MA | **Review:** Match こ/そ/あ pattern: これ-この-ここ, それ-その-そこ, あれ-あの-あそこ | Review |
+**Exercises (14):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: ここ, そこ, あそこ |
+| 2 | GI | "ここ/そこ/あそこ — Location Words" — grammar explanation |
+| 3 | MC | "Which means "here"?" → ここ |
+| 4 | MC | "Which means "there" (near you)?" → そこ |
+| 5 | MC | "Which means "over there"?" → あそこ |
+| 6 | MA | Match 3 pairs: ここ=here, そこ=there, あそこ=over there |
+| 7 | MC | "ここ is to これ as そこ is to:" → それ |
+| 8 | FB | "がっこうは ＿ です" → ここ — "The school is here." |
+| 9 | MC | "でんわはあそこです means:" → The phone is over there |
+| 10 | WO | "The book is there." → ほん / は / そこ / です |
+| 11 | TF | でんわはあそこです = "The phone is here" → Wrong (The phone is over there) |
+| 12 | FB | "やまださん ＿ せんせいです" → も |
+| 13 | LI | Listen: ここ → here / there / over there / where |
+| 14 | MA | Match 3 pairs: これ — この — ここ=near me (こ), それ — その — そこ=near you (そ), あれ — あの — あそこ=over there (あ) |
 
 ---
 
-### Lesson 6.3: Where? (どこ)
+### Where? (どこ？)
 
-**New vocabulary (2 words):**
+**Vocabulary (2 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | どこ | doko | where |
 | トイレ | toire | toilet / bathroom |
 
-**Grammar:** どこ + は...です (location question/answer pattern)
-**grammar_intro:**
-> どこ = where. It completes the こ/そ/あ/ど pattern for locations.
-> Place は どこ です か？ = "Where is [place]?"
-> トイレはどこですか？ = "Where is the bathroom?"
-> トイレはあそこです。 = "The bathroom is over there."
-
-**Review:** L6.1-6.2 + Units 1-5
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'where'?" → どこ | New |
-| 2 | MC | "Which means 'bathroom'?" → トイレ | New |
-| 3 | FB | "トイレは ＿ ですか" → どこ | New |
-| 4 | WO | Build: トイレ / は / どこ / です / か | New |
-| 5 | MC | "トイレはどこですか means:" → Where is the bathroom? | New |
-| 6 | FB | "トイレは ＿ です" (pointing over there) → あそこ | New |
-| 7 | KB | Build トイレ from katakana: ト イ レ (distractors: テ, ー, ブ) | New |
-| 8 | WO | Build: でんわ / は / どこ / です / か | New |
-| 9 | MC | "かばんはそこです means:" → The bag is there | New |
-| 10 | MC | **Review L6.2:** "ここ means:" → here | Review |
-| 11 | FB | **Review L6.1:** "それ ＿ ほんです" (also) → も | Review |
-| 12 | MC | **Review U5:** "わたしのかさ means:" → my umbrella | Review |
-| 13 | MC | **Review U2:** "Which means 'no'?" → いいえ | Review |
-| 14 | MA | **Review:** Match ここ, そこ, あそこ, どこ to here, there, over there, where | Review |
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: どこ, トイレ |
+| 2 | GI | "どこ — Asking "Where?"" — grammar explanation |
+| 3 | MC | "Which means "where"?" → どこ |
+| 4 | MC | "Which means "bathroom"?" → トイレ |
+| 5 | FB | "トイレは ＿ ですか" → どこ — "Where is the bathroom?" |
+| 6 | WO | "Where is the bathroom?" → トイレ / は / どこ / です / か |
+| 7 | MC | "トイレはどこですか means:" → Where is the bathroom? |
+| 8 | FB | "トイレは ＿ です" → あそこ — "The bathroom is over there." |
+| 9 | WO | "Where is the phone?" → でんわ / は / どこ / です / か |
+| 10 | TF | トイレはあそこです = "The bathroom is over there" → Correct |
+| 11 | MC | "ここ means:" → here |
+| 12 | FB | "それ ＿ ほんです" → も |
+| 13 | MC | "わたしのかさ means:" → my umbrella |
+| 14 | DR | Stranger: "すみません、トイレはどこですか？" — It's over there: → あそこです |
+| 15 | MA | Match 4 pairs: ここ=here, そこ=there, あそこ=over there, どこ=where |
 
 ---
 
-### Lesson 6.4: Which One? (どれ/どの)
+### Which One? (どれ？どの？)
 
-**New vocabulary (2 words):**
+**Vocabulary (2 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | どれ | dore | which one (standalone) |
 | どの | dono | which ~ (+ noun) |
 
-**Grammar:** どれ vs どの — どれ stands alone, どの goes before a noun
-**grammar_intro:**
-> どれ stands alone, like これ/それ/あれ: どれがあなたのですか？ = "Which one is yours?"
-> どの goes before a noun, like この/その/あの: どのほんですか？ = "Which book?"
-> Pattern: これ↔この, それ↔その, あれ↔あの, どれ↔どの
-
-**Review:** L6.1-6.3 + Units 1-5
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "Which means 'which one'?" → どれ | New |
-| 2 | MC | "どの vs どれ: which needs a noun after it?" → どの | New |
-| 3 | FB | "＿ がたなかさんのかばんですか" (which one) → どれ | New |
-| 4 | WO | Build: どの / ほん / が / たなかさん / の / です / か | New |
-| 5 | MC | "どれがあなたのですか means:" → Which one is yours? | New |
-| 6 | FB | "＿ ペンがすきですか" (which) → どの | New |
-| 7 | MA | Match question words: なん, だれ, どこ, どれ to what, who, where, which one | New |
-| 8 | MC | "どのくるまですか means:" → Which car? | New |
-| 9 | MC | **Review L6.3:** "トイレはどこですか means:" → Where is the bathroom? | Review |
-| 10 | FB | **Review L6.3:** "トイレは ＿ です" (over there) → あそこ | Review |
-| 11 | MC | **Review L6.1:** "も means:" → also, too | Review |
-| 12 | MC | **Review U4:** "あれはなんですか means:" → What is that over there? | Review |
-| 13 | FB | **Review U5:** "せんせい ＿ くるま" → の | Review |
-| 14 | MA | **Review:** Match the complete ど-series: どこ, どれ, どの, だれ, なん to where, which one, which~, who, what | Review |
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: どれ, どの |
+| 2 | GI | "どれ vs どの — Asking "Which?"" — grammar explanation |
+| 3 | MC | "Which means "which one"?" → どれ |
+| 4 | MC | "どの vs どれ: which needs a noun after it?" → どの |
+| 5 | FB | "＿ がたなかさんのかばんですか" → どれ — "Which one is Tanaka's bag?" |
+| 6 | WO | "Which book is Tanaka's?" → どの / ほん / が / たなかさん / の / です / か |
+| 7 | MC | "どれがあなたのですか means:" → Which one is yours? |
+| 8 | FB | "＿ ペンがすきですか" → どの — "Which pen do you like?" |
+| 9 | MA | Match 4 pairs: なん=what, だれ=who, どこ=where, どれ=which one |
+| 10 | TF | どのくるまですか = "Which car?" → Correct |
+| 11 | MC | "トイレはどこですか means:" → Where is the bathroom? |
+| 12 | FB | "トイレは ＿ です" → あそこ — "The bathroom is over there." |
+| 13 | DR | Tanaka: "わたしはがくせいです。" — You are also a student: → わたしもがくせいです |
+| 14 | FB | "せんせい ＿ くるま" → の |
+| 15 | MA | Match 5 pairs: どこ=where, どれ=which one, どの=which ~, だれ=who, なん=what |
 
 ---
 
-### Lesson 6.5: Practice — Also, Where, Which
+### Practice: Also, Where, Which (れんしゅう)
 
-**New vocabulary (1 word):**
+**Vocabulary (1 words):**
 | Japanese | Reading | English |
 |----------|---------|---------|
 | えき | eki | station |
 
-**Grammar:** None (consolidation of all Unit 6 material)
-**Review:** All Unit 6 + Units 1-5
-
-**Exercises (14):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MC | "えき means:" → station | New |
-| 2 | KB | Build えき from kana: え き (distractors: か, さ, ど) | New |
-| 3 | WO | Build: えき / は / どこ / です / か | New |
-| 4 | FB | "えきは ＿ です" (over there) → あそこ | Review |
-| 5 | MC | "たなかさんもせんせいです means:" → Tanaka is also a teacher | Review |
-| 6 | FB | "＿ がたなかさんのですか" (which one) → どれ | Review |
-| 7 | WO | Build: どの / かばん / が / やまださん / の / です / か | Review |
-| 8 | FB | "わたし ＿ にほんじんです" (also) → も | Review |
-| 9 | MC | "トイレはここです means:" → The bathroom is here | Review |
-| 10 | MC | **Review U5:** "このとけいはだれのですか means:" → Whose watch is this? | Review |
-| 11 | WO | **Review U5:** Build: この / かさ / は / わたし / の / です | Review |
-| 12 | MC | **Review U3:** "いしゃじゃないです means:" → is not a doctor | Review |
-| 13 | MC | **Review U2:** "すみません means:" → excuse me / sorry | Review |
-| 14 | MC | **Review U1:** "Which means 'good evening'?" → こんばんは | Review |
+**Exercises (15):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | VI | Intro: えき |
+| 2 | MC | "えき means:" → station |
+| 3 | KB | Build "station" 🚉: え き (distractors: か, さ, ど) |
+| 4 | WO | "Where is the station?" → えき / は / どこ / です / か (distractors: の) |
+| 5 | FB | "えきは ＿ です" → あそこ — "The station is over there." |
+| 6 | TF | たなかさんもせんせいです = "Tanaka is a teacher" → Wrong (Tanaka is also a teacher) |
+| 7 | FB | "＿ がたなかさんのですか" → どれ — "Which one is Tanaka's?" |
+| 8 | WO | "Which bag is Yamada's?" → どの / かばん / が / やまださん / の / です / か (distractors: は) |
+| 9 | FB | "わたし ＿ にほんじんです" → も |
+| 10 | RD | "トイレはあそこです。
+えきもあそこです。" — Q: Where is the station? → Over there |
+| 11 | MC | "このとけいはだれのですか means:" → Whose watch is this? |
+| 12 | WO | "This umbrella is mine." → この / かさ / は / わたし / の / です (distractors: も) |
+| 13 | MC | "いしゃじゃないです means:" → is not a doctor |
+| 14 | KR | 駅 (station) → えき |
+| 15 | DR | You: "(You accidentally bump into someone)" — You say: → すみません |
 
 ---
 
-### Lesson 6.6: Unit 6 Quiz (Course V2 Checkpoint)
-
-**New vocabulary:** None
-**Grammar:** None
-**Review:** All Units 1-6 — this is a major checkpoint
+### Unit 6 Quiz (ユニット6クイズ)
 
 **Exercises (15):**
-| # | Type | Exercise | New/Review |
-|---|------|----------|------------|
-| 1 | MA | Match も, ここ, そこ, あそこ, どこ to also, here, there, over there, where | Review |
-| 2 | FB | "やまださん ＿ がくせいです" (also) → も | Review |
-| 3 | WO | Build: えき / は / どこ / です / か | Review |
-| 4 | MC | "どのほんですか means:" → Which book? | Review |
-| 5 | FB | "＿ がわたしのです" (which one) → どれ | Review |
-| 6 | MC | "Pick the WRONG pairing:" → ここ = there (trap) | Review |
-| 7 | WO | Build: トイレ / は / あそこ / です | Review |
-| 8 | MC | "えきはそこです means:" → The station is there | Review |
-| 9 | MC | **Review U5:** "わたしのくるま means:" → my car | Review |
-| 10 | FB | **Review U5:** "この とけい は だれ ＿ ですか" → の | Review |
-| 11 | MC | **Review U4:** "これはかばんですか means:" → Is this a bag? | Review |
-| 12 | WO | **Review U3:** Build: はじめまして / わたし / は / たなか / です / どうぞよろしく | Review |
-| 13 | MC | **Review U3:** "わたしはいしゃじゃないです means:" → I am not a doctor | Review |
-| 14 | MC | **Review U2:** "Formal thanks:" → ありがとうございます | Review |
-| 15 | MA | **Review U1-6:** Match 8 mixed words from across all units | Review |
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | MA | Match 5 pairs: も=also, ここ=here, そこ=there, あそこ=over there, どこ=where |
+| 2 | FB | "やまださん ＿ がくせいです" → も |
+| 3 | WO | "Where is the station?" → えき / は / どこ / です / か (distractors: も) |
+| 4 | MC | "どのほんですか means:" → Which book? |
+| 5 | FB | "＿ がわたしのです" → どれ — "Which one is mine?" |
+| 6 | MC | "Pick the WRONG pairing:" → ここ = there |
+| 7 | WO | "The bathroom is over there." → トイレ / は / あそこ / です (distractors: どこ, か) |
+| 8 | MC | "えきはそこです means:" → The station is there |
+| 9 | MC | "わたしのくるま means:" → my car |
+| 10 | FB | "このとけいはだれ ＿ ですか" → の |
+| 11 | RD | "わたしはやまだです。がくせいです。
+たなかさんはせんせいです..." — Q: Who is the teacher? → Tanaka |
+| 12 | MC | "わたしはいしゃじゃないです means:" → I am not a doctor |
+| 13 | KR | 友達 → ともだち |
+| 14 | MA | Match 8 pairs: も=also, えき=station, トイレ=bathroom, どれ=which one, どの=which ~, ここ=here, そこ=there, あそこ=over there |
+| 15 | WO | "Nice to meet you. I am Tanaka. Pleased to meet you." → はじめまして / わたし / は / たなか / です / どうぞよろしく (distractors: も) |
+
+---
+
+## ⭐ Conversation Ready (after unit-6)
+
+Test everything from Units 1-6: demonstratives, objects, possession, location, also, and all earlier material.
+
+**Exercises (20):**
+| # | Type | Exercise |
+|---|------|----------|
+| 1 | MA | Match 6 pairs: これ=this thing, この=this ~, ここ=here, それ=that thing, その=that ~, そこ=there |
+| 2 | WO | "Whose book is this?" → この / ほん / は / だれ / の / です / か (distractors: も, あの) |
+| 3 | FB | "トイレは ＿ ですか" → どこ — "Where is the bathroom?" |
+| 4 | MC | "Someone asks これはなんですか while holding a bag. You reply:" → それはかばんです |
+| 5 | WO | "The station is over there." → えき / は / あそこ / です (distractors: どこ, か) |
+| 6 | FB | "たなかさん ＿ ペン" → の |
+| 7 | MC | "わたしもがくせいです means:" → I am also a student |
+| 8 | FB | "これはテーブルです。それ ＿ テーブルです" → も |
+| 9 | WO | "My bag is there." → わたし / の / かばん / は / そこ / です (distractors: この) |
+| 10 | MA | Match 7 pairs: ほん=book, ペン=pen, かばん=bag, でんわ=phone, とけい=watch, くるま=car, かさ=umbrella |
+| 11 | MC | "どのくるまですか means:" → Which car? |
+| 12 | KB | Build "phone": で ん わ (distractors: か, ば, ほ) |
+| 13 | FB | "＿ がたなかさんのですか" → どれ — "Which one is Tanaka's?" |
+| 14 | WO | "That car over there is the teacher's." → あの / くるま / は / せんせい / の / です (distractors: この) |
+| 15 | RD | "これはたなかさんのでんわです。
+それはわたしのほんです。
+せ..." — Q: Where is the teacher's bag? → Over there |
+| 16 | FB | "いいえ、わたしはいしゃ ＿" → じゃないです |
+| 17 | WO | "I am also Japanese." → わたし / も / にほんじん / です (distractors: は) |
+| 18 | MC | "You need to find the station. You ask:" → えきはどこですか |
+| 19 | KB | Build "bag": か ば ん (distractors: で, わ, と) |
+| 20 | MA | Match 5 pairs: なん=what, だれ=who, どこ=where, どれ=which one, どの=which ~ |
 
 ---
 
 ## Summary Statistics
 
 ### Lesson Count by Unit
-| Unit | Lessons | Content Lessons | Practice/Quiz Lessons |
-|------|---------|----------------|-----------------------|
-| 1: Hello! | 5 | 2 | 3 |
-| 2: Please & Thank You | 5 | 3 | 2 |
-| 3: I Am... | 7 | 4 (+bonus grammar) | 2 (+1 bonus review) |
-| 4: What Is This? | 5 | 3 | 2 |
-| 5: My Things | 6 | 4 | 2 |
-| 6: Also & Where? | 6 | 4 (+1 has new vocab) | 2 |
-| **TOTAL** | **34** | **20** | **14** |
+| Unit | Lessons |
+|------|---------|
+| Hello! | 5 |
+| Please & Thank You | 5 |
+| I Am... | 7 |
+| ⭐ Survival Checkpoint | 1 |
+| What Is This? | 5 |
+| My Things | 6 |
+| Also & Where? | 6 |
+| ⭐ Conversation Ready | 1 |
+| **Total** | **36** |
 
-### Vocabulary Distribution
+### Exercise Type Distribution
+| Type | Count | % |
+|------|-------|---|
+| MC (multiple_choice) | 191 | 36% |
+| FB (fill_blank) | 72 | 14% |
+| MA (matching) | 55 | 10% |
+| WO (word_order) | 50 | 10% |
+| KB (kana_build) | 47 | 9% |
+| VI (vocab_intro) | 23 | 4% |
+| TF (true_false) | 20 | 4% |
+| LI (listening) | 16 | 3% |
+| DR (dialogue_response) | 13 | 2% |
+| GI (grammar_intro) | 13 | 2% |
+| RD (reading) | 9 | 2% |
+| TR (translation) | 8 | 2% |
+| KR (kanji_reading) | 8 | 2% |
+| **Total** | **525** | |
+
+### Vocabulary by Unit
 | Unit | New Words | Cumulative |
 |------|-----------|-----------|
-| 1 | 4 | 4 |
-| 2 | 5 | 9 |
-| 3 | 16 | 25 |
-| 4 | 8 | 33 |
-| 5 | 9 | 42 |
-| 6 | 10 | 52 |
-| **TOTAL** | **52** | |
+| Hello! | 4 | 4 |
+| Please & Thank You | 6 | 10 |
+| I Am... | 16 | 26 |
+| What Is This? | 8 | 34 |
+| My Things | 9 | 43 |
+| Also & Where? | 10 | 53 |
 
-### Grammar Distribution
-| Unit | Grammar Points | Cumulative |
-|------|---------------|-----------|
-| 1 | 0 | 0 |
-| 2 | 0 | 0 |
-| 3 | 3 (は+です, か, じゃないです) + から+きました | 4 |
-| 4 | 1 (これ/それ/あれ) | 5 |
-| 5 | 2 (この/その/あの, の) | 7 |
-| 6 | 3 (も, ここ/そこ/あそこ/どこ, どれ/どの) | 10 |
-
-### Exercise Type Distribution (approximate across all lessons)
-| Type | Count | Percentage |
-|------|-------|-----------|
-| MC (multiple_choice) | ~250 | ~52% |
-| MA (matching) | ~70 | ~15% |
-| FB (fill_blank) | ~75 | ~16% |
-| WO (word_order) | ~50 | ~10% |
-| KB (kana_build) | ~35 | ~7% |
-
-### Review Ratio
-- Average review exercises per lesson: **4.8** (target was 4-5)
-- Review as percentage of total exercises: **~35%** (target was 30-40%)
-- Every lesson from L1.2 onward includes review from previous lessons
-- Every lesson from Unit 2 onward includes cross-unit review
-
-### Comparison: Old vs New
-| Metric | Old (Units 1-2) | New (Units 1-6) |
-|--------|-----------------|-----------------|
-| Lessons | 16 | 34 |
-| Words per lesson (avg) | 3-5 | 1-3 |
-| Grammar per lesson (max) | 1-2 | 0-1 |
-| Exercises per lesson | 8-12 | 13-15 |
-| Dedicated review lessons | 2 | 13 |
-| Total exercises | ~160 | ~470 |
-| Review exercises | ~20 | ~165 |
-| Review ratio | ~12% | ~35% |
-
----
-
-## Complete Vocabulary Reference (Units 1-6)
-
-All 52 words covered in this course section, in order of introduction:
+## Complete Vocabulary Reference
 
 | # | Japanese | Reading | English | Introduced |
 |---|----------|---------|---------|-----------|
-| 1 | こんにちは | konnichiwa | hello | L1.1 |
+| 1 | こんにちは | konnichiwa | hello / good afternoon | L1.1 |
 | 2 | おはようございます | ohayou gozaimasu | good morning | L1.1 |
 | 3 | こんばんは | konbanwa | good evening | L1.2 |
 | 4 | さようなら | sayounara | goodbye | L1.2 |
@@ -1281,64 +1226,47 @@ All 52 words covered in this course section, in order of introduction:
 | 7 | はい | hai | yes | L2.2 |
 | 8 | いいえ | iie | no | L2.2 |
 | 9 | おねがいします | onegaishimasu | please | L2.3 |
-| 10 | わたし | watashi | I, me | L3.1 |
-| 11 | がくせい | gakusei | student | L3.1 |
-| 12 | せんせい | sensei | teacher | L3.1 |
-| 13 | です | desu | am/is/are | L3.2 |
-| 14 | なまえ | namae | name | L3.3 |
-| 15 | おなまえは？ | onamae wa? | What is your name? | L3.3 |
-| 16 | ～さん | -san | Mr./Ms./Mrs. | L3.3 |
-| 17 | か | ka | question particle | L3.4 |
-| 18 | にほんじん | nihonjin | Japanese person | L3.4 |
-| 19 | アメリカじん | amerikajin | American person | L3.4 |
-| 20 | じゃないです | ja nai desu | is not | L3.5 |
-| 21 | ともだち | tomodachi | friend | L3.5 |
-| 22 | いしゃ | isha | doctor | L3.5 |
-| 23 | はじめまして | hajimemashite | nice to meet you | L3.6 |
-| 24 | どうぞよろしく | douzo yoroshiku | pleased to meet you | L3.6 |
-| 25 | ～からきました | kara kimashita | came from ~ | L3.6 |
-| 26 | ほん | hon | book | L4.1 |
-| 27 | ペン | pen | pen | L4.1 |
-| 28 | これ | kore | this | L4.2 |
-| 29 | それ | sore | that (near you) | L4.2 |
-| 30 | あれ | are | that (over there) | L4.2 |
-| 31 | なん | nan | what | L4.2 |
-| 32 | かばん | kaban | bag | L4.3 |
-| 33 | でんわ | denwa | phone | L4.3 |
-| 34 | とけい | tokei | watch/clock | L5.1 |
-| 35 | くるま | kuruma | car | L5.1 |
-| 36 | かさ | kasa | umbrella | L5.1 |
-| 37 | この | kono | this ~ | L5.2 |
-| 38 | その | sono | that ~ | L5.2 |
-| 39 | あの | ano | that ~ (over there) | L5.2 |
-| 40 | テーブル | teeburu | table | L5.3 |
-| 41 | いす | isu | chair | L5.3 |
-| 42 | の | no | possession particle | L5.4 |
-| 43 | も | mo | also, too | L6.1 |
-| 44 | だれ | dare | who | L6.1 |
-| 45 | ここ | koko | here | L6.2 |
-| 46 | そこ | soko | there | L6.2 |
-| 47 | あそこ | asoko | over there | L6.2 |
-| 48 | どこ | doko | where | L6.3 |
-| 49 | トイレ | toire | bathroom | L6.3 |
-| 50 | どれ | dore | which one | L6.4 |
-| 51 | どの | dono | which ~ | L6.4 |
-| 52 | えき | eki | station | L6.5 |
-
----
-
-## Grammar Reference (Units 1-6)
-
-| # | Grammar Point | Pattern | Introduced |
-|---|--------------|---------|-----------|
-| 1 | は (topic particle) + です (copula) | X は Y です | L3.2 |
-| 2 | おなまえは？ (set phrase) | Fixed question phrase | L3.3 |
-| 3 | か (question particle) | Statement + か = question | L3.4 |
-| 4 | じゃないです (negative copula) | X は Y じゃないです | L3.5 |
-| 5 | から + きました (origin) | Place から きました | L3.6 |
-| 6 | これ/それ/あれ (demonstrative pronouns) | これは Y です | L4.2 |
-| 7 | この/その/あの (demonstrative adjectives) | この N は... | L5.2 |
-| 8 | の (possession particle) | X の Y | L5.4 |
-| 9 | も (also particle) | X も Y です (replaces は) | L6.1 |
-| 10 | ここ/そこ/あそこ/どこ (location) | Place は どこ ですか | L6.2-6.3 |
-| 11 | どれ/どの (which) | どれ standalone, どの + noun | L6.4 |
+| 10 | おやすみなさい | oyasuminasai | goodnight | L2.3 |
+| 11 | わたし | watashi | I, me | L3-1 |
+| 12 | がくせい | gakusei | student | L3-1 |
+| 13 | せんせい | sensei | teacher | L3-1 |
+| 14 | です | desu | am / is / are | L3-2 |
+| 15 | なまえ | namae | name | L3-3 |
+| 16 | おなまえは？ | onamae wa? | What is your name? | L3-3 |
+| 17 | ～さん | -san | Mr. / Ms. / Mrs. | L3-3 |
+| 18 | か | ka | ? (question particle) | L3-4 |
+| 19 | にほんじん | nihonjin | Japanese person | L3-4 |
+| 20 | アメリカじん | amerikajin | American person | L3-4 |
+| 21 | じゃないです | ja nai desu | is not | L3-5 |
+| 22 | ともだち | tomodachi | friend | L3-5 |
+| 23 | いしゃ | isha | doctor | L3-5 |
+| 24 | はじめまして | hajimemashite | nice to meet you | L3-6 |
+| 25 | どうぞよろしく | douzo yoroshiku | pleased to meet you | L3-6 |
+| 26 | ～からきました | kara kimashita | came from ~ | L3-6 |
+| 27 | ほん | hon | book | L4-1 |
+| 28 | ペン | pen | pen | L4-1 |
+| 29 | これ | kore | this (thing here) | L4-2 |
+| 30 | それ | sore | that (thing near you) | L4-2 |
+| 31 | あれ | are | that (thing over there) | L4-2 |
+| 32 | なん | nan | what | L4-2 |
+| 33 | かばん | kaban | bag | L4-3 |
+| 34 | でんわ | denwa | phone | L4-3 |
+| 35 | とけい | tokei | watch / clock | L5-1 |
+| 36 | くるま | kuruma | car | L5-1 |
+| 37 | かさ | kasa | umbrella | L5-1 |
+| 38 | この | kono | this ~ (+ noun) | L5-2 |
+| 39 | その | sono | that ~ (+ noun) | L5-2 |
+| 40 | あの | ano | that ~ over there (+ noun) | L5-2 |
+| 41 | テーブル | teeburu | table | L5-3 |
+| 42 | いす | isu | chair | L5-3 |
+| 43 | の | no | 's (possession particle) | L5-4 |
+| 44 | も | mo | also, too | L6-1 |
+| 45 | だれ | dare | who | L6-1 |
+| 46 | ここ | koko | here | L6-2 |
+| 47 | そこ | soko | there | L6-2 |
+| 48 | あそこ | asoko | over there | L6-2 |
+| 49 | どこ | doko | where | L6-3 |
+| 50 | トイレ | toire | toilet / bathroom | L6-3 |
+| 51 | どれ | dore | which one (standalone) | L6-4 |
+| 52 | どの | dono | which ~ (+ noun) | L6-4 |
+| 53 | えき | eki | station | L6-5 |

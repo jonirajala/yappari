@@ -35,9 +35,9 @@ export const unit2Lessons: Lesson[] = [
       },
       {
         id: 'u2-l1-e4',
-        type: 'multiple_choice',
-        prompt: 'What does ありがとうございます mean?',
-        options: ['Thank you', 'Excuse me', 'Hello', 'Goodbye'],
+        type: 'listening',
+        audio: 'ありがとうございます',
+        options: ['thank you', 'excuse me', 'hello', 'goodbye'],
         correctIndex: 0,
       },
       {
@@ -110,10 +110,10 @@ export const unit2Lessons: Lesson[] = [
       },
       {
         id: 'u2-l1-e14',
-        type: 'multiple_choice',
-        prompt: "Review: Which means 'goodbye'?",
-        options: ['さようなら', 'こんばんは', 'こんにちは', 'おはようございます'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'さようなら',
+        english: 'Goodbye',
+        isCorrect: true,
       },
     ],
   },
@@ -189,9 +189,11 @@ export const unit2Lessons: Lesson[] = [
       },
       {
         id: 'u2-l2-e9',
-        type: 'multiple_choice',
-        prompt: 'はい is the opposite of:',
-        options: ['いいえ', 'すみません', 'ありがとうございます', 'さようなら'],
+        type: 'dialogue_response',
+        speaker: 'Friend',
+        speakerLine: 'コーヒー？',
+        prompt: 'You don\'t want any:',
+        options: ['いいえ', 'はい', 'すみません', 'さようなら'],
         correctIndex: 0,
       },
       {
@@ -210,8 +212,8 @@ export const unit2Lessons: Lesson[] = [
       },
       {
         id: 'u2-l2-e12',
-        type: 'multiple_choice',
-        prompt: "Review: It's 10pm. You greet someone:",
+        type: 'listening',
+        audio: 'こんばんは',
         options: ['こんばんは', 'おはようございます', 'こんにちは', 'さようなら'],
         correctIndex: 0,
       },
@@ -237,10 +239,11 @@ export const unit2Lessons: Lesson[] = [
   {
     id: 'u2-l3',
     unitId: 'unit-2',
-    title: 'Please',
-    titleJp: 'おねがいします',
+    title: 'Please & Goodnight',
+    titleJp: 'おねがいします・おやすみなさい',
     vocabulary: [
       { japanese: 'おねがいします', reading: 'onegaishimasu', english: 'please', emoji: '🙏' },
+      { japanese: 'おやすみなさい', reading: 'oyasuminasai', english: 'goodnight', emoji: '🌙' },
     ],
     exercises: [
       {
@@ -248,6 +251,7 @@ export const unit2Lessons: Lesson[] = [
         type: 'vocab_intro',
         words: [
           { japanese: 'おねがいします', reading: 'onegaishimasu', english: 'please', emoji: '🙏' },
+          { japanese: 'おやすみなさい', reading: 'oyasuminasai', english: 'goodnight', emoji: '🌙' },
         ],
       },
       {
@@ -304,9 +308,11 @@ export const unit2Lessons: Lesson[] = [
       },
       {
         id: 'u2-l3-e9',
-        type: 'multiple_choice',
-        prompt: 'Which phrase would you use to request something?',
-        options: ['おねがいします', 'ありがとうございます', 'すみません', 'いいえ'],
+        type: 'dialogue_response',
+        speaker: 'Waiter',
+        speakerLine: 'なにがいいですか？',
+        prompt: 'You want water:',
+        options: ['みず、おねがいします', 'みず、ありがとうございます', 'みず、すみません', 'みず、さようなら'],
         correctIndex: 0,
       },
       {
@@ -319,15 +325,15 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l3-e11',
         type: 'multiple_choice',
-        prompt: "Review: Which means 'excuse me'?",
-        options: ['すみません', 'ありがとうございます', 'おねがいします', 'はい'],
+        prompt: 'Which means "goodnight"?',
+        options: ['おやすみなさい', 'さようなら', 'こんばんは', 'おねがいします'],
         correctIndex: 0,
       },
       {
         id: 'u2-l3-e12',
         type: 'multiple_choice',
-        prompt: "Review: It's 3pm. You greet someone:",
-        options: ['こんにちは', 'おはようございます', 'こんばんは', 'さようなら'],
+        prompt: 'You\'re going to bed. You say:',
+        options: ['おやすみなさい', 'さようなら', 'こんばんは', 'おはようございます'],
         correctIndex: 0,
       },
       {
@@ -342,10 +348,11 @@ export const unit2Lessons: Lesson[] = [
       },
       {
         id: 'u2-l3-e14',
-        type: 'multiple_choice',
-        prompt: "Review: Which means 'good evening'?",
-        options: ['こんばんは', 'おはようございます', 'こんにちは', 'さようなら'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'すみません',
+        english: 'Thank you',
+        isCorrect: false,
+        correctEnglish: 'Excuse me / Sorry',
       },
       {
         id: 'u2-l3-e15',
@@ -367,6 +374,7 @@ export const unit2Lessons: Lesson[] = [
       { japanese: 'はい', reading: 'hai', english: 'yes', emoji: '✅' },
       { japanese: 'いいえ', reading: 'iie', english: 'no', emoji: '❌' },
       { japanese: 'おねがいします', reading: 'onegaishimasu', english: 'please', emoji: '🙏' },
+      { japanese: 'おやすみなさい', reading: 'oyasuminasai', english: 'goodnight', emoji: '🌙' },
     ],
     exercises: [
       {
@@ -390,7 +398,7 @@ export const unit2Lessons: Lesson[] = [
       {
         id: 'u2-l4-e3',
         type: 'multiple_choice',
-        prompt: 'You want the check at a restaurant. You say:',
+        prompt: 'You want to call the waiter at a restaurant. You say:',
         options: ['すみません', 'ありがとうございます', 'おねがいします', 'はい'],
         correctIndex: 0,
       },
@@ -417,9 +425,9 @@ export const unit2Lessons: Lesson[] = [
       },
       {
         id: 'u2-l4-e7',
-        type: 'multiple_choice',
-        prompt: "Which phrase means 'please'?",
-        options: ['おねがいします', 'ありがとうございます', 'すみません', 'はい'],
+        type: 'listening',
+        audio: 'おねがいします',
+        options: ['please', 'thank you', 'excuse me', 'yes'],
         correctIndex: 0,
       },
       {
@@ -464,16 +472,20 @@ export const unit2Lessons: Lesson[] = [
       },
       {
         id: 'u2-l4-e13',
-        type: 'multiple_choice',
-        prompt: "Review: It's evening. You greet someone:",
-        options: ['こんばんは', 'こんにちは', 'おはようございます', 'さようなら'],
+        type: 'dialogue_response',
+        speaker: 'Neighbor',
+        speakerLine: 'こんばんは！',
+        prompt: 'You reply:',
+        options: ['こんばんは', 'おはようございます', 'さようなら', 'すみません'],
         correctIndex: 0,
       },
       {
         id: 'u2-l4-e14',
-        type: 'multiple_choice',
-        prompt: "How do you say 'please' in Japanese?",
-        options: ['おねがいします', 'ありがとうございます', 'すみません', 'はい'],
+        type: 'dialogue_response',
+        speaker: 'Family',
+        speakerLine: 'おやすみなさい！',
+        prompt: 'You reply:',
+        options: ['おやすみなさい', 'さようなら', 'こんばんは', 'ありがとうございます'],
         correctIndex: 0,
       },
     ],
@@ -595,13 +607,14 @@ export const unit2Lessons: Lesson[] = [
           { left: 'おねがいします', right: 'please' },
           { left: 'はい', right: 'yes' },
           { left: 'いいえ', right: 'no' },
+          { left: 'おやすみなさい', right: 'goodnight' },
         ],
       },
       {
         id: 'u2-l5-e15',
         type: 'multiple_choice',
-        prompt: 'Which word means "yes"?',
-        options: ['はい', 'いいえ', 'すみません', 'おねがいします'],
+        prompt: 'You\'re going to bed. You say:',
+        options: ['おやすみなさい', 'さようなら', 'こんばんは', 'すみません'],
         correctIndex: 0,
       },
     ],

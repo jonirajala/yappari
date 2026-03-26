@@ -49,6 +49,13 @@ export function FillBlank({ exercise, onAnswer }: Props) {
           Fill in the blank
         </h2>
 
+        {/* Translation hint */}
+        {exercise.translation && (
+          <p className="text-center text-sm text-gray-500 mb-4">
+            "{exercise.translation}"
+          </p>
+        )}
+
         {/* Sentence with blank */}
         <div className="font-jp text-2xl text-center mb-10 flex items-center justify-center flex-wrap gap-1">
           {parts.map((part, i) => (
@@ -74,21 +81,16 @@ export function FillBlank({ exercise, onAnswer }: Props) {
           ))}
         </div>
 
-        {/* Translation after answer */}
-        {answered && (
-          <p className={cn(
-            'text-center text-sm mb-6 font-medium',
-            selected === exercise.answer ? 'text-correct' : 'text-incorrect'
-          )}>
+        {/* Correct answer after wrong answer */}
+        {answered && !wasCorrect && (
+          <p className="text-center text-sm mb-6 font-medium text-incorrect">
             {exercise.translation
               ? `"${exercise.translation}"`
               : `Correct answer: ${exercise.answer}`
             }
-            {answered && selected !== exercise.answer && (
-              <span className="block font-jp text-correct mt-1">
-                {exercise.sentence.replace('＿', exercise.answer)}
-              </span>
-            )}
+            <span className="block font-jp text-correct mt-1">
+              {exercise.sentence.replace('＿', exercise.answer)}
+            </span>
           </p>
         )}
 

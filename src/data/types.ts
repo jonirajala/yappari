@@ -39,7 +39,12 @@ export type Exercise =
   | KanaBuildExercise
   | TranslationExercise
   | GrammarIntroExercise
-  | VocabIntroExercise;
+  | VocabIntroExercise
+  | ListeningExercise
+  | TrueFalseExercise
+  | DialogueResponseExercise
+  | KanjiReadingExercise
+  | ReadingExercise;
 
 export type ExerciseType =
   | 'multiple_choice'
@@ -49,7 +54,12 @@ export type ExerciseType =
   | 'kana_build'
   | 'translation'
   | 'grammar_intro'
-  | 'vocab_intro';
+  | 'vocab_intro'
+  | 'listening'
+  | 'true_false'
+  | 'dialogue_response'
+  | 'kanji_reading'
+  | 'reading';
 
 interface ExerciseBase {
   id: string;
@@ -114,6 +124,63 @@ export interface VocabIntroExercise extends ExerciseBase {
   type: 'vocab_intro';
   words: { japanese: string; reading: string; english: string; emoji?: string }[];
 }
+
+export interface ListeningExercise extends ExerciseBase {
+  type: 'listening';
+  /** Japanese text to speak via TTS */
+  audio: string;
+  options: string[];
+  correctIndex: number;
+}
+
+export interface TrueFalseExercise extends ExerciseBase {
+  type: 'true_false';
+  japanese: string;
+  english: string;
+  isCorrect: boolean;
+  /** Shown when isCorrect=false and learner answers correctly */
+  correctEnglish?: string;
+}
+
+export interface ReadingExercise extends ExerciseBase {
+  type: 'reading';
+  passage: string;
+  question: string;
+  options: string[];
+  correctIndex: number;
+}
+
+export interface KanjiReadingExercise extends ExerciseBase {
+  type: 'kanji_reading';
+  kanji: string;
+  correctReading: string;
+  options: string[];
+  english?: string;
+}
+
+export interface DialogueResponseExercise extends ExerciseBase {
+  type: 'dialogue_response';
+  speaker: string;
+  speakerLine: string;
+  prompt?: string;
+  options: string[];
+  correctIndex: number;
+}
+
+// === Milestone Reviews ===
+
+export interface MilestoneReview {
+  id: string;
+  title: string;
+  titleJp: string;
+  description: string;
+  afterUnitId: string;
+  exercises: Exercise[];
+}
+
+export type JourneyItem =
+  | { type: 'unit'; unit: Unit }
+  | { type: 'milestone'; milestone: MilestoneReview };
 
 // === Progress ===
 

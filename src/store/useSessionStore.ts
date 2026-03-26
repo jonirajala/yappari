@@ -30,7 +30,7 @@ interface SessionState {
 }
 
 // Exercise types that are scored (not intros)
-const SCORED_TYPES = ['multiple_choice', 'matching', 'fill_blank', 'word_order', 'translation', 'kana_build'];
+const SCORED_TYPES = ['multiple_choice', 'matching', 'fill_blank', 'word_order', 'translation', 'kana_build', 'listening', 'true_false', 'dialogue_response', 'kanji_reading', 'reading'];
 
 export const useSessionStore = create<SessionState>()((set, get) => ({
   lessonId: null,

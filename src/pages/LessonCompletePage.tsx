@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useSessionStore } from '../store/useSessionStore';
 import { useProgressStore } from '../store/useProgressStore';
-import { getLessonById } from '../data/course';
+import { getLessonById, getMilestoneById, isMilestoneId } from '../data/course';
 import { playComplete, playIncorrect } from '../lib/sounds';
 
 export function LessonCompletePage() {
@@ -15,8 +15,12 @@ export function LessonCompletePage() {
 
   const score = getScore();
   const stars = getStars();
-  const failed = isFailed();
+  const isMilestone = lessonId ? isMilestoneId(lessonId) : false;
+  const milestoneFailed = isMilestone && score < 70;
+  const failed = isFailed() || milestoneFailed;
   const lesson = lessonId ? getLessonById(lessonId) : null;
+  const milestone = lessonId && !lesson ? getMilestoneById(lessonId) : null;
+  const title = lesson?.title ?? milestone?.title ?? '';
 
   useEffect(() => {
     if (!lessonId || saved) return;
@@ -67,11 +71,11 @@ export function LessonCompletePage() {
             Not quite yet
           </h1>
           <p className="text-gray-500 mb-2">
-            You need at least 50% to pass.
+            You need at least {isMilestone ? '70' : '50'}% to pass.
           </p>
 
-          {lesson && (
-            <p className="text-gray-400 text-sm mb-6">{lesson.title}</p>
+          {title && (
+            <p className="text-gray-400 text-sm mb-6">{title}</p>
           )}
 
           <div className="flex justify-center gap-8 mb-10">
@@ -112,26 +116,37 @@ export function LessonCompletePage() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center max-w-sm w-full"
       >
-        {/* Stars */}
-        <div className="flex items-center justify-center gap-3 mb-6">
-          {[1, 2, 3].map((n) => (
-            <motion.div
-              key={n}
-              initial={{ scale: 0, rotate: -30 }}
-              animate={{ scale: n <= stars ? 1 : 0.6, rotate: 0 }}
-              transition={{ delay: n * 0.2, type: 'spring', stiffness: 200 }}
-            >
-              <svg
-                width={n === 2 ? 64 : 48}
-                height={n === 2 ? 64 : 48}
-                viewBox="0 0 24 24"
-                fill={n <= stars ? '#FFD700' : '#E5E5E5'}
+        {/* Stars or Trophy */}
+        {isMilestone ? (
+          <motion.div
+            initial={{ scale: 0, rotate: -15 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ type: 'spring', stiffness: 200 }}
+            className="text-7xl mb-6"
+          >
+            🏆
+          </motion.div>
+        ) : (
+          <div className="flex items-center justify-center gap-3 mb-6">
+            {[1, 2, 3].map((n) => (
+              <motion.div
+                key={n}
+                initial={{ scale: 0, rotate: -30 }}
+                animate={{ scale: n <= stars ? 1 : 0.6, rotate: 0 }}
+                transition={{ delay: n * 0.2, type: 'spring', stiffness: 200 }}
               >
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-            </motion.div>
-          ))}
-        </div>
+                <svg
+                  width={n === 2 ? 64 : 48}
+                  height={n === 2 ? 64 : 48}
+                  viewBox="0 0 24 24"
+                  fill={n <= stars ? '#FFD700' : '#E5E5E5'}
+                >
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </motion.div>
+            ))}
+          </div>
+        )}
 
         <motion.h1
           initial={{ opacity: 0 }}
@@ -139,11 +154,13 @@ export function LessonCompletePage() {
           transition={{ delay: 0.8 }}
           className="text-3xl font-bold text-gray-800 mb-2"
         >
-          {stars === 3 ? 'Perfect!' : stars === 2 ? 'Great job!' : 'Lesson Complete!'}
+          {isMilestone
+            ? 'Checkpoint Complete!'
+            : stars === 3 ? 'Perfect!' : stars === 2 ? 'Great job!' : 'Lesson Complete!'}
         </motion.h1>
 
-        {lesson && (
-          <p className="text-gray-500 mb-6">{lesson.title}</p>
+        {title && (
+          <p className="text-gray-500 mb-6">{title}</p>
         )}
 
         <motion.div

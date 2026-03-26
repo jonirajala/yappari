@@ -49,10 +49,9 @@ export const unit6Lessons: Lesson[] = [
       {
         id: 'ex-6-1-04',
         type: 'fill_blank',
-        sentence: 'たなかさんはがくせいです。やまださん ＿ がくせいです',
+        sentence: 'やまださん ＿ がくせいです',
         answer: 'も',
-        options: ['も', 'は', 'の', 'か'],
-        translation: 'Tanaka is a student. Yamada is also a student.',
+        options: ['も', 'です', 'の', 'か'],
       },
       {
         id: 'ex-6-1-05',
@@ -79,8 +78,7 @@ export const unit6Lessons: Lesson[] = [
         type: 'fill_blank',
         sentence: 'これはテーブルです。それ ＿ テーブルです',
         answer: 'も',
-        options: ['も', 'は', 'の', 'か'],
-        translation: 'This is a table. That is also a table.',
+        options: ['も', 'です', 'の', 'か'],
       },
       {
         id: 'ex-6-1-09',
@@ -91,10 +89,11 @@ export const unit6Lessons: Lesson[] = [
       // Review exercises
       {
         id: 'ex-6-1-10',
-        type: 'multiple_choice',
-        prompt: 'わたしのほん means:',
-        options: ['my book', 'your book', 'this book', 'a book'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'わたしもがくせいです',
+        english: 'I am a student',
+        isCorrect: false,
+        correctEnglish: 'I am also a student',
       },
       {
         id: 'ex-6-1-11',
@@ -102,7 +101,6 @@ export const unit6Lessons: Lesson[] = [
         sentence: 'たなかさん ＿ ペン',
         answer: 'の',
         options: ['の', 'は', 'も', 'か'],
-        translation: 'Tanaka\'s pen',
       },
       {
         id: 'ex-6-1-12',
@@ -210,24 +208,24 @@ export const unit6Lessons: Lesson[] = [
       // Review exercises
       {
         id: 'ex-6-2-10',
-        type: 'multiple_choice',
-        prompt: 'わたしもがくせいです means:',
-        options: ['I am also a student', 'I am a student', 'I am not a student', 'You are a student'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'でんわはあそこです',
+        english: 'The phone is here',
+        isCorrect: false,
+        correctEnglish: 'The phone is over there',
       },
       {
         id: 'ex-6-2-11',
         type: 'fill_blank',
         sentence: 'やまださん ＿ せんせいです',
         answer: 'も',
-        options: ['も', 'は', 'の', 'か'],
-        translation: 'Yamada is also a teacher.',
+        options: ['も', 'です', 'の', 'か'],
       },
       {
         id: 'ex-6-2-12',
-        type: 'multiple_choice',
-        prompt: 'このくるま means:',
-        options: ['this car', 'that car', 'my car', 'a car'],
+        type: 'listening',
+        audio: 'ここ',
+        options: ['here', 'there', 'over there', 'where'],
         correctIndex: 0,
       },
       {
@@ -324,10 +322,10 @@ export const unit6Lessons: Lesson[] = [
       },
       {
         id: 'ex-6-3-09',
-        type: 'multiple_choice',
-        prompt: 'かばんはそこです means:',
-        options: ['The bag is there', 'The bag is here', 'Where is the bag?', 'Is this a bag?'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'トイレはあそこです',
+        english: 'The bathroom is over there',
+        isCorrect: true,
       },
       // Review exercises
       {
@@ -342,8 +340,7 @@ export const unit6Lessons: Lesson[] = [
         type: 'fill_blank',
         sentence: 'それ ＿ ほんです',
         answer: 'も',
-        options: ['も', 'は', 'の', 'か'],
-        translation: 'That is also a book.',
+        options: ['も', 'です', 'の', 'か'],
       },
       {
         id: 'ex-6-3-12',
@@ -354,9 +351,11 @@ export const unit6Lessons: Lesson[] = [
       },
       {
         id: 'ex-6-3-13',
-        type: 'multiple_choice',
-        prompt: 'Which means "no"?',
-        options: ['いいえ', 'はい', 'すみません', 'さようなら'],
+        type: 'dialogue_response',
+        speaker: 'Stranger',
+        speakerLine: 'すみません、トイレはどこですか？',
+        prompt: 'It\'s over there:',
+        options: ['あそこです', 'ここです', 'どこですか', 'トイレです'],
         correctIndex: 0,
       },
       {
@@ -458,10 +457,10 @@ export const unit6Lessons: Lesson[] = [
       },
       {
         id: 'ex-6-4-09',
-        type: 'multiple_choice',
-        prompt: 'どのくるまですか means:',
-        options: ['Which car?', 'Where is the car?', 'Whose car?', 'This car?'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'どのくるまですか',
+        english: 'Which car?',
+        isCorrect: true,
       },
       // Review exercises
       {
@@ -481,9 +480,11 @@ export const unit6Lessons: Lesson[] = [
       },
       {
         id: 'ex-6-4-12',
-        type: 'multiple_choice',
-        prompt: 'も means:',
-        options: ['also, too', 'not', 'and', 'or'],
+        type: 'dialogue_response',
+        speaker: 'Tanaka',
+        speakerLine: 'わたしはがくせいです。',
+        prompt: 'You are also a student:',
+        options: ['わたしもがくせいです', 'わたしはがくせいです', 'わたしはせんせいです', 'がくせいですか'],
         correctIndex: 0,
       },
       {
@@ -492,7 +493,6 @@ export const unit6Lessons: Lesson[] = [
         sentence: 'せんせい ＿ くるま',
         answer: 'の',
         options: ['の', 'は', 'も', 'か'],
-        translation: 'the teacher\'s car',
       },
       {
         id: 'ex-6-4-14',
@@ -545,6 +545,7 @@ export const unit6Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'Where is the station?',
         correctOrder: ['えき', 'は', 'どこ', 'です', 'か'],
+        distractors: ['の'],
       },
       {
         id: 'ex-6-5-04',
@@ -556,10 +557,11 @@ export const unit6Lessons: Lesson[] = [
       },
       {
         id: 'ex-6-5-05',
-        type: 'multiple_choice',
-        prompt: 'たなかさんもせんせいです means:',
-        options: ['Tanaka is also a teacher', 'Tanaka is a teacher', 'Tanaka is not a teacher', 'Is Tanaka a teacher?'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'たなかさんもせんせいです',
+        english: 'Tanaka is a teacher',
+        isCorrect: false,
+        correctEnglish: 'Tanaka is also a teacher',
       },
       {
         id: 'ex-6-5-06',
@@ -574,20 +576,21 @@ export const unit6Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'Which bag is Yamada\'s?',
         correctOrder: ['どの', 'かばん', 'が', 'やまださん', 'の', 'です', 'か'],
+        distractors: ['は'],
       },
       {
         id: 'ex-6-5-08',
         type: 'fill_blank',
         sentence: 'わたし ＿ にほんじんです',
         answer: 'も',
-        options: ['も', 'は', 'の', 'か'],
-        translation: 'I am also Japanese.',
+        options: ['も', 'です', 'の', 'か'],
       },
       {
         id: 'ex-6-5-09',
-        type: 'multiple_choice',
-        prompt: 'トイレはここです means:',
-        options: ['The bathroom is here', 'Where is the bathroom?', 'The bathroom is over there', 'Is this the bathroom?'],
+        type: 'reading',
+        passage: 'トイレはあそこです。\nえきもあそこです。',
+        question: 'Where is the station?',
+        options: ['Over there', 'Here', 'There (near you)', 'Unknown'],
         correctIndex: 0,
       },
       // Review exercises from earlier units
@@ -603,6 +606,7 @@ export const unit6Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'This umbrella is mine.',
         correctOrder: ['この', 'かさ', 'は', 'わたし', 'の', 'です'],
+        distractors: ['も'],
       },
       {
         id: 'ex-6-5-12',
@@ -613,15 +617,18 @@ export const unit6Lessons: Lesson[] = [
       },
       {
         id: 'ex-6-5-13',
-        type: 'multiple_choice',
-        prompt: 'すみません means:',
-        options: ['excuse me / sorry', 'thank you', 'please', 'goodbye'],
-        correctIndex: 0,
+        type: 'kanji_reading',
+        kanji: '駅',
+        correctReading: 'えき',
+        options: ['えき', 'くるま', 'とけい', 'でんわ'],
+        english: 'station',
       },
       {
         id: 'ex-6-5-14',
-        type: 'multiple_choice',
-        prompt: 'You bump into someone. You say:',
+        type: 'dialogue_response',
+        speaker: 'You',
+        speakerLine: '(You accidentally bump into someone)',
+        prompt: 'You say:',
         options: ['すみません', 'ありがとうございます', 'おねがいします', 'はい'],
         correctIndex: 0,
       },
@@ -652,14 +659,14 @@ export const unit6Lessons: Lesson[] = [
         type: 'fill_blank',
         sentence: 'やまださん ＿ がくせいです',
         answer: 'も',
-        options: ['も', 'は', 'の', 'か'],
-        translation: 'Yamada is also a student.',
+        options: ['も', 'です', 'の', 'か'],
       },
       {
         id: 'ex-6-6-03',
         type: 'word_order',
         prompt: 'Where is the station?',
         correctOrder: ['えき', 'は', 'どこ', 'です', 'か'],
+        distractors: ['も'],
       },
       {
         id: 'ex-6-6-04',
@@ -688,6 +695,7 @@ export const unit6Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'The bathroom is over there.',
         correctOrder: ['トイレ', 'は', 'あそこ', 'です'],
+        distractors: ['どこ', 'か'],
       },
       {
         id: 'ex-6-6-08',
@@ -710,13 +718,13 @@ export const unit6Lessons: Lesson[] = [
         sentence: 'このとけいはだれ ＿ ですか',
         answer: 'の',
         options: ['の', 'は', 'も', 'か'],
-        translation: 'Whose watch is this?',
       },
       {
         id: 'ex-6-6-11',
-        type: 'multiple_choice',
-        prompt: 'これはかばんですか means:',
-        options: ['Is this a bag?', 'This is a bag.', 'What is this?', 'Where is the bag?'],
+        type: 'reading',
+        passage: 'わたしはやまだです。がくせいです。\nたなかさんはせんせいです。\nたなかさんのくるまはあそこです。',
+        question: 'Who is the teacher?',
+        options: ['Tanaka', 'Yamada', 'Both', 'Neither'],
         correctIndex: 0,
       },
       {
@@ -728,10 +736,10 @@ export const unit6Lessons: Lesson[] = [
       },
       {
         id: 'ex-6-6-13',
-        type: 'multiple_choice',
-        prompt: 'Formal thanks:',
-        options: ['ありがとうございます', 'さようなら', 'すみません', 'おねがいします'],
-        correctIndex: 0,
+        type: 'kanji_reading',
+        kanji: '友達',
+        correctReading: 'ともだち',
+        options: ['ともだち', 'がくせい', 'せんせい', 'いしゃ'],
       },
       {
         id: 'ex-6-6-14',
@@ -752,6 +760,7 @@ export const unit6Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'Nice to meet you. I am Tanaka. Pleased to meet you.',
         correctOrder: ['はじめまして', 'わたし', 'は', 'たなか', 'です', 'どうぞよろしく'],
+        distractors: ['も'],
       },
     ],
   },

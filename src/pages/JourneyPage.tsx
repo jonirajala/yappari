@@ -1,11 +1,12 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { course, getAllLessons } from '../data/course';
+import { journey, getJourneySequence } from '../data/course';
 import { useProgressStore } from '../store/useProgressStore';
 import { useUserStore } from '../store/useUserStore';
 import type { LessonStatus } from '../data/types';
 import { UnitHeader } from '../components/journey/UnitHeader';
 import { WindingPath } from '../components/journey/WindingPath';
+import { MilestoneNode } from '../components/journey/MilestoneNode';
 import { LogoMark } from '../components/common/Logo';
 
 export function JourneyPage() {
@@ -14,22 +15,22 @@ export function JourneyPage() {
   const name = useUserStore((s) => s.name);
   const currentRef = useRef<HTMLDivElement>(null);
 
-  const allLessons = getAllLessons();
+  const journeySeq = getJourneySequence();
 
-  // Find the next available lesson for the continue button
-  const nextLessonId = allLessons.find((l) => {
-    const idx = allLessons.indexOf(l);
-    if (completedLessons[l.id]) return false;
+  // Find the next available item (lesson or milestone) for the continue button
+  const nextPlayableId = journeySeq.find((item) => {
+    const idx = journeySeq.indexOf(item);
+    if (completedLessons[item.id]) return false;
     if (idx === 0) return true;
-    return !!completedLessons[allLessons[idx - 1].id];
+    return !!completedLessons[journeySeq[idx - 1].id];
   })?.id ?? null;
 
-  function getLessonStatus(lessonId: string): LessonStatus {
-    if (completedLessons[lessonId]) return 'completed';
-    const idx = allLessons.findIndex((l) => l.id === lessonId);
+  function getItemStatus(itemId: string): LessonStatus {
+    if (completedLessons[itemId]) return 'completed';
+    const idx = journeySeq.findIndex((item) => item.id === itemId);
     if (idx === 0) return 'available';
-    const prevLesson = allLessons[idx - 1];
-    if (prevLesson && completedLessons[prevLesson.id]) return 'available';
+    const prevItem = journeySeq[idx - 1];
+    if (prevItem && completedLessons[prevItem.id]) return 'available';
     return 'locked';
   }
 
@@ -72,41 +73,63 @@ export function JourneyPage() {
 
       {/* Journey */}
       <div className="max-w-lg mx-auto pt-4">
-        {course.map((unit) => {
-          const completedCount = unit.lessons.filter(
-            (l) => completedLessons[l.id]
-          ).length;
-          const isComingSoon = unit.lessons.length === 0;
+        {journey.map((item) => {
+          if (item.type === 'unit') {
+            const unit = item.unit;
+            const completedCount = unit.lessons.filter(
+              (l) => completedLessons[l.id]
+            ).length;
+            const isComingSoon = unit.lessons.length === 0;
 
-          return (
-            <div key={unit.id} className="mb-4">
-              <UnitHeader
-                unit={unit}
-                completedCount={completedCount}
-                isComingSoon={isComingSoon}
-              />
-
-              {!isComingSoon && (
-                <WindingPath
-                  lessons={unit.lessons}
-                  unitColor={unit.color}
-                  getLessonStatus={getLessonStatus}
-                  completedLessons={completedLessons}
-                  onLessonTap={(id) => navigate(`/lesson/${id}`)}
-                  currentRef={currentRef}
+            return (
+              <div key={unit.id} className="mb-4">
+                <UnitHeader
+                  unit={unit}
+                  completedCount={completedCount}
+                  isComingSoon={isComingSoon}
                 />
-              )}
-            </div>
-          );
+
+                {!isComingSoon && (
+                  <WindingPath
+                    lessons={unit.lessons}
+                    unitColor={unit.color}
+                    getLessonStatus={getItemStatus}
+                    completedLessons={completedLessons}
+                    onLessonTap={(id) => navigate(`/lesson/${id}`)}
+                    currentRef={currentRef}
+                  />
+                )}
+              </div>
+            );
+          } else {
+            const ms = item.milestone;
+            const status = getItemStatus(ms.id);
+            const isAvailable = status === 'available';
+
+            return (
+              <div
+                key={ms.id}
+                ref={isAvailable ? currentRef : undefined}
+                className="flex justify-center"
+              >
+                <MilestoneNode
+                  milestone={ms}
+                  status={status}
+                  result={completedLessons[ms.id]}
+                  onTap={() => navigate(`/lesson/${ms.id}`)}
+                />
+              </div>
+            );
+          }
         })}
       </div>
 
       {/* Floating continue button */}
-      {nextLessonId && (
+      {nextPlayableId && (
         <div className="fixed bottom-0 left-0 right-0 z-10 p-4 pb-6 bg-gradient-to-t from-surface via-surface to-transparent">
           <div className="max-w-lg mx-auto">
             <button
-              onClick={() => navigate(`/lesson/${nextLessonId}`)}
+              onClick={() => navigate(`/lesson/${nextPlayableId}`)}
               className="w-full btn-primary text-center"
             >
               Continue Learning

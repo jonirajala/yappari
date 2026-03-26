@@ -267,6 +267,37 @@ export const kanjiMap: Record<string, KanjiEntry> = {
     introUnit: 6,
   },
 
+  // === Unit 4: Objects (kanji forms for words introduced in Unit 4) ===
+  'ほん': {
+    kanji: '本',
+    segments: [{ text: '本', reading: 'ほん' }],
+    introUnit: 4,
+  },
+  'でんわ': {
+    kanji: '電話',
+    segments: [{ text: '電', reading: 'でん' }, { text: '話', reading: 'わ' }],
+    introUnit: 4,
+  },
+
+  // === Unit 5: More objects ===
+  'くるま': {
+    kanji: '車',
+    segments: [{ text: '車', reading: 'くるま' }],
+    introUnit: 5,
+  },
+  'とけい': {
+    kanji: '時計',
+    segments: [{ text: '時', reading: 'と' }, { text: '計', reading: 'けい' }],
+    introUnit: 5,
+  },
+
+  // === Unit 6: Places ===
+  'えき': {
+    kanji: '駅',
+    segments: [{ text: '駅', reading: 'えき' }],
+    introUnit: 6,
+  },
+
   // === Unit 7: Food & Shopping ===
   'みず': {
     kanji: '水',
@@ -293,19 +324,9 @@ export const kanjiMap: Record<string, KanjiEntry> = {
     segments: [{ text: '古', reading: 'ふる' }, { text: 'い' }],
     introUnit: 7,
   },
-  'ほん': {
-    kanji: '本',
-    segments: [{ text: '本', reading: 'ほん' }],
-    introUnit: 7,
-  },
   'でんしゃ': {
     kanji: '電車',
     segments: [{ text: '電', reading: 'でん' }, { text: '車', reading: 'しゃ' }],
-    introUnit: 7,
-  },
-  'くるま': {
-    kanji: '車',
-    segments: [{ text: '車', reading: 'くるま' }],
     introUnit: 7,
   },
 };

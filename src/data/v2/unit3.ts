@@ -78,10 +78,11 @@ export const unit3Lessons: Lesson[] = [
       },
       {
         id: 'ex-3-1-08',
-        type: 'multiple_choice',
-        prompt: 'A person who teaches is a:',
-        options: ['せんせい', 'がくせい', 'わたし', 'ともだち'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'せんせい',
+        english: 'Student',
+        isCorrect: false,
+        correctEnglish: 'Teacher',
       },
       {
         id: 'ex-3-1-09',
@@ -93,8 +94,8 @@ export const unit3Lessons: Lesson[] = [
       // Review U2
       {
         id: 'ex-3-1-10',
-        type: 'multiple_choice',
-        prompt: 'Which means "thank you"?',
+        type: 'listening',
+        audio: 'ありがとうございます',
         options: ['ありがとうございます', 'すみません', 'おねがいします', 'さようなら'],
         correctIndex: 0,
       },
@@ -215,10 +216,11 @@ export const unit3Lessons: Lesson[] = [
       },
       {
         id: 'ex-3-2-10',
-        type: 'multiple_choice',
-        prompt: 'は is pronounced ___ when used as a particle:',
-        options: ['wa', 'ha', 'wo', 'no'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'わたしはがくせいです',
+        english: 'I am a teacher',
+        isCorrect: false,
+        correctEnglish: 'I am a student',
       },
       // Review U2
       {
@@ -329,8 +331,10 @@ export const unit3Lessons: Lesson[] = [
       },
       {
         id: 'ex-3-3-07',
-        type: 'multiple_choice',
-        prompt: 'Someone asks おなまえは？ You are Yamada. You say:',
+        type: 'dialogue_response',
+        speaker: 'New colleague',
+        speakerLine: 'おなまえは？',
+        prompt: 'You are Yamada:',
         options: ['わたしはやまだです', 'やまだはわたしです', 'おなまえはやまだ', 'やまだがくせいです'],
         correctIndex: 0,
       },
@@ -490,10 +494,10 @@ export const unit3Lessons: Lesson[] = [
       // Review L3.3
       {
         id: 'ex-3-4-11',
-        type: 'multiple_choice',
-        prompt: 'おなまえは？ means:',
-        options: ['What is your name?', 'Who are you?', 'Are you a student?', 'Where is it?'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'にほんじんですか',
+        english: 'Are you Japanese?',
+        isCorrect: true,
       },
       // Review L3.2
       {
@@ -608,8 +612,10 @@ export const unit3Lessons: Lesson[] = [
       },
       {
         id: 'ex-3-5-08',
-        type: 'multiple_choice',
-        prompt: 'Your friend asks がくせいですか？ You are not a student. You say:',
+        type: 'dialogue_response',
+        speaker: 'Friend',
+        speakerLine: 'がくせいですか？',
+        prompt: 'You are not a student:',
         options: ['いいえ、がくせいじゃないです', 'はい、がくせいです', 'がくせいですか', 'いいえ、がくせいです'],
         correctIndex: 0,
       },
@@ -704,9 +710,11 @@ export const unit3Lessons: Lesson[] = [
       },
       {
         id: 'ex-3-6-02',
-        type: 'multiple_choice',
-        prompt: 'Which phrase do you say when meeting someone for the first time?',
-        options: ['はじめまして', 'さようなら', 'ありがとうございます', 'すみません'],
+        type: 'dialogue_response',
+        speaker: 'Tanaka',
+        speakerLine: 'はじめまして。わたしはたなかです。どうぞよろしく。',
+        prompt: 'You reply:',
+        options: ['はじめまして。どうぞよろしく。', 'さようなら', 'ありがとうございます', 'すみません'],
         correctIndex: 0,
       },
       {
@@ -785,10 +793,11 @@ export const unit3Lessons: Lesson[] = [
       // Review U2
       {
         id: 'ex-3-6-13',
-        type: 'multiple_choice',
-        prompt: 'Which means "thank you"?',
-        options: ['ありがとうございます', 'すみません', 'おねがいします', 'さようなら'],
-        correctIndex: 0,
+        type: 'kanji_reading',
+        kanji: '学生',
+        correctReading: 'がくせい',
+        options: ['がくせい', 'せんせい', 'いしゃ', 'ともだち'],
+        english: 'student',
       },
       // Review U1
       {
@@ -881,10 +890,11 @@ export const unit3Lessons: Lesson[] = [
       },
       {
         id: 'ex-3-7-10',
-        type: 'kana_build',
-        prompt: 'nice to meet you',
-        correctChars: ['は', 'じ', 'め', 'ま', 'し', 'て'],
-        distractors: ['ど', 'う', 'ぞ'],
+        type: 'reading',
+        passage: 'わたしはやまだです。\nせんせいです。\nにほんからきました。',
+        question: 'What is Yamada\'s job?',
+        options: ['Teacher', 'Student', 'Doctor', 'Friend'],
+        correctIndex: 0,
       },
       {
         id: 'ex-3-7-11',
@@ -895,10 +905,10 @@ export const unit3Lessons: Lesson[] = [
       },
       {
         id: 'ex-3-7-12',
-        type: 'translation',
-        prompt: 'Are you a teacher?',
-        correctAnswer: ['せんせい', 'です', 'か'],
-        wordBank: ['せんせい', 'です', 'か', 'がくせい', 'は', 'じゃないです'],
+        type: 'kanji_reading',
+        kanji: '先生',
+        correctReading: 'せんせい',
+        options: ['せんせい', 'がくせい', 'ともだち', 'なまえ'],
       },
       // Review Unit 2
       {

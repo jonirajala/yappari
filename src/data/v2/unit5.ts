@@ -78,9 +78,9 @@ export const unit5Lessons: Lesson[] = [
       },
       {
         id: 'ex-5-1-08',
-        type: 'multiple_choice',
-        prompt: 'You check the time on your:',
-        options: ['とけい', 'かさ', 'くるま', 'でんわ'],
+        type: 'listening',
+        audio: 'とけい',
+        options: ['watch / clock', 'car', 'umbrella', 'bag'],
         correctIndex: 0,
       },
       {
@@ -100,10 +100,10 @@ export const unit5Lessons: Lesson[] = [
       },
       {
         id: 'ex-5-1-11',
-        type: 'multiple_choice',
-        prompt: 'これはほんです means:',
-        options: ['This is a book', 'That is a book', 'Is this a book?', 'What is a book?'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'これはほんです',
+        english: 'This is a book',
+        isCorrect: true,
       },
       {
         id: 'ex-5-1-12',
@@ -222,10 +222,11 @@ export const unit5Lessons: Lesson[] = [
       },
       {
         id: 'ex-5-2-10',
-        type: 'multiple_choice',
-        prompt: 'このとけい means:',
-        options: ['this watch', 'that watch', 'my watch', 'which watch'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'このとけい',
+        english: 'That watch',
+        isCorrect: false,
+        correctEnglish: 'This watch',
       },
       // Review exercises
       {
@@ -253,9 +254,9 @@ export const unit5Lessons: Lesson[] = [
       },
       {
         id: 'ex-5-2-14',
-        type: 'multiple_choice',
-        prompt: 'Which means "thank you"?',
-        options: ['ありがとうございます', 'すみません', 'おねがいします', 'さようなら'],
+        type: 'listening',
+        audio: 'くるま',
+        options: ['car', 'umbrella', 'watch', 'table'],
         correctIndex: 0,
       },
     ],
@@ -327,10 +328,11 @@ export const unit5Lessons: Lesson[] = [
       },
       {
         id: 'ex-5-3-07',
-        type: 'multiple_choice',
-        prompt: 'そのいす means:',
-        options: ['that chair', 'this chair', 'my chair', 'which chair'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'そのいす',
+        english: 'This chair',
+        isCorrect: false,
+        correctEnglish: 'That chair',
       },
       // Review exercises
       {
@@ -345,8 +347,7 @@ export const unit5Lessons: Lesson[] = [
         type: 'fill_blank',
         sentence: 'あのくるま ＿ せんせいのです',
         answer: 'は',
-        options: ['は', 'の', 'も', 'か'],
-        translation: 'That car (over there) is the teacher\'s.',
+        options: ['は', 'の', 'です', 'か'],
       },
       {
         id: 'ex-5-3-10',
@@ -368,9 +369,9 @@ export const unit5Lessons: Lesson[] = [
       },
       {
         id: 'ex-5-3-12',
-        type: 'multiple_choice',
-        prompt: 'Which means "yes"?',
-        options: ['はい', 'いいえ', 'すみません', 'ありがとうございます'],
+        type: 'listening',
+        audio: 'テーブル',
+        options: ['table', 'chair', 'watch', 'umbrella'],
         correctIndex: 0,
       },
     ],
@@ -418,7 +419,6 @@ export const unit5Lessons: Lesson[] = [
         sentence: 'たなかさん ＿ ペン',
         answer: 'の',
         options: ['の', 'は', 'も', 'か'],
-        translation: 'Tanaka\'s pen',
       },
       {
         id: 'ex-5-4-04',
@@ -439,7 +439,6 @@ export const unit5Lessons: Lesson[] = [
         sentence: 'せんせい ＿ かさ',
         answer: 'の',
         options: ['の', 'は', 'も', 'か'],
-        translation: 'the teacher\'s umbrella',
       },
       {
         id: 'ex-5-4-07',
@@ -460,7 +459,6 @@ export const unit5Lessons: Lesson[] = [
         sentence: 'このくるまはせんせい ＿ です',
         answer: 'の',
         options: ['の', 'は', 'も', 'か'],
-        translation: 'This car is the teacher\'s.',
       },
       {
         id: 'ex-5-4-10',
@@ -471,25 +469,24 @@ export const unit5Lessons: Lesson[] = [
       // Review exercises
       {
         id: 'ex-5-4-11',
-        type: 'multiple_choice',
-        prompt: 'Which means "table"?',
-        options: ['テーブル', 'いす', 'とけい', 'かさ'],
+        type: 'listening',
+        audio: 'いす',
+        options: ['chair', 'table', 'car', 'clock'],
         correctIndex: 0,
       },
       {
         id: 'ex-5-4-12',
-        type: 'multiple_choice',
-        prompt: 'How do you say "that umbrella" (near you)?',
-        options: ['そのかさ', 'このかさ', 'あのかさ', 'それかさ'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'わたしのかさ',
+        english: 'My umbrella',
+        isCorrect: true,
       },
       {
         id: 'ex-5-4-13',
         type: 'fill_blank',
         sentence: 'これ ＿ でんわです',
         answer: 'は',
-        options: ['は', 'か', 'の', 'も'],
-        translation: 'This is a phone.',
+        options: ['は', 'か', 'の', 'です'],
       },
       {
         id: 'ex-5-4-14',
@@ -517,13 +514,13 @@ export const unit5Lessons: Lesson[] = [
         sentence: 'これはわたし ＿ かばんです',
         answer: 'の',
         options: ['の', 'は', 'も', 'か'],
-        translation: 'This is my bag.',
       },
       {
         id: 'ex-5-5-02',
         type: 'word_order',
         prompt: 'Whose watch is this?',
         correctOrder: ['この', 'とけい', 'は', 'だれ', 'の', 'です', 'か'],
+        distractors: ['あの'],
       },
       {
         id: 'ex-5-5-03',
@@ -550,6 +547,7 @@ export const unit5Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'That car (over there) is the teacher\'s.',
         correctOrder: ['あの', 'くるま', 'は', 'せんせい', 'の', 'です'],
+        distractors: ['この'],
       },
       {
         id: 'ex-5-5-06',
@@ -569,7 +567,6 @@ export const unit5Lessons: Lesson[] = [
         sentence: 'それはわたし ＿ ペンです',
         answer: 'の',
         options: ['の', 'は', 'も', 'か'],
-        translation: 'That is my pen.',
       },
       {
         id: 'ex-5-5-08',
@@ -587,17 +584,14 @@ export const unit5Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'This is my friend\'s phone.',
         correctOrder: ['これ', 'は', 'ともだち', 'の', 'でんわ', 'です'],
+        distractors: ['かばん'],
       },
       {
         id: 'ex-5-5-10',
-        type: 'multiple_choice',
-        prompt: 'あれはなんですか means:',
-        options: [
-          'What is that (over there)?',
-          'What is this?',
-          'Is that a pen?',
-          'Where is that?',
-        ],
+        type: 'reading',
+        passage: 'このほんはたなかさんのです。\nそのペンはわたしのです。\nあのかさはせんせいのです。',
+        question: 'Whose is the pen?',
+        options: ['Mine', 'Tanaka\'s', 'The teacher\'s', 'Yamada\'s'],
         correctIndex: 0,
       },
       {
@@ -613,14 +607,14 @@ export const unit5Lessons: Lesson[] = [
         sentence: 'いいえ、わたしはせんせい ＿',
         answer: 'じゃないです',
         options: ['じゃないです', 'です', 'か', 'の'],
-        translation: 'No, I am not a teacher.',
       },
       {
         id: 'ex-5-5-13',
-        type: 'multiple_choice',
-        prompt: 'Which means "thank you"?',
-        options: ['ありがとうございます', 'すみません', 'おねがいします', 'さようなら'],
-        correctIndex: 0,
+        type: 'kanji_reading',
+        kanji: '車',
+        correctReading: 'くるま',
+        options: ['くるま', 'とけい', 'かさ', 'いす'],
+        english: 'car',
       },
       {
         id: 'ex-5-5-14',
@@ -655,7 +649,6 @@ export const unit5Lessons: Lesson[] = [
         sentence: 'たなかさん ＿ ほん',
         answer: 'の',
         options: ['の', 'は', 'も', 'か'],
-        translation: 'Tanaka\'s book',
       },
       {
         id: 'ex-5-6-03',
@@ -674,6 +667,7 @@ export const unit5Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'Whose watch is that?',
         correctOrder: ['それ', 'は', 'だれ', 'の', 'とけい', 'です', 'か'],
+        distractors: ['この'],
       },
       {
         id: 'ex-5-6-05',
@@ -708,6 +702,7 @@ export const unit5Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'That pen is my friend\'s.',
         correctOrder: ['あの', 'ペン', 'は', 'ともだち', 'の', 'です'],
+        distractors: ['か', 'この'],
       },
       {
         id: 'ex-5-6-10',
@@ -726,17 +721,18 @@ export const unit5Lessons: Lesson[] = [
       // Review exercises from earlier units
       {
         id: 'ex-5-6-12',
-        type: 'multiple_choice',
-        prompt: 'これはペンですか means:',
-        options: ['Is this a pen?', 'This is a pen.', 'What is this?', 'Where is the pen?'],
+        type: 'reading',
+        passage: 'わたしはたなかです。\nこのくるまはわたしのです。\nあのかさもわたしのです。',
+        question: 'What does Tanaka say is his?',
+        options: ['A car and an umbrella', 'Only a car', 'Only an umbrella', 'A car and a book'],
         correctIndex: 0,
       },
       {
         id: 'ex-5-6-13',
-        type: 'multiple_choice',
-        prompt: 'You bump into someone. You say:',
-        options: ['すみません', 'ありがとうございます', 'おねがいします', 'さようなら'],
-        correctIndex: 0,
+        type: 'kanji_reading',
+        kanji: '時計',
+        correctReading: 'とけい',
+        options: ['とけい', 'くるま', 'でんわ', 'えき'],
       },
       {
         id: 'ex-5-6-14',

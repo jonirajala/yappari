@@ -59,9 +59,9 @@ export const unit4Lessons: Lesson[] = [
       },
       {
         id: 'ex-4-1-06',
-        type: 'multiple_choice',
-        prompt: 'You read a:',
-        options: ['ほん', 'ペン', 'かばん', 'でんわ'],
+        type: 'listening',
+        audio: 'ほん',
+        options: ['book', 'pen', 'bag', 'phone'],
         correctIndex: 0,
       },
       {
@@ -95,16 +95,15 @@ export const unit4Lessons: Lesson[] = [
         type: 'fill_blank',
         sentence: 'わたし ＿ せんせいです',
         answer: 'は',
-        options: ['は', 'が', 'か', 'を'],
-        translation: 'I am a teacher',
+        options: ['は', 'か', 'を', 'です'],
       },
       // Review U2
       {
         id: 'ex-4-1-11',
-        type: 'multiple_choice',
-        prompt: 'Which means "yes"?',
-        options: ['はい', 'いいえ', 'すみません', 'さようなら'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'はい',
+        english: 'Yes',
+        isCorrect: true,
       },
       // Review U1
       {
@@ -204,18 +203,17 @@ export const unit4Lessons: Lesson[] = [
       },
       {
         id: 'ex-4-2-07',
-        type: 'multiple_choice',
-        prompt: 'これはほんです means:',
-        options: ['This is a book', 'That is a book', 'What is a book?', 'Is this a book?'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'これはほんです',
+        english: 'This is a book',
+        isCorrect: true,
       },
       {
         id: 'ex-4-2-08',
         type: 'fill_blank',
         sentence: 'それ ＿ ペンです',
         answer: 'は',
-        options: ['は', 'か', 'の', 'も'],
-        translation: 'That is a pen',
+        options: ['は', 'か', 'の', 'です'],
       },
       {
         id: 'ex-4-2-09',
@@ -239,8 +237,8 @@ export const unit4Lessons: Lesson[] = [
       // Review L4.1
       {
         id: 'ex-4-2-12',
-        type: 'multiple_choice',
-        prompt: 'You write with a:',
+        type: 'listening',
+        audio: 'ペン',
         options: ['ペン', 'ほん', 'かばん', 'でんわ'],
         correctIndex: 0,
       },
@@ -258,7 +256,6 @@ export const unit4Lessons: Lesson[] = [
         sentence: 'いいえ、わたしはいしゃ ＿',
         answer: 'じゃないです',
         options: ['じゃないです', 'です', 'ですか', 'は'],
-        translation: 'No, I am not a doctor',
       },
     ],
   },
@@ -342,9 +339,11 @@ export const unit4Lessons: Lesson[] = [
       },
       {
         id: 'ex-4-3-08',
-        type: 'multiple_choice',
-        prompt: 'それはかばんです means:',
-        options: ['That is a bag', 'This is a bag', 'That over there is a bag', 'What is a bag?'],
+        type: 'dialogue_response',
+        speaker: 'Friend',
+        speakerLine: 'これはなんですか？',
+        prompt: 'They\'re holding a bag:',
+        options: ['それはかばんです', 'これはかばんです', 'あれはかばんです', 'それはでんわです'],
         correctIndex: 0,
       },
       // Review L4.2
@@ -357,10 +356,11 @@ export const unit4Lessons: Lesson[] = [
       },
       {
         id: 'ex-4-3-10',
-        type: 'multiple_choice',
-        prompt: 'あれはでんわです means:',
-        options: ['That over there is a phone', 'This is a phone', 'That is a phone', 'What is a phone?'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'あれはでんわです',
+        english: 'This is a phone',
+        isCorrect: false,
+        correctEnglish: 'That over there is a phone',
       },
       {
         id: 'ex-4-3-11',
@@ -430,12 +430,13 @@ export const unit4Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'What is this?',
         correctOrder: ['これ', 'は', 'なん', 'です', 'か'],
+        distractors: ['も'],
       },
       {
         id: 'ex-4-4-04',
-        type: 'multiple_choice',
-        prompt: 'あれはでんわです means:',
-        options: ['That (over there) is a phone', 'This is a phone', 'That is a phone', 'What is a phone?'],
+        type: 'listening',
+        audio: 'かばん',
+        options: ['bag', 'phone', 'book', 'pen'],
         correctIndex: 0,
       },
       {
@@ -443,14 +444,14 @@ export const unit4Lessons: Lesson[] = [
         type: 'fill_blank',
         sentence: 'これ ＿ かばんです',
         answer: 'は',
-        options: ['は', 'か', 'の', 'も'],
-        translation: 'This is a bag',
+        options: ['は', 'か', 'の', 'です'],
       },
       {
         id: 'ex-4-4-06',
         type: 'word_order',
         prompt: 'That over there is a book',
         correctOrder: ['あれ', 'は', 'ほん', 'です'],
+        distractors: ['か'],
       },
       {
         id: 'ex-4-4-07',
@@ -472,13 +473,15 @@ export const unit4Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'Is this a phone?',
         correctOrder: ['これ', 'は', 'でんわ', 'です', 'か'],
+        distractors: ['ほん'],
       },
       // Review U3
       {
         id: 'ex-4-4-10',
-        type: 'multiple_choice',
-        prompt: 'わたしはせんせいじゃないです means:',
-        options: ['I am not a teacher', 'I am a teacher', 'Are you a teacher?', 'The teacher'],
+        type: 'reading',
+        passage: 'これはほんです。\nそれはペンです。\nあれはかばんです。',
+        question: 'What is near the listener?',
+        options: ['A pen', 'A book', 'A bag', 'A phone'],
         correctIndex: 0,
       },
       {
@@ -487,23 +490,24 @@ export const unit4Lessons: Lesson[] = [
         sentence: 'にほん ＿ きました',
         answer: 'から',
         options: ['から', 'は', 'です', 'か'],
-        translation: 'I came from Japan',
       },
       // Review U2
       {
         id: 'ex-4-4-12',
-        type: 'multiple_choice',
-        prompt: 'Which means "thank you"?',
-        options: ['ありがとうございます', 'すみません', 'おねがいします', 'さようなら'],
-        correctIndex: 0,
+        type: 'true_false',
+        japanese: 'ありがとうございます',
+        english: 'Please',
+        isCorrect: false,
+        correctEnglish: 'Thank you',
       },
       // Review U1
       {
         id: 'ex-4-4-13',
-        type: 'multiple_choice',
-        prompt: 'Good morning (formal):',
-        options: ['おはようございます', 'おはよう', 'こんにちは', 'こんばんは'],
-        correctIndex: 0,
+        type: 'kanji_reading',
+        kanji: '本',
+        correctReading: 'ほん',
+        options: ['ほん', 'ペン', 'かばん', 'でんわ'],
+        english: 'book',
       },
       {
         id: 'ex-4-4-14',
@@ -548,8 +552,8 @@ export const unit4Lessons: Lesson[] = [
       {
         id: 'ex-4-5-02',
         type: 'multiple_choice',
-        prompt: 'これはなんですか — pick the correct answer if it\'s a pen:',
-        options: ['これはペンです', 'これはほんです', 'それはペンです', 'あれはペンです'],
+        prompt: 'Someone asks you これはなんですか while holding a pen. You reply:',
+        options: ['それはペンです', 'これはペンです', 'あれはペンです', 'それはほんです'],
         correctIndex: 0,
       },
       {
@@ -564,6 +568,7 @@ export const unit4Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'Is that a phone?',
         correctOrder: ['それ', 'は', 'でんわ', 'です', 'か'],
+        distractors: ['の'],
       },
       {
         id: 'ex-4-5-05',
@@ -592,6 +597,7 @@ export const unit4Lessons: Lesson[] = [
         type: 'word_order',
         prompt: 'What is that over there?',
         correctOrder: ['あれ', 'は', 'なん', 'です', 'か'],
+        distractors: ['これ'],
       },
       {
         id: 'ex-4-5-09',
@@ -621,22 +627,22 @@ export const unit4Lessons: Lesson[] = [
         sentence: 'がくせいです ＿',
         answer: 'か',
         options: ['か', 'は', 'です', 'も'],
-        translation: 'Are you a student?',
       },
       // Review U2
       {
         id: 'ex-4-5-13',
-        type: 'multiple_choice',
-        prompt: 'Which means "please"?',
-        options: ['おねがいします', 'ありがとうございます', 'すみません', 'さようなら'],
-        correctIndex: 0,
+        type: 'kanji_reading',
+        kanji: '電話',
+        correctReading: 'でんわ',
+        options: ['でんわ', 'ほん', 'とけい', 'くるま'],
       },
       // Review U1
       {
         id: 'ex-4-5-14',
-        type: 'multiple_choice',
-        prompt: 'You\'re leaving. You say:',
-        options: ['さようなら', 'こんにちは', 'おはようございます', 'こんばんは'],
+        type: 'reading',
+        passage: 'たなかさんはがくせいです。\nやまださんもがくせいです。\nたなかさんはにほんじんです。',
+        question: 'What do Tanaka and Yamada have in common?',
+        options: ['Both are students', 'Both are Japanese', 'Both are teachers', 'Both are doctors'],
         correctIndex: 0,
       },
       {
@@ -652,139 +658,4 @@ export const unit4Lessons: Lesson[] = [
     ],
   },
 
-  // === Lesson 4.6: Mega Review — Objects & Demonstratives ===
-  {
-    id: 'lesson-4-6',
-    unitId: 'unit-4',
-    title: 'Mega Review',
-    titleJp: 'まとめ',
-    vocabulary: [
-      { japanese: 'ほん', reading: 'hon', english: 'book' },
-      { japanese: 'ペン', reading: 'pen', english: 'pen' },
-      { japanese: 'これ', reading: 'kore', english: 'this (thing here)' },
-      { japanese: 'それ', reading: 'sore', english: 'that (thing near you)' },
-      { japanese: 'あれ', reading: 'are', english: 'that (thing over there)' },
-      { japanese: 'なん', reading: 'nan', english: 'what' },
-      { japanese: 'かばん', reading: 'kaban', english: 'bag' },
-      { japanese: 'でんわ', reading: 'denwa', english: 'phone' },
-    ],
-    exercises: [
-      {
-        id: 'ex-4-6-01',
-        type: 'matching',
-        pairs: [
-          { left: 'ほん', right: 'book' },
-          { left: 'ペン', right: 'pen' },
-          { left: 'かばん', right: 'bag' },
-          { left: 'でんわ', right: 'phone' },
-        ],
-      },
-      {
-        id: 'ex-4-6-02',
-        type: 'word_order',
-        prompt: 'What is this?',
-        correctOrder: ['これ', 'は', 'なん', 'です', 'か'],
-      },
-      {
-        id: 'ex-4-6-03',
-        type: 'fill_blank',
-        sentence: 'あれ ＿ でんわです',
-        answer: 'は',
-        options: ['は', 'か', 'の', 'も'],
-        translation: 'That over there is a phone',
-      },
-      {
-        id: 'ex-4-6-04',
-        type: 'multiple_choice',
-        prompt: 'これはかばんです means:',
-        options: ['This is a bag', 'That is a bag', 'What is a bag?', 'Is this a bag?'],
-        correctIndex: 0,
-      },
-      {
-        id: 'ex-4-6-05',
-        type: 'word_order',
-        prompt: 'That is a pen',
-        correctOrder: ['それ', 'は', 'ペン', 'です'],
-      },
-      {
-        id: 'ex-4-6-06',
-        type: 'fill_blank',
-        sentence: 'これは ＿ ですか',
-        answer: 'なん',
-        options: ['なん', 'ほん', 'ペン', 'かばん'],
-        translation: 'What is this?',
-      },
-      {
-        id: 'ex-4-6-07',
-        type: 'multiple_choice',
-        prompt: 'あれはほんですか means:',
-        options: ['Is that (over there) a book?', 'That is a book', 'This is a book', 'What is a book?'],
-        correctIndex: 0,
-      },
-      {
-        id: 'ex-4-6-08',
-        type: 'kana_build',
-        prompt: 'bag',
-        emoji: '👜',
-        correctChars: ['か', 'ば', 'ん'],
-        distractors: ['で', 'わ', 'ほ'],
-      },
-      {
-        id: 'ex-4-6-09',
-        type: 'kana_build',
-        prompt: 'phone',
-        emoji: '📱',
-        correctChars: ['で', 'ん', 'わ'],
-        distractors: ['か', 'ば', 'ほ'],
-      },
-      {
-        id: 'ex-4-6-10',
-        type: 'translation',
-        prompt: 'This is a book',
-        correctAnswer: ['これ', 'は', 'ほん', 'です'],
-        wordBank: ['これ', 'は', 'ほん', 'です', 'それ', 'ペン'],
-      },
-      // Review U3
-      {
-        id: 'ex-4-6-11',
-        type: 'word_order',
-        prompt: 'I am a student',
-        correctOrder: ['わたし', 'は', 'がくせい', 'です'],
-      },
-      {
-        id: 'ex-4-6-12',
-        type: 'fill_blank',
-        sentence: 'いいえ、わたしはいしゃ ＿',
-        answer: 'じゃないです',
-        options: ['じゃないです', 'です', 'ですか', 'は'],
-        translation: 'No, I am not a doctor',
-      },
-      // Review U2
-      {
-        id: 'ex-4-6-13',
-        type: 'multiple_choice',
-        prompt: 'Which means "thank you"?',
-        options: ['ありがとうございます', 'すみません', 'おねがいします', 'さようなら'],
-        correctIndex: 0,
-      },
-      // Review U1
-      {
-        id: 'ex-4-6-14',
-        type: 'matching',
-        pairs: [
-          { left: 'これ', right: 'this' },
-          { left: 'それ', right: 'that (near you)' },
-          { left: 'あれ', right: 'that over there' },
-          { left: 'なん', right: 'what' },
-        ],
-      },
-      {
-        id: 'ex-4-6-15',
-        type: 'multiple_choice',
-        prompt: 'Someone helps you. You say:',
-        options: ['ありがとうございます', 'すみません', 'おねがいします', 'さようなら'],
-        correctIndex: 0,
-      },
-    ],
-  },
 ];

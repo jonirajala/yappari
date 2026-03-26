@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "audio:manifest": "node --experimental-strip-types scripts/build-audio-manifest.ts",
     "audio:generate": "scripts/.venv/bin/python3 scripts/generate_course_audio.py",
-    "audio:status": "node --experimental-strip-types scripts/audio_status.ts"
+    "audio:status": "node --experimental-strip-types scripts/audio_status.ts",
+    "course-doc": "node --experimental-strip-types scripts/generate-course-doc.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.100.0",

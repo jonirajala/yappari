@@ -8,6 +8,11 @@ import { Matching } from './Matching';
 import { GrammarIntro } from './GrammarIntro';
 import { VocabIntro } from './VocabIntro';
 import { KanaBuild } from './KanaBuild';
+import { Listening } from './Listening';
+import { TrueFalse } from './TrueFalse';
+import { DialogueResponse } from './DialogueResponse';
+import { KanjiReading } from './KanjiReading';
+import { Reading } from './Reading';
 
 interface Props {
   exercise: Exercise;
@@ -33,6 +38,16 @@ export function ExerciseRenderer({ exercise, onAnswer }: Props) {
         return <VocabIntro exercise={exercise} onAnswer={onAnswer} />;
       case 'kana_build':
         return <KanaBuild exercise={exercise} onAnswer={onAnswer} />;
+      case 'listening':
+        return <Listening exercise={exercise} onAnswer={onAnswer} />;
+      case 'true_false':
+        return <TrueFalse exercise={exercise} onAnswer={onAnswer} />;
+      case 'dialogue_response':
+        return <DialogueResponse exercise={exercise} onAnswer={onAnswer} />;
+      case 'kanji_reading':
+        return <KanjiReading exercise={exercise} onAnswer={onAnswer} />;
+      case 'reading':
+        return <Reading exercise={exercise} onAnswer={onAnswer} />;
     }
   };
 

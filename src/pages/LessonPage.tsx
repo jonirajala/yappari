@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getLessonById, getNextLessonId, getUnitByLessonId } from '../data/course';
+import { getLessonById, getMilestoneById, getNextLessonId, getUnitByLessonId, isMilestoneId } from '../data/course';
 import { useSessionStore } from '../store/useSessionStore';
 import { ExerciseRenderer } from '../components/exercises/ExerciseRenderer';
 import { LessonProvider } from '../lib/LessonContext';
@@ -18,6 +18,11 @@ function getExerciseContent(ex: Exercise): string {
     case 'matching': return `Match: ${ex.pairs.map(p => `${p.left}=${p.right}`).join(', ')}`;
     case 'grammar_intro': return `Grammar: ${ex.title}`;
     case 'vocab_intro': return `Vocab: ${ex.words.map(w => `${w.japanese}(${w.english})`).join(', ')}`;
+    case 'listening': return `Listen: ${ex.audio} | Options: ${ex.options.join(', ')}`;
+    case 'true_false': return `T/F: ${ex.japanese} = ${ex.english} (${ex.isCorrect})`;
+    case 'dialogue_response': return `Dialogue: ${ex.speaker}: ${ex.speakerLine} | Options: ${ex.options.join(', ')}`;
+    case 'kanji_reading': return `Kanji: ${ex.kanji} → ${ex.correctReading} | Options: ${ex.options.join(', ')}`;
+    case 'reading': return `Read: ${ex.passage.slice(0, 40)}... | Q: ${ex.question}`;
   }
 }
 
@@ -40,19 +45,23 @@ export function LessonPage() {
     originalCount,
   } = useSessionStore();
 
+  const isMilestone = lessonId ? isMilestoneId(lessonId) : false;
+
   useEffect(() => {
     if (!lessonId) return;
     const lesson = getLessonById(lessonId);
-    if (!lesson) {
+    const milestone = !lesson ? getMilestoneById(lessonId) : null;
+    const exercises = lesson?.exercises ?? milestone?.exercises;
+    if (!exercises) {
       navigate('/journey');
       return;
     }
-    startLesson(lessonId, lesson.exercises);
+    startLesson(lessonId, exercises);
     setActiveLessonAudio(lessonId);
     void preloadLessonAudio(lessonId).then(() => {
-      const nextLessonId = getNextLessonId(lessonId);
-      if (nextLessonId) {
-        void preloadLessonAudioInBackground(nextLessonId);
+      const nextId = getNextLessonId(lessonId);
+      if (nextId) {
+        void preloadLessonAudioInBackground(nextId);
       }
     });
     const unit = getUnitByLessonId(lessonId);
@@ -109,7 +118,7 @@ export function LessonPage() {
         {/* Progress bar */}
         <div className="flex-1 h-3 bg-surface rounded-full overflow-hidden flex">
           <div
-            className="h-full bg-primary rounded-full transition-all duration-500 ease-out"
+            className={`h-full rounded-full transition-all duration-500 ease-out ${isMilestone ? 'bg-amber-500' : 'bg-primary'}`}
             style={{ width: `${progress}%` }}
           />
           {inRetry && (
