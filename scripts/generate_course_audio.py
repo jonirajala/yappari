@@ -99,8 +99,8 @@ def save_manifest(manifest: dict) -> None:
 
 
 def upload_file(file_path: Path, bucket: str, storage_path: str) -> None:
-    supabase_url = os.environ.get("SUPABASE_URL")
-    service_role_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    supabase_url = os.environ.get("SUPABASE_URL") or os.environ.get("VITE_SUPABASE_URL")
+    service_role_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY") or os.environ.get("VITE_SUPABASE_SERVICE_KEY")
     if not supabase_url or not service_role_key:
       raise RuntimeError("SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required for upload")
 

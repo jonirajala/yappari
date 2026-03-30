@@ -26,8 +26,9 @@ When you add, remove, or modify exercises in any `src/data/v2/unit*.ts` or `mile
 
 1. Run `npm run course-doc` to regenerate COURSE.md
 2. If the change affects unit themes, milestone placement, or grammar progression, also update `docs/COURSE_OVERVIEW.md` manually
+3. Run `npm run audio:manifest` to rebuild the audio manifest, then `npm run audio:generate` to generate and upload TTS clips for new content (reads credentials from `.env.local` automatically)
 
-This keeps documentation in sync with the code automatically.
+This keeps documentation and audio in sync with the code automatically.
 
 ## Exercise Types
 
@@ -53,6 +54,8 @@ Milestone reviews sit between units on the journey map. They test all previous k
 
 - Milestone 1: After Unit 3 (Survival Checkpoint)
 - Milestone 2: After Unit 6 (Conversation Ready)
+- Milestone 3: After Unit 10 (World Builder)
+- Milestone 4: After Unit 14 (Action Speaker)
 
 ## Exercise Design Rules
 

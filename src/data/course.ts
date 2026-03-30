@@ -5,8 +5,18 @@ import { unit3Lessons } from './v2/unit3.ts';
 import { unit4Lessons } from './v2/unit4.ts';
 import { unit5Lessons } from './v2/unit5.ts';
 import { unit6Lessons } from './v2/unit6.ts';
+import { unit7Lessons } from './v2/unit7.ts';
+import { unit8Lessons } from './v2/unit8.ts';
+import { unit9Lessons } from './v2/unit9.ts';
+import { unit10Lessons } from './v2/unit10.ts';
+import { unit11Lessons } from './v2/unit11.ts';
+import { unit12Lessons } from './v2/unit12.ts';
+import { unit13Lessons } from './v2/unit13.ts';
+import { unit14Lessons } from './v2/unit14.ts';
 import { milestone1 } from './v2/milestone1.ts';
 import { milestone2 } from './v2/milestone2.ts';
+import { milestone3 } from './v2/milestone3.ts';
+import { milestone4 } from './v2/milestone4.ts';
 
 export const course: Unit[] = [
   {
@@ -57,14 +67,13 @@ export const course: Unit[] = [
     color: '#D94F3B',
     lessons: unit6Lessons,
   },
-  // Future units (content from old Units 3-10, to be expanded similarly)
   {
     id: 'unit-7',
     title: 'People & Family',
     titleJp: 'ひととかぞく',
     description: 'Family words, person words, personal-world vocabulary',
     color: '#3B82F6',
-    lessons: [],
+    lessons: unit7Lessons,
   },
   {
     id: 'unit-8',
@@ -72,7 +81,7 @@ export const course: Unit[] = [
     titleJp: 'すうじ',
     description: '1-10, quantity, age, prices, first counting feel',
     color: '#E67E22',
-    lessons: [],
+    lessons: unit8Lessons,
   },
   {
     id: 'unit-9',
@@ -80,7 +89,7 @@ export const course: Unit[] = [
     titleJp: 'じかん',
     description: 'Days, time, daily rhythm, routine-ready vocabulary',
     color: '#8B5CF6',
-    lessons: [],
+    lessons: unit9Lessons,
   },
   {
     id: 'unit-10',
@@ -88,11 +97,43 @@ export const course: Unit[] = [
     titleJp: 'ばしょ',
     description: 'School/home/station/store, existence, first go/come/location sentences',
     color: '#10B981',
-    lessons: [],
+    lessons: unit10Lessons,
+  },
+  {
+    id: 'unit-11',
+    title: 'Eating & Drinking',
+    titleJp: 'たべものとのみもの',
+    description: 'Food/drink vocab, を particle, たべます/のみます, meal phrases',
+    color: '#D94F3B',
+    lessons: unit11Lessons,
+  },
+  {
+    id: 'unit-12',
+    title: 'Daily Actions',
+    titleJp: 'まいにちのこと',
+    description: 'More verbs (みます, よみます, かきます, します), verb negative ～ません',
+    color: '#3B82F6',
+    lessons: unit12Lessons,
+  },
+  {
+    id: 'unit-13',
+    title: 'Describing Things',
+    titleJp: 'せつめい',
+    description: 'な-adjectives, い-adjective conjugation, すき/きらい',
+    color: '#E67E22',
+    lessons: unit13Lessons,
+  },
+  {
+    id: 'unit-14',
+    title: 'Home & School Life',
+    titleJp: 'せいかつ',
+    description: 'Rooms, frequency adverbs, verb past ～ました/～ませんでした, daily routines',
+    color: '#8B5CF6',
+    lessons: unit14Lessons,
   },
 ];
 
-export const milestones: MilestoneReview[] = [milestone1, milestone2];
+export const milestones: MilestoneReview[] = [milestone1, milestone2, milestone3, milestone4];
 
 /** Journey sequence interleaving units and milestones */
 export const journey: JourneyItem[] = buildJourney();
