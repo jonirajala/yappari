@@ -7,7 +7,7 @@ function LogoImage({ size, className = '' }: Props) {
   return (
     <img
       src="/logo.png"
-      alt="Yappari logo"
+      alt="Mojibun logo"
       width={size}
       height={size}
       className={className}

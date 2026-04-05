@@ -171,7 +171,7 @@ export function SettingsPage() {
 
         {/* About */}
         <section className="text-center pt-4">
-          <p className="font-jp text-lg text-gray-300">やっぱり v 0.1</p>
+          <p className="font-jp text-lg text-gray-300">もじぶん v 0.1</p>
           <p className="text-sm text-gray-300">Free Japanese learning for everyone</p>
         </section>
       </div>

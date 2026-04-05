@@ -484,7 +484,7 @@ export const unit1Lessons: Lesson[] = [
         id: 'u1-l5-e1',
         type: 'translation',
         prompt: 'Good morning',
-        correctAnswer: ['おはようございます'],
+        correctAnswer: ['おはよう', 'ございます'],
         wordBank: ['おはよう', 'ございます', 'こんにちは', 'さようなら'],
       },
       {
@@ -518,7 +518,7 @@ export const unit1Lessons: Lesson[] = [
         id: 'u1-l5-e5',
         type: 'translation',
         prompt: 'Goodbye',
-        correctAnswer: ['さようなら'],
+        correctAnswer: ['さよう', 'なら'],
         wordBank: ['さよう', 'なら', 'こんにち', 'は'],
       },
       {
@@ -554,7 +554,7 @@ export const unit1Lessons: Lesson[] = [
         id: 'u1-l5-e10',
         type: 'translation',
         prompt: 'Good evening',
-        correctAnswer: ['こんばんは'],
+        correctAnswer: ['こん', 'ばん', 'は'],
         wordBank: ['こん', 'ばん', 'は', 'にち', 'おはよう'],
       },
       {

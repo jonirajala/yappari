@@ -40,6 +40,18 @@ export const readings: Record<string, string> = {
 
   // Adjectives
   'おおきい': 'ookii',
+  'ちいさい': 'chiisai',
+  'やさしい': 'yasashii',
+  'あたらしい': 'atarashii',
+  'ふるい': 'furui',
+  'きれい': 'kirei',
+  'しずか': 'shizuka',
+  'げんき': 'genki',
+  'すき': 'suki',
+  'きらい': 'kirai',
+  'おいしい': 'oishii',
+
+  // Particles
   'を': 'wo',
   'が': 'ga',
   'に': 'ni',
@@ -63,6 +75,15 @@ export const readings: Record<string, string> = {
   'たなかさん': 'tanaka-san',
   'やまださん': 'yamada-san',
   'さん': '-san',
+
+  // Family
+  'かぞく': 'kazoku',
+  'おかあさん': 'okaasan',
+  'おとうさん': 'otousan',
+  'おにいさん': 'oniisan',
+  'おねえさん': 'oneesan',
+  'おとうと': 'otouto',
+  'いもうと': 'imouto',
 
   // Self-intro
   'きました': 'kimashita',
@@ -100,6 +121,70 @@ export const readings: Record<string, string> = {
   'がっこう': 'gakkou',
   'えき': 'eki',
   'トイレ': 'toire',
+  'うち': 'uchi',
+  'みせ': 'mise',
+  'こうえん': 'kouen',
+  'へや': 'heya',
+  'まど': 'mado',
+
+  // Numbers
+  'いち': 'ichi',
+  'よん': 'yon',
+  'ご': 'go',
+  'ろく': 'roku',
+  'なな': 'nana',
+  'はち': 'hachi',
+  'きゅう': 'kyuu',
+  'じゅう': 'juu',
+  'いくつ': 'ikutsu',
+  'さい': 'sai',
+  'なんさい': 'nansai',
+
+  // Time & Days
+  'きょう': 'kyou',
+  'あした': 'ashita',
+  'きのう': 'kinou',
+  'あさ': 'asa',
+  'ひる': 'hiru',
+  'よる': 'yoru',
+  'いま': 'ima',
+  'げつようび': 'getsuyoubi',
+  'かようび': 'kayoubi',
+  'すいようび': 'suiyoubi',
+  'もくようび': 'mokuyoubi',
+  'きんようび': 'kinyoubi',
+  'どようび': 'doyoubi',
+  'にちようび': 'nichiyoubi',
+  'なんようび': 'nanyoubi',
+  'しゅうまつ': 'shuumatsu',
+  'まいにち': 'mainichi',
+  'いつも': 'itsumo',
+  'ときどき': 'tokidoki',
+
+  // Verbs
+  'あります': 'arimasu',
+  'います': 'imasu',
+  'いきます': 'ikimasu',
+  '行きます': 'ikimasu',
+  'きます': 'kimasu',
+  '来ます': 'kimasu',
+  'たべます': 'tabemasu',
+  'のみます': 'nomimasu',
+  'みます': 'mimasu',
+  'よみます': 'yomimasu',
+  'かきます': 'kakimasu',
+  'します': 'shimasu',
+
+  // Food & Drink
+  'ごはん': 'gohan',
+  'みず': 'mizu',
+  'おちゃ': 'ocha',
+  'パン': 'pan',
+  'にく': 'niku',
+
+  // Other objects
+  'テレビ': 'terebi',
+  'べんきょう': 'benkyou',
 
   // Common phrases in exercises
   'わたしはがくせいです': 'watashi wa gakusei desu',

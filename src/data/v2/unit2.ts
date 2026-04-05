@@ -501,7 +501,7 @@ export const unit2Lessons: Lesson[] = [
         id: 'u2-l5-e1',
         type: 'translation',
         prompt: 'Thank you',
-        correctAnswer: ['ありがとうございます'],
+        correctAnswer: ['ありがとう', 'ございます'],
         wordBank: ['ありがとう', 'ございます', 'すみません', 'おねがい'],
       },
       {
@@ -543,7 +543,7 @@ export const unit2Lessons: Lesson[] = [
         id: 'u2-l5-e6',
         type: 'translation',
         prompt: 'Please',
-        correctAnswer: ['おねがいします'],
+        correctAnswer: ['おねがい', 'します'],
         wordBank: ['おねがい', 'します', 'ございます', 'ありがとう'],
       },
       {
@@ -588,7 +588,7 @@ export const unit2Lessons: Lesson[] = [
         id: 'u2-l5-e12',
         type: 'translation',
         prompt: 'Goodbye',
-        correctAnswer: ['さようなら'],
+        correctAnswer: ['さよう', 'なら'],
         wordBank: ['さよう', 'なら', 'こんにち', 'は'],
       },
       {
